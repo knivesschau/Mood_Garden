@@ -1,5 +1,4 @@
 * {
-    text-align: center;
     box-sizing: border-box;
 }
 
@@ -8,9 +7,9 @@
     min-height: 200px;
 }
 
-div:nth-of-type(even) {
+/* div:nth-of-type(even) {
     background-color: #bbbbbb;
-}
+} */
 
 p {
     margin-left: 3em;

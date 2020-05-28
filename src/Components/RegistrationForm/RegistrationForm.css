@@ -1,0 +1,14 @@
+.LoginForm {
+    text-align: center;
+    padding: 1em;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+}
+
+button {
+    margin-top: 2em;
+}
