@@ -1,7 +1,7 @@
 const journalEntries = [
     {
         "id": "77308808-5511-4e14-9e08-919f1fe9f904",
-        "date": "2020-01-15T23:00:00.000Z",
+        "date": "2020-04-10T23:00:00.000Z",
         "rose": "I got to video chat with my family and eat dinner together virtually. We made eggplant parmesean together!",
         "bud": "I'm looking forward to seeing my family again once shelter-in-place is over.",
         "thorn": "Even though I saw my family via video chat, I realized how much I missed them today and it mad me sad that I haven't been able to see them for a long time.",
@@ -25,7 +25,7 @@ const journalEntries = [
     },
     {
         "id": "97eb5b8d-55f3-4fe2-827b-31f8a6a29224",
-        "date": "2020-04-05-T23:00:00.000Z",
+        "date": "2020-03-24-T23:00:00.000Z",
         "rose": "I got some much needed rest today and was able to sleep in until noon. I was also happy that I got the clothes I ordered in the mail.",
         "bud": "This weekend, I want to learn how to make sourdough bread from scratch.",
         "thorn": "It made me a little upset that my ideas for a surprise party were ignored during a conversation with my friends.",
