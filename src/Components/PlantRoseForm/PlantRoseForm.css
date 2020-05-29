@@ -1,0 +1,23 @@
+.PlantRose {
+    text-align: center; 
+    padding: 1em;
+}
+
+.Rose_Entry, .Bud_Entry {
+    background-color: #bbbbbb;
+}
+
+input[type="number"] {
+    text-align: center;
+    margin: .25em;
+}
+
+textarea {
+    min-width: 300px;
+    margin: .5em;
+}
+
+#submit-rose, #start-over {
+    margin: .5em;
+    margin-top: 2em;
+}
