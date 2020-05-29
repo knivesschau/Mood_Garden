@@ -7,6 +7,10 @@ export default class LandingNav extends Component {
         return (
             <div className="LandingNav">
                 <Link to='/'>
+                    Landing Page
+                </Link>
+                
+                <Link to='/'>
                     Sign Up
                 </Link>
 

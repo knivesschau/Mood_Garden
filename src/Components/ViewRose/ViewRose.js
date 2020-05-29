@@ -4,16 +4,19 @@ import './ViewRose.css';
 export default function ViewRose(props) {
     return (
         <div className="ViewRose">
-            <h3>{props.journal.color} Rose Planted on {props.journal.date}</h3>
+            <h2>{props.journal.color} Rose Planted on {props.journal.date}</h2>
 
-            <h2>Rose</h2>
+            <h3>Rose</h3>
             <p>{props.journal.rose}</p>
 
-            <h2>Thorn</h2>
+            <h3>Thorn</h3>
             <p>{props.journal.thorn}</p>
 
-            <h2>Bud</h2>
+            <h3>Bud</h3>
             <p>{props.journal.bud}</p>
+
+            <button type="submit" id="edit">Edit</button>
+            <button type="submit" id="delete">Delete</button>
         </div>
     );
 }

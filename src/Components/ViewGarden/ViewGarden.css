@@ -1,0 +1,7 @@
+#collapsed-entry-1, #collapsed-entry-2 {
+    border: 1px solid black;
+}
+
+#collapsed-entry-2 {
+    background-color: #FC6262;
+}

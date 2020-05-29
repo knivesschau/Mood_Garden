@@ -1,0 +1,8 @@
+.ViewRose {
+    background-color: #FFF9C0;
+    border: 1px solid black;
+}
+
+#edit, #delete {
+    margin: .5em;
+}
