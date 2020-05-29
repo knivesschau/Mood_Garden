@@ -8,16 +8,13 @@ import ViewGarden from './Components/ViewGarden/ViewGarden';
 
 class App extends Component {
   render() {
-
     return (
       <main className='App'>
           <ViewGarden/>
         
       </main>
     );
-
   }
-
 }
 
 export default App;
