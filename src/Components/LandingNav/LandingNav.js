@@ -19,7 +19,7 @@ export default class LandingNav extends Component {
                 </Link>
 
                 <Link to='/your-garden'>
-                    Your Mood Garden
+                    Your Garden
                 </Link>
 
                 <Link to='/plant-rose'>
