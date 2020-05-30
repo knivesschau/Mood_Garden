@@ -1,8 +1,24 @@
-.ViewRose {
+.Sample_Expand1, .Sample_Expand2 {
     background-color: #FFF9C0;
     border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+}
+
+.Sample_Expand2 {
+    background-color:#FC6262;
 }
 
 #edit, #delete {
     margin: .5em;
+}
+
+.Collapsed_EntryS1, .Collapsed_EntryS2 {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
+
+.Collapsed_EntryS2 {
+    background-color: #ff99ff;
 }

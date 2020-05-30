@@ -1,15 +1,11 @@
-* {
-    box-sizing: border-box;
+.LandingPage {
+    text-align: center;
 }
 
 .Description_Intro, .Description_Functional, .Description_Final {
-    padding: 3em;
+    padding: 1.5em;
     min-height: 200px;
 }
-
-/* div:nth-of-type(even) {
-    background-color: #bbbbbb;
-} */
 
 p {
     margin-left: 3em;
