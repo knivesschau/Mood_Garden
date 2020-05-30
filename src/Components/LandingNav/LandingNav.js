@@ -10,19 +10,19 @@ export default class LandingNav extends Component {
                     Landing Page
                 </Link>
                 
-                <Link to='/'>
+                <Link to='/register'>
                     Sign Up
                 </Link>
 
-                <Link to='/'>
+                <Link to='/login'>
                     Login
                 </Link>
 
-                <Link to='/'>
+                <Link to='/your-garden'>
                     Your Mood Garden
                 </Link>
 
-                <Link to='/'>
+                <Link to='/plant-rose'>
                     Plant a Rose 
                 </Link>
             </div>

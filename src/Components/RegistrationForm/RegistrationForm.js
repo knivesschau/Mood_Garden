@@ -7,7 +7,6 @@ export default class RegistrationForm extends Component {
         return (
 
             <section className="LoginForm">
-                <LandingNav/>
 
                 <h3>Begin Cultivating</h3>
 

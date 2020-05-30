@@ -9,9 +9,8 @@ export default class ViewGarden extends Component {
 
         return (
             <section className="ViewGarden">
-                <LandingNav/>
                 
-                <h1>Your Mood Garden</h1>
+                <h1 id="garden-header">Your Mood Garden</h1>
 
                 <ViewRose entries={journalEntries.journalEntries}/>
             

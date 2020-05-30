@@ -6,13 +6,12 @@ export default class PlantRoseForm extends Component {
     render() {
         return (
             <section className="PlantRose">
-                <LandingNav/>
 
                 <h1>Plant a Rose</h1>
 
                 <form className="PlantRoseForm">
 
-                    <div classname="Date_Entry">
+                    <div className="Date_Entry">
                         <p id="date-entry">Date Planted:</p>
 
                         <input type="number" placeholder="01" min="01" max="12" required="" name="month" id="month"/>

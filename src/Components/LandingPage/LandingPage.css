@@ -4,7 +4,9 @@
 
 .Description_Intro, .Description_Functional, .Description_Final {
     padding: 1.5em;
+    margin: 1em;
     min-height: 200px;
+    border: 1px solid black;
 }
 
 p {
