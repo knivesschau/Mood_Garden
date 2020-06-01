@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ViewRose from '../ViewRose/ViewRose';
-import LandingNav from '../LandingNav/LandingNav';
 import journalEntries from '../../dummy-store';
 import './ViewGarden.css';
 

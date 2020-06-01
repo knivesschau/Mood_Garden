@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import LandingNav from '../LandingNav/LandingNav'
 import './PlantRoseForm.css';
 
 export default class PlantRoseForm extends Component {

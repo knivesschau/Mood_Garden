@@ -25,6 +25,10 @@ export default class LandingNav extends Component {
                 <Link to='/plant-rose'>
                     Plant a Rose 
                 </Link>
+
+                <Link to='/edit-rose'>
+                    Edit Rose
+                </Link>
             </div>
         )
     }

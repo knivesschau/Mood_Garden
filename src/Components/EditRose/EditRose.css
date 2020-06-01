@@ -1,0 +1,12 @@
+.EditRose {
+    text-align: center; 
+}
+
+.Rose_Edit, .Bud_Edit {
+    background-color: #bbbbbb;
+}
+
+#update-garden {
+    margin: 1em;
+    margin-top: 1em;
+}
