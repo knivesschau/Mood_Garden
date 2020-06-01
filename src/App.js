@@ -7,6 +7,7 @@ import PlantRoseForm from './Components/PlantRoseForm/PlantRoseForm';
 import ViewGarden from './Components/ViewGarden/ViewGarden';
 import LandingNav from './Components/LandingNav/LandingNav';
 import EditRose from './Components/EditRose/EditRose';
+import Rose from './Components/Rose/Rose';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path='/your-garden' component={ViewGarden}/>
           <Route path='/plant-rose' component={PlantRoseForm}/>
           <Route path='/edit-rose' component={EditRose}/>
+          <Route path='/view-rose' component={Rose}/>
         </Switch>
         
       </main>

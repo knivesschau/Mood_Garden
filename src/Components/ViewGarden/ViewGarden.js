@@ -12,7 +12,7 @@ export default class ViewGarden extends Component {
                 <h1 id="garden-header">Your Mood Garden</h1>
 
                 <ViewRose entries={journalEntries.journalEntries}/>
-            
+
             </section>
         )
     }
