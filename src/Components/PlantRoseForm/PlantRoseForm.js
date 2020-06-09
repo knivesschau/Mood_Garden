@@ -1,14 +1,58 @@
 import React, {Component} from 'react';
+import moodGardenContext from '../../moodGardenContext';
+import config from '../../config';
 import './PlantRoseForm.css';
 
 export default class PlantRoseForm extends Component {
+    static defaultProps = {
+        history: {
+            push: () => {}
+        },
+    }
+
+    static contextType = moodGardenContext;
+    
+    handleSubmit = e => {
+        e.preventDefault();
+
+        const newEntry = {
+            entry_date: new Date(),
+            rose: e.target['rose-text'].value,
+            thorn: e.target['thorn-text'].value,
+            bud: e.target['bud-text'].value,
+            color: e.target['rose-colors'].value,
+        };
+
+        fetch(`${config.API_ENDPOINT}/roses`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newEntry)
+        })
+        .then(res => {
+            if (!res.ok) {
+                return res.json().then(e => Promise.reject(e))
+            }
+            return res.json();
+        })
+        .then(rose => {
+            this.context.addEntry(rose);
+            this.props.history.push(`/roses/${rose.id}`)
+        })
+        .catch(error => {
+            console.error({error})
+        });
+    }
+    
     render() {
+
         return (
             <section className="PlantRose">
 
                 <h1>Plant a Rose</h1>
 
-                <form className="PlantRoseForm">
+                <form className="PlantRoseForm" onSubmit={this.handleSubmit}>
 
                     <div className="Date_Entry">
                         <p id="date-entry">Date Planted:</p>
@@ -24,7 +68,7 @@ export default class PlantRoseForm extends Component {
 
                         <p id="rose-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
                         
-                        <textarea name="rose-text" rows="15" placeholder="Write your thoughts here"/>
+                        <textarea name="rose-text" id="rose-entry-input" rows="15" placeholder="Write your thoughts here"/>
                     </div>
 
                     <div className="Thorn_Entry">
@@ -32,7 +76,7 @@ export default class PlantRoseForm extends Component {
 
                         <p id="thorn-prompt">What didn't go as planned? What stressed you out or made you feel upset?</p>
 
-                        <textarea name="thorn-text" rows="15" placeholder="Write your thoughts here"/>
+                        <textarea name="thorn-text" id="thorn-entry-input" rows="15" placeholder="Write your thoughts here"/>
                     </div>
 
                     <div className="Bud_Entry">
@@ -40,7 +84,7 @@ export default class PlantRoseForm extends Component {
 
                         <p id="bud-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
                     
-                        <textarea name="bud-text" rows="15" placeholder="Write your thoughts here"/>
+                        <textarea name="bud-text" id="bud-entry-input" rows="15" placeholder="Write your thoughts here"/>
                     </div>
 
                     <div className="Rose_Color">
@@ -49,12 +93,12 @@ export default class PlantRoseForm extends Component {
                         <p id="color-prompt">Lastly, pick a rose color based on your current mood.</p>
 
                         <select name="rose-colors" id="colors">
-                            <option value="red">Red (Neutral)</option>
-                            <option value="yellow">Yellow (Happy)</option>
-                            <option value="white">White (Thoughtful)</option> 
-                            <option value="pink">Pink (Grateful)</option>
-                            <option value="purple">Purple (Angry)</option>
-                            <option value="black">Black (Sad)</option>
+                            <option value="Red">Red (Neutral)</option>
+                            <option value="Yellow">Yellow (Happy)</option>
+                            <option value="White">White (Thoughtful)</option> 
+                            <option value="Pink">Pink (Grateful)</option>
+                            <option value="Purple">Purple (Angry)</option>
+                            <option value="Black">Black (Sad)</option>
                         </select> 
 
                     </div>
