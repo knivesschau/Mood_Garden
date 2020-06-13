@@ -1,22 +1,31 @@
 import React, {Component} from 'react';
+import moodGardenContext from '../../moodGardenContext';
+import {Link} from 'react-router-dom';
 import './Rose.css';
 
 export default class Rose extends Component {
+    
+    static contextType = moodGardenContext;
+
     render() {
+        const {id, rose, thorn, bud, color, entry_date} = this.props;
+
         return (
             <section className="Rose">
 
-                <div className="Example_Rose">
-                    <h2>Viewing Pink Rose Planted on 2020-03-04</h2>
+                <div className="View_Rose">
+                    <Link to={`/roses/${id}`}>
+                    <h2>{color} Rose Planted on {entry_date}</h2>
+                    </Link>
 
                     <h3>Rose</h3>
-                    <p>I got some much needed rest today and was able to sleep in until noon. I was also happy that I got the clothes I ordered in the mail.</p>
+                    <p>{rose}</p>
 
                     <h3>Thorn</h3>
-                    <p>It made me a little upset that my ideas for a surprise party were ignored during a conversation with my friends.</p>
+                    <p>{thorn}</p>
 
                     <h3>Bud</h3>
-                    <p>This weekend, I want to learn how to make sourdough bread from scratch.</p>
+                    <p>{bud}</p>
 
                     <button type="submit" id="edit">Edit</button>
                     <button type="submit" id="delete">Delete</button>
