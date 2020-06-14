@@ -37,7 +37,7 @@ export default class PlantRoseForm extends Component {
             return res.json();
         })
         .then(rose => {
-            this.context.addEntry(rose);
+            this.context.addRose(rose);
             this.props.history.push(`/roses/${rose.id}`)
         })
         .catch(error => {

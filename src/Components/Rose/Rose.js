@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import moodGardenContext from '../../moodGardenContext';
-import {Link} from 'react-router-dom';
+import {findRose} from '../../garden-helpers';
 import './Rose.css';
 
 export default class Rose extends Component {
@@ -14,9 +14,7 @@ export default class Rose extends Component {
             <section className="Rose">
 
                 <div className="View_Rose">
-                    <Link to={`/roses/${id}`}>
                     <h2>{color} Rose Planted on {entry_date}</h2>
-                    </Link>
 
                     <h3>Rose</h3>
                     <p>{rose}</p>

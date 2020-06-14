@@ -22,8 +22,10 @@ class App extends Component {
         if (!res.ok) {
           return res.json().then(e => Promise.reject(e))
         }
+        return res.json()
       })
       .then(roses => {
+        console.log(roses)
         this.setState({roses})
       })
       .catch(error => {
@@ -34,7 +36,7 @@ class App extends Component {
   handleAddRose = (newRose) => {
     this.setState({
       roses: [
-        ...this.state.notes,
+        ...this.state.roses,
         newRose
       ]
     })
@@ -52,6 +54,8 @@ class App extends Component {
       addRose: this.handleAddRose,
       deleteRose: this.handleDeleteRose
     }
+
+    const {id} = this.props; 
     
     return (
       <moodGardenContext.Provider value={value}>
@@ -68,7 +72,7 @@ class App extends Component {
               <Route path='/your-garden' component={ViewGarden}/>
               <Route path='/plant-rose' component={PlantRoseForm}/>
               <Route path='/edit-rose' component={EditRose}/>
-              <Route path='/view-rose' component={Rose}/>
+              <Route path='/roses/:id' component={Rose}/>
             </Switch>
             
           </main>
