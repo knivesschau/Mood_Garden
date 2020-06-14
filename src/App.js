@@ -9,7 +9,7 @@ import PlantRoseForm from './Components/PlantRoseForm/PlantRoseForm';
 import ViewGarden from './Components/ViewGarden/ViewGarden';
 import LandingNav from './Components/LandingNav/LandingNav';
 import EditRose from './Components/EditRose/EditRose';
-import Rose from './Components/Rose/Rose';
+import RoseMain from './Components/RoseMain/RoseMain';
 
 class App extends Component {
   state = {
@@ -54,8 +54,6 @@ class App extends Component {
       addRose: this.handleAddRose,
       deleteRose: this.handleDeleteRose
     }
-
-    const {id} = this.props; 
     
     return (
       <moodGardenContext.Provider value={value}>
@@ -72,7 +70,7 @@ class App extends Component {
               <Route path='/your-garden' component={ViewGarden}/>
               <Route path='/plant-rose' component={PlantRoseForm}/>
               <Route path='/edit-rose' component={EditRose}/>
-              <Route path='/roses/:id' component={Rose}/>
+              <Route path='/roses/:id' component={RoseMain}/>
             </Switch>
             
           </main>

@@ -4,12 +4,6 @@ import RoseInfo from '../RoseInfo/RoseInfo';
 import './ViewGarden.css';
 
 export default class ViewGarden extends Component {
-    static defaultProps = {
-        match: {
-            params: {}
-        }
-    }
-
     static contextType = moodGardenContext;
 
     render() {
@@ -30,7 +24,7 @@ export default class ViewGarden extends Component {
                                 // rose={rose.rose}
                                 // thorn={rose.thorn}
                                 // bud={rose.bud}
-                                />
+                            />
                         </li>
                     )}
                 </ul>

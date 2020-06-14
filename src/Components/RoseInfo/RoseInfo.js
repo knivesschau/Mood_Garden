@@ -9,7 +9,7 @@ export default class RoseInfo extends Component {
     static contextType = moodGardenContext;
 
     render() {
-        const {id, rose, thorn, bud, color, entry_date} = this.props;
+        const {id, color, entry_date} = this.props;
 
         return (
             <section className="ViewRose">
@@ -18,8 +18,8 @@ export default class RoseInfo extends Component {
                 <Link to={`/roses/${id}`}>
                     <h2>{color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h2>
                 </Link>
-
-                {/* <h3>Rose</h3>
+{/* 
+                <h3>Rose</h3>
                 <p>{rose}</p>
 
                 <h3>Thorn</h3>
