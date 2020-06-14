@@ -12,6 +12,10 @@ export default class RoseMain extends Component {
 
     static contextType = moodGardenContext;
 
+    handleDeleteRose = id => {
+        this.props.history.push(`/`)
+    }
+
     render() {
         const {roses=[]} = this.context; 
         const {id} = this.props.match.params;
@@ -28,6 +32,7 @@ export default class RoseMain extends Component {
                         bud={roseEntry.bud}
                         color={roseEntry.color}
                         entry_date={roseEntry.entry_date}
+                        onDeleteRose={this.handleDeleteRose}
                     />
             </section>
         )

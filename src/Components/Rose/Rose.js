@@ -1,10 +1,39 @@
 import React, {Component} from 'react';
+import config from '../../config';
 import moodGardenContext from '../../moodGardenContext';
 import './Rose.css';
 
 export default class Rose extends Component {
-    
+    static defaultProps = {
+        onDeleteRose: () => {}
+    }
+
     static contextType = moodGardenContext;
+
+    handleDelete = e => {
+        e.preventDefault();
+        const id = this.props.id;
+
+        fetch(`${config.API_ENDPOINT}/roses/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json'
+            },
+        })
+        .then(res => {
+            if (!res.ok) {
+                return res.json().then(e => Promise.reject(e))
+            }
+            return null;
+        })
+        .then(() => {
+            this.context.deleteRose(id);
+            this.props.onDeleteRose(id);
+        })
+        .catch(error => {
+            console.error({error})
+        });
+    }
 
     render() {
         const {rose, thorn, bud, color, entry_date} = this.props;
@@ -24,8 +53,8 @@ export default class Rose extends Component {
                     <h3>Bud</h3>
                     <p>{bud}</p>
 
-                    <button type="submit" id="edit">Edit</button>
-                    <button type="submit" id="delete">Delete</button>
+                    <button type="submit" id="edit">Edit Rose</button>
+                    <button type="button" id="delete" onClick={this.handleDelete}>Delete Rose</button>
 
                 </div>
 
