@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import moodGardenContext from '../../moodGardenContext';
-import {findRose} from '../../garden-helpers';
 import Rose from '../Rose/Rose';
 import './RoseMain.css';
 
@@ -16,20 +15,20 @@ export default class RoseMain extends Component {
     render() {
         const {roses=[]} = this.context; 
         const {id} = this.props.match.params;
-        // const roseEntry = findRose(roses, id) using helper function results in undefined data? 
+        const roseEntry = roses.find(rose => rose.id === parseInt(id)) || {};
+
+        console.log(roseEntry);
         
         return (
             <section className="View_Rose">
-                {roses.find(rose => 
                     <Rose 
-                        id={rose.id}
-                        rose={rose.rose}
-                        thorn={rose.thorn}
-                        bud={rose.bud}
-                        color={rose.color}
-                        entry_date={rose.entry_date}
+                        id={roseEntry.id}
+                        rose={roseEntry.rose}
+                        thorn={roseEntry.thorn}
+                        bud={roseEntry.bud}
+                        color={roseEntry.color}
+                        entry_date={roseEntry.entry_date}
                     />
-                )}
             </section>
         )
     }
