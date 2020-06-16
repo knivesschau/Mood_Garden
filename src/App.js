@@ -47,16 +47,25 @@ class App extends Component {
       roses: this.state.roses.filter(rose => rose.id !== id)
     })
   }
+
+  handleUpdateRose = updatedRose => {
+    const updatedRoses = this.state.roses.map(rose => rose.id === updatedRose.id ? updatedRose : rose);
+
+    this.setState({
+      roses: updatedRoses
+    });
+  };
   
   render() {
-    const value = {
+    const roseValues = {
       roses: this.state.roses,
       addRose: this.handleAddRose,
-      deleteRose: this.handleDeleteRose
+      deleteRose: this.handleDeleteRose,
+      updateRose: this.handleUpdateRose
     }
     
     return (
-      <moodGardenContext.Provider value={value}>
+      <moodGardenContext.Provider value={roseValues}>
         <main className='App'>
             
             <nav className="StaticNav">
@@ -69,7 +78,7 @@ class App extends Component {
               <Route path='/login' component={LoginForm}/>
               <Route path='/your-garden' component={ViewGarden}/>
               <Route path='/plant-rose' component={PlantRoseForm}/>
-              <Route path='/edit-rose' component={EditRose}/>
+              <Route path='/edit-rose/:id' component={EditRose}/>
               <Route path='/roses/:id' component={RoseMain}/>
             </Switch>
             

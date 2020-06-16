@@ -13,7 +13,7 @@ export default class RoseMain extends Component {
     static contextType = moodGardenContext;
 
     handleDeleteRose = id => {
-        this.props.history.push(`/`)
+        this.props.history.push(`/your-garden`)
     }
 
     render() {

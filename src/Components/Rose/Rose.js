@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import config from '../../config';
 import moodGardenContext from '../../moodGardenContext';
 import './Rose.css';
@@ -36,12 +37,13 @@ export default class Rose extends Component {
     }
 
     render() {
-        const {rose, thorn, bud, color, entry_date} = this.props;
+        const {id, rose, thorn, bud, color, entry_date} = this.props;
 
         return (
             <section className="Rose">
 
                 <div className="View_Rose">
+
                     <h2>{color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h2>
 
                     <h3>Rose</h3>
@@ -53,7 +55,12 @@ export default class Rose extends Component {
                     <h3>Bud</h3>
                     <p>{bud}</p>
 
-                    <button type="submit" id="edit">Edit Rose</button>
+                    <Link to={`/edit-rose/${id}`}>
+                        <button type="submit" id="edit">
+                            Edit Rose
+                        </button>
+                    </Link>
+
                     <button type="button" id="delete" onClick={this.handleDelete}>Delete Rose</button>
 
                 </div>
