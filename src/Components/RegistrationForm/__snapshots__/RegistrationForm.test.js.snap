@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationForm Component renders the complete RegistrationForm Component 1`] = `
+<section
+  className="LoginForm"
+>
+  <nav
+    className="Login_Nav"
+    role="navigation"
+  >
+    <Link
+      to="/"
+    >
+      Back to Landing Page
+    </Link>
+  </nav>
+  <h3>
+    Begin Cultivating (Will Be Included in Final Version)
+  </h3>
+  <form
+    className="Registration_Form"
+  >
+    <div
+      className="First_Name"
+    >
+      <label
+        htmlFor="first_name"
+      >
+        First Name:
+      </label>
+      <input
+        id="first-name"
+        name="first_name"
+        type="text"
+      />
+    </div>
+    <div
+      className="Last_Name"
+    >
+      <label
+        htmlFor="last_name"
+      >
+        Last Name:
+      </label>
+      <input
+        id="last-name"
+        name="last_name"
+        type="text"
+      />
+    </div>
+    <div
+      className="E-Mail_Add"
+    >
+      <label
+        htmlFor="email"
+      >
+        E-Mail:
+      </label>
+      <input
+        id="e-mail"
+        name="email"
+        type="text"
+      />
+    </div>
+    <div
+      className="Username"
+    >
+      <label
+        htmlFor="username"
+      >
+        Username:
+      </label>
+      <input
+        id="username"
+        name="username"
+        type="text"
+      />
+    </div>
+    <div
+      className="Password"
+    >
+      <label
+        htmlFor="password"
+      >
+        Password:
+      </label>
+      <input
+        id="password"
+        name="password"
+        type="text"
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Register
+    </button>
+  </form>
+</section>
+`;

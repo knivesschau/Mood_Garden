@@ -7,7 +7,6 @@ import LoginForm from './Components/LoginForm/LoginForm';
 import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
 import PlantRoseForm from './Components/PlantRoseForm/PlantRoseForm';
 import ViewGarden from './Components/ViewGarden/ViewGarden';
-import LandingNav from './Components/LandingNav/LandingNav';
 import EditRose from './Components/EditRose/EditRose';
 import RoseMain from './Components/RoseMain/RoseMain';
 
@@ -67,10 +66,6 @@ class App extends Component {
     return (
       <moodGardenContext.Provider value={roseValues}>
         <main className='App'>
-            
-            <nav className="StaticNav">
-              <LandingNav/>
-            </nav>
 
             <Switch>
               <Route exact path='/' component={LandingPage}/>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
 import moodGardenContext from '../../moodGardenContext';
+import RoseNav from '../RoseNav/RoseNav';
 import config from '../../config';
 import './PlantRoseForm.css';
 
@@ -50,6 +50,7 @@ export default class PlantRoseForm extends Component {
 
         return (
             <section className="PlantRose">
+                <RoseNav/>
 
                 <h1>Plant a Rose</h1>
 

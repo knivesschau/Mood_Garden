@@ -6,10 +6,6 @@ export default class LandingNav extends Component {
     render() {
         return (
             <div className="LandingNav">
-                <Link to='/'>
-                    Landing Page
-                </Link>
-                
                 <Link to='/register'>
                     Sign Up
                 </Link>
@@ -22,13 +18,6 @@ export default class LandingNav extends Component {
                     Your Garden
                 </Link>
 
-                <Link to='/plant-rose'>
-                    Plant a Rose 
-                </Link>
-
-                <Link to='/edit-rose'>
-                    Edit Rose
-                </Link>
             </div>
         )
     }

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewGarden Component renders the complete ViewGarden Component and all nested Components 1`] = `
+<section
+  className="ViewGarden"
+>
+  <nav
+    className="Garden_Nav"
+    role="navigation"
+  >
+    <RoseNav />
+  </nav>
+  <h1
+    id="garden-header"
+  >
+    Your Mood Garden
+  </h1>
+  <ul />
+</section>
+`;

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import moodGardenContext from '../../moodGardenContext';
+import RoseNav from '../RoseNav/RoseNav';
 import Rose from '../Rose/Rose';
 import './RoseMain.css';
 
@@ -25,6 +26,10 @@ export default class RoseMain extends Component {
         
         return (
             <section className="View_Rose">
+                <nav role="navigation" className="Rose_Nav">
+                    <RoseNav/>
+                </nav>
+                
                     <Rose 
                         id={roseEntry.id}
                         rose={roseEntry.rose}

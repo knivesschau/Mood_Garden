@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import EditRoseForm from '../EditRoseForm/EditRoseForm';
+import RoseNav from '../RoseNav/RoseNav';
 import config from '../../config';
 import moodGardenContext from '../../moodGardenContext';
 import './EditRose.css';
@@ -56,6 +57,8 @@ export default class EditRose extends Component {
 
         return (
             <section className="EditRose">
+
+                <RoseNav/>
                 
                 <div className="Rose__Editor">
                     

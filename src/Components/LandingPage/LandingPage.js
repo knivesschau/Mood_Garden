@@ -7,6 +7,10 @@ export default class LandingPage extends Component {
         return (
             <div className="LandingPage">
                 
+                <nav role="navigation" className="Landing_Nav">
+                    <LandingNav/>
+                </nav>
+
                 <header role="banner">
                     <h1>Mood Garden</h1>
                     

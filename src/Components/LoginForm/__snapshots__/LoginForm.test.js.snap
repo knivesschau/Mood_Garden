@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
+<section
+  className="LoginForm"
+>
+  <nav
+    className="Login_Nav"
+    role="navigation"
+  >
+    <Link
+      to="/"
+    >
+      Back to Landing Page
+    </Link>
+  </nav>
+  <h3>
+    Log In (Will Be Included in Final Version)
+  </h3>
+  <form
+    className="Login_Form"
+  >
+    <div>
+      <label
+        htmlFor="username"
+      >
+        Username:
+      </label>
+      <input
+        id="return-user"
+        name="return-user"
+        type="text"
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="username"
+      >
+        Password:
+      </label>
+      <input
+        id="return-pass"
+        name="return-pass"
+        type="text"
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</section>
+`;

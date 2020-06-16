@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditRose Component renders the complete EditRose Component and all nested Components 1`] = `
+<section
+  className="EditRose"
+>
+  <RoseNav />
+  <div
+    className="Rose__Editor"
+  >
+    <form
+      className="Edit_Rose"
+      onSubmit={[Function]}
+    >
+      <EditRoseForm />
+      <button
+        id="update-garden"
+        type="submit"
+      >
+        Update Rose
+      </button>
+      <button
+        id="cancel-update"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+</section>
+`;

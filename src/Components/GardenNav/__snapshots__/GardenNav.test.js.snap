@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GardenNav Component renders the complete GardenNav Component 1`] = `
+<div
+  className="Garden_Nav"
+>
+  <Link
+    to="/"
+  >
+    Landing Page
+  </Link>
+  ||
+  <Link
+    to="/plant-rose"
+  >
+    Plant A Rose
+  </Link>
+  ||
+  <Link
+    to="/"
+  >
+    Sign Out
+  </Link>
+</div>
+`;

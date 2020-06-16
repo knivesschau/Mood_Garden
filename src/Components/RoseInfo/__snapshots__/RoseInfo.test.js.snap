@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoseInfo Component renders the complete RoseInfo Component 1`] = `
+<section
+  className="ViewRose"
+>
+  <div
+    className="Collapsed_Roses"
+  >
+    <Link
+      to="/roses/undefined"
+    >
+      <h2>
+         Rose Planted on 
+        Invalid Date
+      </h2>
+    </Link>
+  </div>
+</section>
+`;

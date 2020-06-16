@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LandingNav from '../LandingNav/LandingNav';
+import {Link} from 'react-router-dom';
 import './RegistrationForm.css';
 
 export default class RegistrationForm extends Component {
@@ -8,7 +8,13 @@ export default class RegistrationForm extends Component {
 
             <section className="LoginForm">
 
-                <h3>Begin Cultivating</h3>
+                <nav role="navigation" className="Login_Nav"> 
+                    <Link to='/'>
+                        Back to Landing Page
+                    </Link>
+                </nav>
+
+                <h3>Begin Cultivating (Will Be Included in Final Version)</h3>
 
                 <form className="Registration_Form">
                     

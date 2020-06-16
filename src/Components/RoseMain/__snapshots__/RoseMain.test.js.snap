@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoseMain Component renders the complete RoseMain Component and all nested Components 1`] = `
+<section
+  className="View_Rose"
+>
+  <nav
+    className="Rose_Nav"
+    role="navigation"
+  >
+    <RoseNav />
+  </nav>
+  <Rose
+    onDeleteRose={[Function]}
+  />
+</section>
+`;

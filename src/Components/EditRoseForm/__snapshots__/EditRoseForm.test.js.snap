@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] = `
+<Fragment>
+  <h1>
+    Editing 
+     Rose Planted on 
+    Invalid Date
+  </h1>
+  <div
+    className="Rose_Editor"
+  >
+    <h2>
+      Rose
+    </h2>
+    <p
+      id="rose-prompt"
+    >
+      What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+    </p>
+    <textarea
+      id="rose-entry-input"
+      name="rose-edit"
+      rows="15"
+    />
+  </div>
+  <div
+    className="Thorn_Editor"
+  >
+    <h2>
+      Thorn
+    </h2>
+    <p
+      id="thorn-prompt"
+    >
+      What didn't go as planned? What stressed you out or made you feel upset?
+    </p>
+    <textarea
+      id="thorn-entry-input"
+      name="thorn-edit"
+      rows="15"
+    />
+  </div>
+  <div
+    className="Bud_Editor"
+  >
+    <h2>
+      Bud
+    </h2>
+    <p
+      id="bud-prompt"
+    >
+      What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+    </p>
+    <textarea
+      id="bud-entry-input"
+      name="bud-edit"
+      rows="15"
+    />
+  </div>
+</Fragment>
+`;

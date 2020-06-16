@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rose Component renders the complete Rose Component 1`] = `
+<section
+  className="Rose"
+>
+  <div
+    className="View_Rose"
+  >
+    <h2>
+       Rose Planted on 
+      Invalid Date
+    </h2>
+    <h3>
+      Rose
+    </h3>
+    <p />
+    <h3>
+      Thorn
+    </h3>
+    <p />
+    <h3>
+      Bud
+    </h3>
+    <p />
+    <Link
+      to="/edit-rose/undefined"
+    >
+      <button
+        id="edit"
+        type="submit"
+      >
+        Edit Rose
+      </button>
+    </Link>
+    <button
+      id="delete"
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Rose
+    </button>
+  </div>
+</section>
+`;
