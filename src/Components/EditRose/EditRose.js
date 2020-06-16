@@ -15,10 +15,14 @@ export default class EditRose extends Component {
 
     handleUpdateRose = e => {
         e.preventDefault();
-
+        
         const {id} = this.props.match.params;
-        const {rose, bud, thorn} = this.props.match.params;
-        const updatedRose = {id, rose, bud, thorn}
+
+        const updatedRose = {
+            rose: e.target['rose-edit'].value,
+            thorn: e.target['thorn-edit'].value,
+            bud: e.target['bud-edit'].value,
+        }
 
         fetch(`${config.API_ENDPOINT}/roses/${id}`, {
             method: 'PATCH',
@@ -34,7 +38,7 @@ export default class EditRose extends Component {
         })
         .then(() => {
             this.context.updateRose(updatedRose);
-            this.props.history.push(`/roses/${rose.id}`)
+            this.props.history.push(`/your-garden`)
         })
         .catch(error => {
             console.error({error})
@@ -66,7 +70,7 @@ export default class EditRose extends Component {
                         entry_date={roseEntry.entry_date}
                     />
 
-                    <button type="submit" id="update-garden">Update Garden</button>
+                    <button type="submit" id="update-garden">Update Rose</button>
                     <button type="button" id="cancel-update" onClick={this.handleCancelClick}>Cancel</button>
                     
                     </form>
