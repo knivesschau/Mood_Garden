@@ -26,9 +26,6 @@ export default class ViewGarden extends Component {
                                 id={rose.id}
                                 color={rose.color}
                                 entry_date={rose.entry_date}
-                                // rose={rose.rose}
-                                // thorn={rose.thorn}
-                                // bud={rose.bud}
                             />
                         </li>
                     )}

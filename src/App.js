@@ -48,7 +48,9 @@ class App extends Component {
   }
 
   handleUpdateRose = updatedRose => {
-    const updatedRoses = this.state.roses.map(rose => rose.id === updatedRose.id ? updatedRose : rose);
+    const updatedRoses = this.state.roses.map(rose => { 
+      return rose.id === updatedRose.id ? updatedRose : rose
+    })
 
     this.setState({
       roses: updatedRoses

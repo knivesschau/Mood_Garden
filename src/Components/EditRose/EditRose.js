@@ -18,6 +18,7 @@ export default class EditRose extends Component {
         e.preventDefault();
         
         const {id} = this.props.match.params;
+        const roseId = parseInt(id); 
 
         const updatedRose = {
             rose: e.target['rose-edit'].value,
@@ -25,7 +26,7 @@ export default class EditRose extends Component {
             bud: e.target['bud-edit'].value,
         }
 
-        fetch(`${config.API_ENDPOINT}/roses/${id}`, {
+        fetch(`${config.API_ENDPOINT}/roses/${roseId}`, {
             method: 'PATCH',
             body: JSON.stringify(updatedRose),
             headers: {
@@ -39,7 +40,7 @@ export default class EditRose extends Component {
         })
         .then(() => {
             this.context.updateRose(updatedRose);
-            this.props.history.push(`/your-garden`)
+            window.location=`/roses/${roseId}`;
         })
         .catch(error => {
             console.error({error})

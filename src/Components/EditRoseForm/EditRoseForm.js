@@ -13,7 +13,7 @@ export default class EditRoseForm extends Component {
 
                 <p id="rose-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
                 
-                <textarea name="rose-edit" id="rose-entry-input" rows="15" placeholder={rose}/>
+                <textarea name="rose-edit" id="rose-entry-input" rows="15" defaultValue={rose}/>
                 
                 </div>
 
@@ -22,7 +22,7 @@ export default class EditRoseForm extends Component {
 
                 <p id="thorn-prompt">What didn't go as planned? What stressed you out or made you feel upset?</p>
 
-                <textarea name="thorn-edit" id="thorn-entry-input" rows="15" placeholder={thorn}/>
+                <textarea name="thorn-edit" id="thorn-entry-input" rows="15" defaultValue={thorn}/>
             </div>
 
             <div className="Bud_Editor">
@@ -30,7 +30,7 @@ export default class EditRoseForm extends Component {
 
                 <p id="bud-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
             
-                <textarea name="bud-edit" id="bud-entry-input" rows="15" placeholder={bud}/>
+                <textarea name="bud-edit" id="bud-entry-input" rows="15" defaultValue={bud}/>
             </div>
             </>
         );
