@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import TokenService from '../../services/token-services'
 import moodGardenContext from '../../moodGardenContext';
 import RoseNav from '../RoseNav/RoseNav';
 import config from '../../config';
@@ -12,11 +13,11 @@ export default class PlantRoseForm extends Component {
     }
 
     static contextType = moodGardenContext;
-    
+
     handleSubmit = e => {
         e.preventDefault();
 
-        const newEntry = {
+        let newEntry = {
             entry_date: new Date(),
             rose: e.target['rose-text'].value,
             thorn: e.target['thorn-text'].value,
@@ -27,7 +28,8 @@ export default class PlantRoseForm extends Component {
         fetch(`${config.API_ENDPOINT}/roses`, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'authorization': `basic ${TokenService.getAuthToken()}`
             },
             body: JSON.stringify(newEntry)
         })
@@ -103,7 +105,7 @@ export default class PlantRoseForm extends Component {
                             <option value="Black">Black (Sad)</option>
                         </select> 
 
-                    </div>
+                    </div> 
                     
                 <button type="submit" id="submit-rose">Plant Rose</button>
                 <button type="reset" id="start-over">Start Over</button>

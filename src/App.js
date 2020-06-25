@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import config from './config';
 import moodGardenContext from './moodGardenContext';
 import {Route, Switch} from 'react-router-dom';
+import TokenService from './services/token-services';
 import LandingPage from './Components/LandingPage/LandingPage';
 import LoginForm from './Components/LoginForm/LoginForm';
 import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
@@ -16,7 +17,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(`${config.API_ENDPOINT}/roses`)
+    fetch(`${config.API_ENDPOINT}/roses`, {
+      headers: {
+        'authorization': `basic ${TokenService.getAuthToken()}`
+      }
+    })
       .then(res => {
         if (!res.ok) {
           return res.json().then(e => Promise.reject(e))

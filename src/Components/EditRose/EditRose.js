@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import TokenService from '../../services/token-services';
 import EditRoseForm from '../EditRoseForm/EditRoseForm';
 import RoseNav from '../RoseNav/RoseNav';
 import config from '../../config';
@@ -30,7 +31,8 @@ export default class EditRose extends Component {
             method: 'PATCH',
             body: JSON.stringify(updatedRose),
             headers: {
-                "content-type": "application/json"
+                'content-type': 'application/json',
+                'authorization': `basic ${TokenService.getAuthToken()}`
             }
         })
         .then(res => {
