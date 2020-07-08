@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import config from '../../config';
+import TokenService from '../../services/token-services';
 import moodGardenContext from '../../moodGardenContext';
 import './Rose.css';
 
@@ -18,7 +19,8 @@ export default class Rose extends Component {
         fetch(`${config.API_ENDPOINT}/roses/${id}`, {
             method: 'DELETE',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
         })
         .then(res => {

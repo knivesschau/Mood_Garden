@@ -35,7 +35,6 @@ export default class LoginForm extends Component {
                 })
             })
         
-        // window.location= '/your-garden'
     }
 
     render() {
