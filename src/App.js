@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount() {
     fetch(`${config.API_ENDPOINT}/roses`, {
       headers: {
-        'authorization': `basic ${TokenService.getAuthToken()}`
+        'authorization': `bearer ${TokenService.getAuthToken()}`
       }
     })
       .then(res => {

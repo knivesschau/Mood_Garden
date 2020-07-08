@@ -5,6 +5,8 @@ import './LandingNav.css';
 
 export default class LandingNav extends Component {
     handleLogoutClick = () => {
+        TokenService.clearAuthToken();
+        window.location='/';
     }
 
     renderLogout() {

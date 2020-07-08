@@ -32,7 +32,7 @@ export default class EditRose extends Component {
             body: JSON.stringify(updatedRose),
             headers: {
                 'content-type': 'application/json',
-                'authorization': `basic ${TokenService.getAuthToken()}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             }
         })
         .then(res => {

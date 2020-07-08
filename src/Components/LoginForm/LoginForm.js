@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import TokenService from '../../services/token-services';
+import AuthApiService from '../../services/auth-api-service';
 import {Link} from 'react-router-dom';
 import './LoginForm.css';
 
@@ -7,22 +8,34 @@ export default class LoginForm extends Component {
     static defaultProps = {
         onValidLogin: () => {}
     }
-    
-    // state = { error: null }
 
-    handleLoginAuth = e => {
-        e.preventDefault()
-        const {return_user, return_pass} = e.target
+    state = {error: null}
 
-        TokenService.saveAuthToken(
-            TokenService.makeBasicAuthToken(return_user.value, return_pass.value)
-        )
+    handleJwtLoginAuth = e => {
+        e.preventDefault();
+        const {return_user, return_pass} = e.target;
+
+        this.setState({
+            error: null
+        })
+
+        AuthApiService.postLogin({
+            user_name: return_user.value,
+            password: return_pass.value 
+        })
+            .then(res => {
+                return_user.value = ''
+                return_pass.value = ''
+                TokenService.saveAuthToken(res.authToken)
+                this.props.onValidLogin()
+            })
+            .catch(res => {
+                this.setState({
+                    error: res.error
+                })
+            })
         
-        return_user.value= ''
-        return_pass.value = ''
-        this.props.onValidLogin()
-
-        window.location='/your-garden'
+        // window.location= '/your-garden'
     }
 
     render() {
@@ -37,7 +50,7 @@ export default class LoginForm extends Component {
             
                 <h3>Log In</h3>
 
-                <form className="Login_Form" onSubmit={this.handleLoginAuth}> 
+                <form className="Login_Form" onSubmit={this.handleJwtLoginAuth}> 
 
                     <div>
                         <label htmlFor="username">

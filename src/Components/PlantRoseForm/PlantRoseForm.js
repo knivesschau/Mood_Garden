@@ -29,12 +29,13 @@ export default class PlantRoseForm extends Component {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'authorization': `basic ${TokenService.getAuthToken()}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
             body: JSON.stringify(newEntry)
         })
         .then(res => {
             if (!res.ok) {
+                console.log(newEntry)
                 return res.json().then(e => Promise.reject(e))
             }
             return res.json();
