@@ -15,38 +15,21 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
     <div
       className="Date_Entry"
     >
-      <p
-        id="date-entry"
+      <label
+        htmlFor="date"
       >
-        Date Planted:
-      </p>
-      <input
-        id="month"
-        max="12"
-        min="01"
-        name="month"
-        placeholder="01"
-        required=""
-        type="number"
-      />
-      <input
-        id="day"
-        max="31"
-        min="01"
-        name="day"
-        placeholder="05"
-        required=""
-        type="number"
-      />
-      <input
-        id="year"
-        max="2030"
-        min="2019"
-        name="year"
-        placeholder="2019"
-        required=""
-        type="number"
-      />
+        <p
+          id="date-entry"
+        >
+          Date Planted:
+        </p>
+        <input
+          id="entry-date"
+          name="date"
+          required=""
+          type="date"
+        />
+      </label>
     </div>
     <div
       className="Rose_Entry"
@@ -54,17 +37,25 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
       <h2>
         Rose
       </h2>
-      <p
-        id="rose-prompt"
+      <label
+        htmlFor="rose-entry-input"
       >
-        What is something you are looking forward to? Are there any new ideas that you would like to see grow?
-      </p>
-      <textarea
-        id="rose-entry-input"
-        name="rose-text"
-        placeholder="Write your thoughts here"
-        rows="15"
-      />
+        <p
+          id="rose-prompt"
+        >
+          What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+        </p>
+        <textarea
+          id="rose-entry-input"
+          name="rose-text"
+          onChange={[Function]}
+          placeholder="Write your thoughts here"
+          rows="15"
+        />
+        <ErrorValidation
+          message="Please enter in some text to repsond to the prompt."
+        />
+      </label>
     </div>
     <div
       className="Thorn_Entry"
@@ -72,17 +63,25 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
       <h2>
         Thorn
       </h2>
-      <p
-        id="thorn-prompt"
+      <label
+        htmlFor="thorn-entry-input"
       >
-        What didn't go as planned? What stressed you out or made you feel upset?
-      </p>
-      <textarea
-        id="thorn-entry-input"
-        name="thorn-text"
-        placeholder="Write your thoughts here"
-        rows="15"
-      />
+        <p
+          id="thorn-prompt"
+        >
+          What didn't go as planned? What stressed you out or made you feel upset?
+        </p>
+        <textarea
+          id="thorn-entry-input"
+          name="thorn-text"
+          onChange={[Function]}
+          placeholder="Write your thoughts here"
+          rows="15"
+        />
+        <ErrorValidation
+          message="Please enter in some text to repsond to the prompt."
+        />
+      </label>
     </div>
     <div
       className="Bud_Entry"
@@ -90,17 +89,25 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
       <h2>
         Bud
       </h2>
-      <p
-        id="bud-prompt"
+      <label
+        htmlFor="bud-text"
       >
-        What is something you are looking forward to? Are there any new ideas that you would like to see grow?
-      </p>
-      <textarea
-        id="bud-entry-input"
-        name="bud-text"
-        placeholder="Write your thoughts here"
-        rows="15"
-      />
+        <p
+          id="bud-prompt"
+        >
+          What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+        </p>
+        <textarea
+          id="bud-entry-input"
+          name="bud-text"
+          onChange={[Function]}
+          placeholder="Write your thoughts here"
+          rows="15"
+        />
+        <ErrorValidation
+          message="Please enter in some text to repsond to the prompt."
+        />
+      </label>
     </div>
     <div
       className="Rose_Color"
@@ -108,46 +115,57 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
       <h2>
         Rose Color
       </h2>
-      <p
-        id="color-prompt"
+      <label
+        htmlFor="colors"
       >
-        Lastly, pick a rose color based on your current mood.
-      </p>
-      <select
-        id="colors"
-        name="rose-colors"
-      >
-        <option
-          value="Red"
+        <p
+          id="color-prompt"
         >
-          Red (Neutral)
-        </option>
-        <option
-          value="Yellow"
+          Lastly, pick a rose color based on your current mood.
+        </p>
+        <select
+          id="colors"
+          name="rose-colors"
+          onChange={[Function]}
         >
-          Yellow (Happy)
-        </option>
-        <option
-          value="White"
-        >
-          White (Thoughtful)
-        </option>
-        <option
-          value="Pink"
-        >
-          Pink (Grateful)
-        </option>
-        <option
-          value="Purple"
-        >
-          Purple (Angry)
-        </option>
-        <option
-          value="Black"
-        >
-          Black (Sad)
-        </option>
-      </select>
+          <option
+            value=""
+          />
+          <option
+            value="Red"
+          >
+            Red (Neutral)
+          </option>
+          <option
+            value="Yellow"
+          >
+            Yellow (Happy)
+          </option>
+          <option
+            value="White"
+          >
+            White (Thoughtful)
+          </option>
+          <option
+            value="Pink"
+          >
+            Pink (Grateful)
+          </option>
+          <option
+            value="Purple"
+          >
+            Purple (Angry)
+          </option>
+          <option
+            value="Black"
+          >
+            Black (Sad)
+          </option>
+        </select>
+        <ErrorValidation
+          message="Please select a color."
+        />
+      </label>
     </div>
     <button
       id="submit-rose"

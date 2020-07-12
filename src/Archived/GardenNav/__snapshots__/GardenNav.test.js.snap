@@ -17,6 +17,7 @@ exports[`GardenNav Component renders the complete GardenNav Component 1`] = `
   </Link>
   ||
   <Link
+    onClick={[Function]}
     to="/"
   >
     Sign Out

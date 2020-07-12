@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import moodGardenContext from '../../moodGardenContext';
-import GardenNav from '../GardenNav/GardenNav';
+import MainNav from '../MainNav/MainNav';
 import RoseInfo from '../RoseInfo/RoseInfo';
 import './ViewGarden.css';
 
@@ -14,7 +14,7 @@ export default class ViewGarden extends Component {
             <section className="ViewGarden">
                 
                 <nav role="navigation" className="Garden_Nav">
-                    <GardenNav/>
+                    <MainNav/>
                 </nav>
 
                 <h1 id="garden-header">Your Mood Garden</h1>

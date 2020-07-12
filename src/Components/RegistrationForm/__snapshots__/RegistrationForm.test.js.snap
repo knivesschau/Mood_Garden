@@ -5,63 +5,22 @@ exports[`RegistrationForm Component renders the complete RegistrationForm Compon
   className="LoginForm"
 >
   <nav
-    className="Login_Nav"
+    className="Register_Nav"
     role="navigation"
   >
     <Link
       to="/"
     >
-      Back to Landing Page
+      Back
     </Link>
   </nav>
   <h3>
-    Begin Cultivating (Will Be Included in Final Version)
+    Begin Cultivating
   </h3>
   <form
     className="Registration_Form"
+    onSubmit={[Function]}
   >
-    <div
-      className="First_Name"
-    >
-      <label
-        htmlFor="first_name"
-      >
-        First Name:
-      </label>
-      <input
-        id="first-name"
-        name="first_name"
-        type="text"
-      />
-    </div>
-    <div
-      className="Last_Name"
-    >
-      <label
-        htmlFor="last_name"
-      >
-        Last Name:
-      </label>
-      <input
-        id="last-name"
-        name="last_name"
-        type="text"
-      />
-    </div>
-    <div
-      className="E-Mail_Add"
-    >
-      <label
-        htmlFor="email"
-      >
-        E-Mail:
-      </label>
-      <input
-        id="e-mail"
-        name="email"
-        type="text"
-      />
-    </div>
     <div
       className="Username"
     >
@@ -69,12 +28,12 @@ exports[`RegistrationForm Component renders the complete RegistrationForm Compon
         htmlFor="username"
       >
         Username:
+        <input
+          id="username"
+          name="username"
+          type="text"
+        />
       </label>
-      <input
-        id="username"
-        name="username"
-        type="text"
-      />
     </div>
     <div
       className="Password"
@@ -83,12 +42,22 @@ exports[`RegistrationForm Component renders the complete RegistrationForm Compon
         htmlFor="password"
       >
         Password:
+        <input
+          id="password"
+          name="password"
+          type="password"
+        />
       </label>
-      <input
-        id="password"
-        name="password"
-        type="text"
-      />
+      <label
+        htmlFor="retype-password"
+      >
+        Re-Type Password:
+        <input
+          id="retype-password"
+          name="re-typepassword"
+          type="password"
+        />
+      </label>
     </div>
     <button
       type="submit"

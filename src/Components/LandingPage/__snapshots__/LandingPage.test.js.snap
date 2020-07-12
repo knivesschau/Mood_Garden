@@ -8,7 +8,7 @@ exports[`LandingPage Component renders the Complete LandingPage Component and al
     className="Landing_Nav"
     role="navigation"
   >
-    <LandingNav />
+    <MainNav />
   </nav>
   <header
     role="banner"

@@ -7,9 +7,10 @@
     background-color: #bbbbbb;
 }
 
-input[type="number"] {
+#entry-date {
     text-align: center;
-    margin: .25em;
+    margin-left: 5em; 
+    margin-right: 5em;
 }
 
 textarea {

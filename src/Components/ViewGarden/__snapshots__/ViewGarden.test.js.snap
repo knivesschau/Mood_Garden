@@ -8,7 +8,7 @@ exports[`ViewGarden Component renders the complete ViewGarden Component and all 
     className="Garden_Nav"
     role="navigation"
   >
-    <RoseNav />
+    <MainNav />
   </nav>
   <h1
     id="garden-header"

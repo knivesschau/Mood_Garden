@@ -13,16 +13,24 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
     <h2>
       Rose
     </h2>
-    <p
-      id="rose-prompt"
+    <label
+      htmlFor="rose-entry-input"
     >
-      What is something you are looking forward to? Are there any new ideas that you would like to see grow?
-    </p>
-    <textarea
-      id="rose-entry-input"
-      name="rose-edit"
-      rows="15"
-    />
+      <p
+        id="rose-prompt"
+      >
+        What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+      </p>
+      <textarea
+        id="rose-entry-input"
+        name="rose-edit"
+        onChange={[Function]}
+        rows="15"
+      />
+      <ErrorValidation
+        message="Please edit your original entry, or type in another response."
+      />
+    </label>
   </div>
   <div
     className="Thorn_Editor"
@@ -30,16 +38,24 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
     <h2>
       Thorn
     </h2>
-    <p
-      id="thorn-prompt"
+    <label
+      htmlFor="thorn-entry-input"
     >
-      What didn't go as planned? What stressed you out or made you feel upset?
-    </p>
-    <textarea
-      id="thorn-entry-input"
-      name="thorn-edit"
-      rows="15"
-    />
+      <p
+        id="thorn-prompt"
+      >
+        What didn't go as planned? What stressed you out or made you feel upset?
+      </p>
+      <textarea
+        id="thorn-entry-input"
+        name="thorn-edit"
+        onChange={[Function]}
+        rows="15"
+      />
+      <ErrorValidation
+        message="Please edit your original entry, or type in another response."
+      />
+    </label>
   </div>
   <div
     className="Bud_Editor"
@@ -47,16 +63,24 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
     <h2>
       Bud
     </h2>
-    <p
-      id="bud-prompt"
+    <label
+      htmlFor="bud-entry-input"
     >
-      What is something you are looking forward to? Are there any new ideas that you would like to see grow?
-    </p>
-    <textarea
-      id="bud-entry-input"
-      name="bud-edit"
-      rows="15"
-    />
+      <p
+        id="bud-prompt"
+      >
+        What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+      </p>
+      <textarea
+        id="bud-entry-input"
+        name="bud-edit"
+        onChange={[Function]}
+        rows="15"
+      />
+      <ErrorValidation
+        message="Please edit your original entry, or type in another response."
+      />
+    </label>
   </div>
 </Fragment>
 `;

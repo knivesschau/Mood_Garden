@@ -10,6 +10,7 @@ import PlantRoseForm from './Components/PlantRoseForm/PlantRoseForm';
 import ViewGarden from './Components/ViewGarden/ViewGarden';
 import EditRose from './Components/EditRose/EditRose';
 import RoseMain from './Components/RoseMain/RoseMain';
+import ErrorHandler from './ErrorHandlers/ErrorHandler';
 
 class App extends Component {
   state = {
@@ -71,21 +72,25 @@ class App extends Component {
     }
     
     return (
-      <moodGardenContext.Provider value={roseValues}>
-        <main className='App'>
+      <ErrorHandler>
 
-            <Switch>
-              <Route exact path='/' component={LandingPage}/>
-              <Route path='/register' component={RegistrationForm}/>
-              <Route path='/login' component={LoginForm}/>
-              <Route path='/your-garden' component={ViewGarden}/>
-              <Route path='/plant-rose' component={PlantRoseForm}/>
-              <Route path='/edit-rose/:id' component={EditRose}/>
-              <Route path='/roses/:id' component={RoseMain}/>
-            </Switch>
-            
-          </main>
-      </moodGardenContext.Provider>
+        <moodGardenContext.Provider value={roseValues}>
+          <main className='App'>
+
+              <Switch>
+                <Route exact path='/' component={LandingPage}/>
+                <Route path='/register' component={RegistrationForm}/>
+                <Route path='/login' component={LoginForm}/>
+                <Route path='/your-garden' component={ViewGarden}/>
+                <Route path='/plant-rose' component={PlantRoseForm}/>
+                <Route path='/edit-rose/:id' component={EditRose}/>
+                <Route path='/roses/:id' component={RoseMain}/>
+              </Switch>
+              
+            </main>
+        </moodGardenContext.Provider>
+      
+      </ErrorHandler>
     );
   }
 }

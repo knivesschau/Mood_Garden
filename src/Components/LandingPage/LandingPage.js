@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LandingNav from '../LandingNav/LandingNav';
+import MainNav from '../MainNav/MainNav';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
@@ -8,7 +8,7 @@ export default class LandingPage extends Component {
             <div className="LandingPage">
                 
                 <nav role="navigation" className="Landing_Nav">
-                    <LandingNav/>
+                    <MainNav/>
                 </nav>
 
                 <header role="banner">

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainNav Component renders the complete MainNav Component 1`] = `
+<div
+  className="Main_Nav"
+>
+  <div
+    className="LandingNav_NoLogin"
+  >
+    <Link
+      to="/register"
+    >
+      Sign Up
+    </Link>
+    ||
+    <Link
+      to="/login"
+    >
+      Log In
+    </Link>
+  </div>
+</div>
+`;
