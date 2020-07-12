@@ -8,10 +8,126 @@ export default class RegistrationForm extends Component {
     static defaultProps = {
         onValidlRegistration: () => {}
     }
+
+    constructor(props) {
+        super(props);
+        this.state = { 
+            username: '',
+            password: '',
+            retypePass: '',
+            validName: false,
+            validPass: false,
+            validConfirm: false,
+            validReg: false,
+            errorType: {},
+        };
+    }
+
+    validateForm() {
+        const {validName, validPass, validConfirm} = this.state;
+
+        this.setState({
+            validReg: validName && validPass && validConfirm
+        });
+    }
+
+    updateUsername(username) {
+        this.setState({
+            username: username,
+        },
+            this.validateUsername
+        );
+    }
+
+    updatePassword(password) {
+        this.setState({
+            password: password,
+        },
+            this.validatePassword
+        );
+    }
+
+    confirmPassword(retypePass) {
+        this.setState({
+            retypePass: retypePass,
+        },
+            this.validateConfirmedPassword
+        );
+    }
+
+    validateUsername() {
+        const {username} = this.state;
+        let validName = true;
+        let errorType = {...this.state.errorType};
+
+        if (username.length < 3) {
+            validName = false;
+            errorType.username = "Please create a username that is longer than 3 characters."
+        }
+
+        this.setState({
+            validName,
+            errorType,
+        },
+            this.validateForm
+        );
+    }
+
+    validatePassword() {
+        const {password} = this.state;
+        const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/;
+        let validPass = true;
+        let errorType = {...this.state.errorType};
+
+        if (password.length < 8) {
+            validPass = false;
+            errorType.password = "Password must be at least 8 characters long."
+        }
+
+        if (password.length > 72) {
+            validPass = false;
+            errorType.password = "Password must be less than 72 characters long."
+        }
+
+        if (password.startsWith(' ') || password.endsWith(' ')) { 
+            validPass = false;
+            errorType.password = "Password must not start or end with a space."
+        }
+
+        if (!REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password)) {
+            validPass = false;
+            errorType.password = "Password must contain 1 upper case letter, lower case letter, number, and special character."
+        }
+
+        this.setState({
+            validPass,
+            errorType,
+        },
+            this.validateForm
+        );
+    }
     
+    validateConfirmedPassword() {
+        const {retypePass} = this.state;
+        const {password} = this.state;
+        let validConfirm = true;
+        let errorType = {...this.state.errorType}
+
+        if (password !== retypePass) {
+            validConfirm = false;
+            errorType.retypePass = "Passwords do not match."
+        }
+
+        this.setState({
+            validConfirm,
+            errorType
+        },
+            this.validateForm
+        );
+    }
+
     submitRegistration = e => {
         e.preventDefault();
-
         const {username, password} = e.target; 
 
         this.setState({
@@ -27,12 +143,15 @@ export default class RegistrationForm extends Component {
                 password.value = '';
                 this.props.onValidlRegistration();
             })
+            .then(() => {
+                window.location='/'
+                alert("Successfully registered! Please log in to begin gardening!")
+            })
             .catch(res => {
                 this.setState({
                     error: res.error
                 })
             })
-    
     }    
     
     render() {
@@ -55,7 +174,16 @@ export default class RegistrationForm extends Component {
                         <label htmlFor="username">
                             Username:
 
-                            <input type="text" id="username" name="username"/>
+                            <input 
+                                onChange={e => this.updateUsername(e.target.value)}
+                                value={this.state.username}
+                                type="text" 
+                                id="username" 
+                                name="username"/>
+
+                            <ErrorValidation 
+                                valid={this.state.validName}
+                                message={this.state.errorType.username}/>
 
                         </label>
 
@@ -67,7 +195,15 @@ export default class RegistrationForm extends Component {
                             
                             Password:
 
-                            <input type="password" id="password" name="password"/>
+                            <input 
+                                onChange={e => this.updatePassword(e.target.value)}
+                                type="password" 
+                                id="password" 
+                                name="password"/>
+                            
+                            <ErrorValidation 
+                                valid={this.state.validPass}
+                                message={this.state.errorType.password}/>
                         
                         </label>
 
@@ -75,7 +211,15 @@ export default class RegistrationForm extends Component {
                             
                             Re-Type Password:
 
-                            <input type="password" id="retype-password" name="re-typepassword"/>
+                            <input 
+                                onChange={e => this.confirmPassword(e.target.value)}
+                                type="password" 
+                                id="retype-password" 
+                                name="re-typepassword"/>
+                            
+                            <ErrorValidation 
+                                valid={this.state.validConfirm}
+                                message={this.state.errorType.retypePass}/>
                         
                         </label>
 

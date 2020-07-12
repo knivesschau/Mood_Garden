@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ErrorValidation(props) {
-    if (props.message) {
+    if (!props.valid) {
         return (
             <div className="error">
 

@@ -87,7 +87,7 @@ class App extends Component {
                 <Route path='/roses/:id' component={RoseMain}/>
               </Switch>
               
-            </main>
+          </main>
         </moodGardenContext.Provider>
       
       </ErrorHandler>
