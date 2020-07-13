@@ -6,70 +6,101 @@ export default class EditRoseForm extends Component {
         super(props);
 
         this.state = {
-            rose_edit: {
-                value: '',
-                touched: false
-            },
-            thorn_edit: {
-                value: '',
-                touched: false
-            },
-            bud_edit: {
-                value: '',
-                touched: false
-            }
+            rose: '',
+            thorn: '',
+            bud: '',
+            roseEdit: false,
+            thornEdit: false,
+            budEdit: false,
+            validEdit: false,
+            errorType: {}
         };
     }
 
-    editRose(rose_edit) {
+    validateEditForm() {
+        const {roseEdit, thornEdit, budEdit} = this.state;
+        
         this.setState({
-            rose_edit: {
-                value: rose_edit,
-                touched: true
-            }
+            validEdit: roseEdit && thornEdit && budEdit
         });
     }
 
-    editThorn(thorn_edit) {
+    editRose(rose) {
         this.setState({
-            thorn_edit: {
-                value: thorn_edit,
-                touched: true
-            }
-        });
+            rose: rose
+        },
+            this.validateRose
+        );
     }
 
-    editBud(bud_edit) {
+    editThorn(thorn) {
         this.setState({
-            bud_edit: {
-                value: bud_edit,
-                touched: true
-            }
-        })
+            thorn: thorn
+        },
+            this.validateThorn
+        );
+    }
+
+    editBud(bud) {
+        this.setState({
+            bud: bud
+        },
+            this.validateBud
+        );
     }
 
     validateRose() {
-        const roseEdit = this.state.rose_edit.value.trim();
+        const {rose} = this.state;
+        let roseEdit = true;
+        let errorType = {...this.state.errorType};
 
-        if (roseEdit.length === 0) {
-            return "Please edit your original entry, or type in another response."
+        if (rose.length === 0) {
+            roseEdit = false;
+            errorType.rose = "Please edit your original entry, or type in another response."
         }
+
+        this.setState({
+            roseEdit, 
+            errorType
+        },
+            this.validateEditForm
+        )
     }
 
     validateThorn() {
-        const thornEdit = this.state.thorn_edit.value.trim();
+        const {thorn} = this.state;
+        let thornEdit = true;
+        let errorType = {...this.state.errorType};
 
-        if (thornEdit.length === 0) {
-            return "Please edit your original entry, or type in another response."
+        if (thorn.length === 0) {
+            thornEdit = false;
+            errorType.thorn = "Please edit your original entry, or type in another response."
         }
+
+        this.setState({
+            thornEdit,
+            errorType
+        }, 
+            this.validateEditForm
+        )
     }
 
     validateBud() {
-        const budEdit = this.state.bud_edit.value.trim();
+        const {bud} = this.state;
+        let budEdit = true;
+        let errorType = {...this.state.errorType}
 
-        if (budEdit.length === 0) {
-            return "Please edit your original entry, or type in another response."
+        if (bud.length === 0) {
+            budEdit = false;
+            errorType.bud = "Please edit your original entry, or type in another response."
         }
+
+        this.setState({
+            budEdit,
+            errorType
+        },
+            this.validateEditForm
+        )
     }
 
     render() {
@@ -94,7 +125,9 @@ export default class EditRoseForm extends Component {
                         rows="15" 
                         defaultValue={rose}/>
 
-                    <ErrorValidation message={this.validateRose()}/>
+                    <ErrorValidation 
+                        value={this.state.validRose}
+                        message={this.state.errorType.rose}/>
                 
                 </label>
 
@@ -115,7 +148,9 @@ export default class EditRoseForm extends Component {
                         rows="15" 
                         defaultValue={thorn}/>
                     
-                    <ErrorValidation message={this.validateThorn()}/>
+                    <ErrorValidation 
+                        value={this.state.validThorn}
+                        message={this.state.errorType.thorn}/>
 
                 </label>
 
@@ -136,7 +171,9 @@ export default class EditRoseForm extends Component {
                         rows="15" 
                         defaultValue={bud}/>
                     
-                    <ErrorValidation message={this.validateBud()}/>
+                    <ErrorValidation 
+                        valid={this.state.validBud}
+                        message={this.state.errorType.bud}/>
 
                 </label>
 

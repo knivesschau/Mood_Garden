@@ -17,91 +17,129 @@ export default class PlantRoseForm extends Component {
         super(props);
 
         this.state = {
-            rose_text: {
-                value: '',
-                touched: false
-            },
-            thorn_text: {
-                value: '',
-                touched: false
-            },
-            bud_text: {
-                value: '',
-                touched: false
-            },
-            color: {
-                value: '',
-                touched: false
-            }
+            rose: '',
+            bud: '',
+            thorn: '',
+            color: '',
+            validRose: false,
+            validThorn: false,
+            validBud: false,
+            validColor: false,
+            validPlant: false,
+            errorType: {},
         };
     }
 
-    writeRose(rose_text) {
+    validateEntry() {
+        const {validRose, validThorn, validBud, validColor} = this.state;
+
         this.setState({
-            rose_text: {
-                value: rose_text,
-                touched: true
-            }
+            validPlant: validRose && validThorn && validBud && validColor
         });
     }
 
-    writeThorn(thorn_text) {
+    writeRose(rose) {
         this.setState({
-            thorn_text: {
-                value: thorn_text,
-                touched: true
-            }
-        });
+            rose: rose,
+        },
+            this.validateRoseInput
+        );
     }
 
-    writeBud(bud_text) {
+    writeThorn(thorn) {
         this.setState({
-            bud_text: {
-                value: bud_text,
-                touched: true
-            }
-        });
+            thorn: thorn,
+        },
+            this.validateThornInput
+        );
+    }
+
+    writeBud(bud) {
+        this.setState({
+            bud: bud,
+        },
+            this.validateBudInput
+        );
     }
 
     pickColor(color) {
         this.setState({
-            color: {
-                value: color,
-                touched: true
-            }
-        });
+            color: color,
+        },
+            this.validateColorPick
+        );
     }
 
     validateRoseInput() {
-        const roseInput = this.state.rose_text.value.trim();
+        const {rose} = this.state;
+        let validRose = true;
+        let errorType = {...this.state.errorType};
 
-        if (roseInput.length === 0) {
-            return "Please enter in some text to repsond to the prompt."
+        if (rose.length === 0) {
+            validRose = false;
+            errorType.rose = "Please enter in some text to repsond to the prompt."
         }
+
+        this.setState({
+            validRose,
+            errorType
+        },
+            this.validateEntry
+        )
     }
 
     validateThornInput() {
-        const thornInput = this.state.thorn_text.value.trim();
+        const {thorn} = this.state;
+        let validThorn = true;
+        let errorType = {...this.state.errorType};
 
-        if (thornInput.length === 0) {
-            return "Please enter in some text to repsond to the prompt."
+        if (thorn.length === 0) {
+            validThorn = false;
+            errorType.thorn = "Please enter in some text to repsond to the prompt."
         }
+
+        this.setState({
+            validThorn,
+            errorType,
+        },
+            this.validateEntry
+        );
     }
 
     validateBudInput() {
-        const budInput = this.state.bud_text.value.trim();
+        const {bud} = this.state;
+        let validBud = true;
+        let errorType = {...this.state.errorType};
 
-        if (budInput.length === 0) {
-            return "Please enter in some text to repsond to the prompt."
+        if (bud.length === 0) {
+            validBud = false;
+            errorType.bud = "Please enter in some text to repsond to the prompt."
         }
+
+        this.setState({
+            validBud,
+            errorType
+        },
+            this.validateEntry
+        )
     }
 
     validateColorPick() {
-        const roseColor = this.state.color.value.trim();
+        const {color} = this.state;
+        let validColor = true;
+        let errorType = {...this.state.errorType};
 
-        if (roseColor === "") {
-            return "Please select a color."
+        if (color === "") {
+            validColor = false;
+            errorType.color = "Please select a color."
         }
+
+        this.setState({
+            validColor,
+            errorType
+        },
+            this.validateEntry
+        )
     }
 
     static contextType = moodGardenContext;
@@ -171,12 +209,15 @@ export default class PlantRoseForm extends Component {
                             <p id="rose-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
                             
                             <textarea 
-                                name="rose-text" 
                                 onChange={e => this.writeRose(e.target.value)} 
+                                value={this.state.rose}
+                                name="rose-text" 
                                 id="rose-entry-input" rows="15" 
                                 placeholder="Write your thoughts here"/>
                             
-                            <ErrorValidation message={this.validateRoseInput()}/>
+                            <ErrorValidation 
+                                valid={this.state.validRose}
+                                message={this.state.errorType.rose}/>
 
                         </label>
 
@@ -191,13 +232,16 @@ export default class PlantRoseForm extends Component {
                             <p id="thorn-prompt">What didn't go as planned? What stressed you out or made you feel upset?</p>
 
                             <textarea 
-                                name="thorn-text" 
                                 onChange={e => this.writeThorn(e.target.value)} 
+                                value={this.state.thorn}
+                                name="thorn-text" 
                                 id="thorn-entry-input" 
                                 rows="15" 
                                 placeholder="Write your thoughts here"/>
 
-                            <ErrorValidation message={this.validateThornInput()}/>
+                            <ErrorValidation 
+                                valid={this.state.validThorn}
+                                message={this.state.errorType.thorn}/>
 
                         </label>
 
@@ -212,13 +256,16 @@ export default class PlantRoseForm extends Component {
                             <p id="bud-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
                         
                             <textarea 
-                                name="bud-text" 
                                 onChange={e => this.writeBud(e.target.value)} 
+                                value={this.state.bud}
+                                name="bud-text" 
                                 id="bud-entry-input" 
                                 rows="15" 
                                 placeholder="Write your thoughts here"/>
 
-                            <ErrorValidation message={this.validateBudInput()}/>
+                            <ErrorValidation 
+                                valid={this.state.validBud}
+                                message={this.state.errorType.bud}/>
 
                         </label>
 
@@ -232,7 +279,12 @@ export default class PlantRoseForm extends Component {
 
                             <p id="color-prompt">Lastly, pick a rose color based on your current mood.</p>
 
-                            <select name="rose-colors" onChange={e => this.pickColor(e.target.value)} id="colors">
+                            <select 
+                                onChange={e => this.pickColor(e.target.value)} 
+                                value={this.state.color}
+                                name="rose-colors" 
+                                id="colors">
+
                                 <option value=""></option>
                                 <option value="Red">Red (Neutral)</option>
                                 <option value="Yellow">Yellow (Happy)</option>
@@ -240,9 +292,12 @@ export default class PlantRoseForm extends Component {
                                 <option value="Pink">Pink (Grateful)</option>
                                 <option value="Purple">Purple (Angry)</option>
                                 <option value="Black">Black (Sad)</option>
+                            
                             </select> 
 
-                            <ErrorValidation message={this.validateColorPick()}/>
+                            <ErrorValidation 
+                                valid={this.state.validColor}
+                                message={this.state.errorType.color}/>
 
                         </label>
 

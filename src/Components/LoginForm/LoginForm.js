@@ -39,7 +39,7 @@ export default class LoginForm extends Component {
             })
             .catch(res => {
                 this.setState({
-                    error: alert("Invalid login. Please double-check your credentials.")
+                    error: alert("Invalid username or password. Please double-check your credentials.")
                 })
             })
         

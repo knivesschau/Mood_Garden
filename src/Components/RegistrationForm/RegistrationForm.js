@@ -23,7 +23,7 @@ export default class RegistrationForm extends Component {
         };
     }
 
-    validateForm() {
+    validateRegForm() {
         const {validName, validPass, validConfirm} = this.state;
 
         this.setState({
@@ -69,7 +69,7 @@ export default class RegistrationForm extends Component {
             validName,
             errorType,
         },
-            this.validateForm
+            this.validateRegForm
         );
     }
 
@@ -103,7 +103,7 @@ export default class RegistrationForm extends Component {
             validPass,
             errorType,
         },
-            this.validateForm
+            this.validateRegForm
         );
     }
     
@@ -122,7 +122,7 @@ export default class RegistrationForm extends Component {
             validConfirm,
             errorType
         },
-            this.validateForm
+            this.validateRegForm
         );
     }
 
