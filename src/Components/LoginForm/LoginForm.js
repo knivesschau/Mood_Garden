@@ -1,7 +1,7 @@
 import React, {Component} from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import TokenService from '../../services/token-services';
 import AuthApiService from '../../services/auth-api-service';
-import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
 import {Link} from 'react-router-dom';
 import './LoginForm.css';
 
@@ -50,19 +50,20 @@ export default class LoginForm extends Component {
             <section className="LoginForm">
 
                 <nav role="navigation" className="Login_Nav"> 
-                    <Link to='/'>
+                    <FontAwesomeIcon icon="chevron-left"/>
+                        <Link to='/'>
                         Back 
-                    </Link>
+                        </Link>
                 </nav>
             
-                <h3>Log In</h3>
+                <h3 id="login-header">Log In</h3>
 
                 <form className="Login_Form" onSubmit={this.handleJwtLoginAuth}> 
 
                     <div>
 
                         <label htmlFor="username">
-                            Username: 
+                            <p id="return-user-label">Username:</p>
 
                         <input type="text" id="return-user" name="return_user"/>
 
@@ -73,14 +74,14 @@ export default class LoginForm extends Component {
                     <div>
 
                         <label htmlFor="username">
-                            Password:
+                            <p id="return-pass-label">Password:</p>
 
                         <input type="password" id="return-pass" name="return_pass"/>
 
                         </label>
                     </div>
 
-                <button type="submit">Login</button>
+                <button type="submit" id="submit-login">Login</button>
                 </form>
 
             </section>

@@ -46,16 +46,16 @@ export default class Rose extends Component {
 
                 <div className="View_Rose">
 
-                    <h2>{color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h2>
+                    <h2 id="expand-rose-header">{color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h2>
 
-                    <h3>Rose</h3>
-                    <p>{rose}</p>
+                    <h3 id="rose-header-expand">Rose</h3>
+                    <p id="expanded-rose">{rose}</p>
 
-                    <h3>Thorn</h3>
-                    <p>{thorn}</p>
+                    <h3 id="thorn-header-expand">Thorn</h3>
+                    <p id="expanded-thorn">{thorn}</p>
 
-                    <h3>Bud</h3>
-                    <p>{bud}</p>
+                    <h3 id="bud-header-expand">Bud</h3>
+                    <p id="expanded-bud">{bud}</p>
 
                     <Link to={`/edit-rose/${id}`}>
                         <button type="submit" id="edit">

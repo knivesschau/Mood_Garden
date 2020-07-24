@@ -11,6 +11,7 @@ import ViewGarden from './Components/ViewGarden/ViewGarden';
 import EditRose from './Components/EditRose/EditRose';
 import RoseMain from './Components/RoseMain/RoseMain';
 import ErrorHandler from './ErrorHandlers/ErrorHandler';
+import './App.css';
 
 class App extends Component {
   state = {

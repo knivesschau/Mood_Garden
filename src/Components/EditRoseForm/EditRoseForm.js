@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
+import './EditRoseForm.css';
 
 export default class EditRoseForm extends Component {
     constructor(props) {
@@ -103,20 +105,26 @@ export default class EditRoseForm extends Component {
         )
     }
 
+    handleCancelClick = () => {
+        window.location=`/your-garden`
+    };
+
     render() {
         const {rose, thorn, bud, color, entry_date} = this.props;
 
         return (
             <>
-            <h1>Editing {color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h1>
+            <h1 id="edit-header">Editing {color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h1>
 
             <div className="Rose_Editor">
                
-               <h2>Rose</h2>
+               <FontAwesomeIcon icon="grin-beam" id="rose-icon" color="#FFFAEA" size="3x"/> 
+
+               <h2 id="rose-edit-header">Rose</h2>
 
                 <label htmlFor="rose-entry-input">
 
-                    <p id="rose-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
+                    <p id="rose-prompt">What brought you happiness today? Did you make progress on any ideas or goals?</p>
                     
                     <textarea 
                         onChange={e => this.editRose(e.target.value)}
@@ -134,12 +142,14 @@ export default class EditRoseForm extends Component {
             </div>
 
             <div className="Thorn_Editor">
+
+                <FontAwesomeIcon icon="frown" id="thorn-icon" color="#A272AA" size="3x"/>
                 
-                <h2>Thorn</h2>
+                <h2 id="thorn-edit-header">Thorn</h2>
 
                 <label htmlFor="thorn-entry-input">
 
-                    <p id="thorn-prompt">What didn't go as planned? What stressed you out or made you feel upset?</p>
+                    <p id="thorn-prompt">Was there anything that upset or frustrated you today? What were the sources of those feelings?</p>
 
                     <textarea 
                         onChange={e => this.editThorn(e.target.value)}
@@ -157,12 +167,14 @@ export default class EditRoseForm extends Component {
             </div>
 
             <div className="Bud_Editor">
+
+                <FontAwesomeIcon icon="grin-alt" id="bud-icon" color="#8B5151" size="3x"/>
                 
-                <h2>Bud</h2>
+                <h2 id="bud-edit-header">Bud</h2>
 
                 <label htmlFor="bud-entry-input">
 
-                    <p id="bud-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
+                    <p id="bud-prompt">What is something you are looking forward to? What would you like to spend more time focusing on?</p>
                 
                     <textarea 
                         onChange={e => this.editBud(e.target.value)}
@@ -176,6 +188,9 @@ export default class EditRoseForm extends Component {
                         message={this.state.errorType.bud}/>
 
                 </label>
+
+                <button type="submit" id="update-garden">Update Rose</button>
+                <button type="button" id="cancel-update" onClick={this.handleCancelClick}>Cancel</button>
 
             </div>
             </>

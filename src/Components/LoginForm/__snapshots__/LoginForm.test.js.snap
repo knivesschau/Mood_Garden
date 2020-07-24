@@ -8,13 +8,34 @@ exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
     className="Login_Nav"
     role="navigation"
   >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="chevron-left"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
     <Link
       to="/"
     >
       Back
     </Link>
   </nav>
-  <h3>
+  <h3
+    id="login-header"
+  >
     Log In
   </h3>
   <form
@@ -25,7 +46,11 @@ exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
       <label
         htmlFor="username"
       >
-        Username:
+        <p
+          id="return-user-label"
+        >
+          Username:
+        </p>
         <input
           id="return-user"
           name="return_user"
@@ -37,7 +62,11 @@ exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
       <label
         htmlFor="username"
       >
-        Password:
+        <p
+          id="return-pass-label"
+        >
+          Password:
+        </p>
         <input
           id="return-pass"
           name="return_pass"
@@ -46,6 +75,7 @@ exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
       </label>
     </div>
     <button
+      id="submit-login"
       type="submit"
     >
       Login

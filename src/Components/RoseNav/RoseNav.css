@@ -1,5 +1,33 @@
 .Rose_Nav {
-    display: flex;
-    flex-direction: row;
-    margin-left: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.2em .5em;
+    margin: 0 0.1em 0.1em 0;
+    margin-bottom: -1.50em;
+    border: 2px transparent #FFFFFF;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);
+    transition-property: background;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+
+.Rose_Nav:hover {
+    cursor: pointer;
+    background-color: #FFADBB;
+    color: #FFFFFF;
+}
+
+.Rose_Nav:active {
+    background-color: #B00000;
+    color: #FFFFFF;
+}
+
+@media only screen and (min-device-width: 414px) {
+    .Rose_Nav {
+        font-size: 1.10em;
+    }
 }

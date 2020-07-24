@@ -1,11 +1,34 @@
+/* Mobile styles first, 320px */
+
 #garden-header {
     text-align: center;
 }
 
+#garden-header {
+    font-size: 1.90em;
+}
+
+ul {
+    padding-left: 0;
+    margin-left: 1em;
+}
+
 li {
-    list-style-type: none; 
     text-align: center;
-    border: 1px solid black;
-    margin: 1.5em;
-    padding: 1em;
+    list-style-type: none; 
+    background-color: rgb(255,173,187, .90);
+    box-shadow: inset -11px -5px 5px 0px #A8739B;
+    border-radius: 1px transparent white;
+    border-radius: 20em; 
+}
+
+@media only screen and (min-device-width: 414px) { 
+    #edit-header {
+        font-size: 2em;
+    }
+    
+    #garden-header {
+        font-size: 2.5em;
+        margin-top: .50em;
+    }
 }

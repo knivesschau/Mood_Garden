@@ -1,6 +1,78 @@
+/* Mobile styles first, 320px */
+
 .Rose {
     text-align: center;
-    border: 1px solid black;
-    margin: 2em;
-    padding: 1em;
+    background-color: rgb(255,173,187, .90);
+    box-shadow: inset -5px -6px 5px 0px #A8739B;
+    border: 1px transparent white; 
+    border-radius: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
+
+#expand-rose-header {
+    font-size: 1.50em;
+    text-align: center;
+    font-weight: bold;
+    word-spacing: -.20rem;
+    color: white;
+    text-shadow: 2px 1px 5px black;
+    padding-top: 1.20em;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+#rose-header-expand, #thorn-header-expand, #bud-header-expand {
+    font-size: 1.25em;
+    margin-top: -.5em;
+    margin-bottom: .5em;
+    text-shadow: 2px 0px 2px white;
+}
+
+#expanded-rose, #expanded-thorn, #expanded-bud {
+    margin-top: .25em;
+    margin-left: .50em;
+    margin-right: .50em;
+}
+
+#edit, #delete {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid rgba(255,255,255,0);
+    border-radius: 2em;
+    padding: .5em;
+    margin: .5em;
+    margin-bottom: 1em;
+    background-color: #C34444;
+    color: #ffffff;
+    text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);   
+}
+
+#edit:hover, #delete:hover {
+    cursor: pointer;
+    border-color: rgb(255,255,255, 1);
+}
+
+#edit:active, #delete:active {
+    background-color: #8F0000;
+}
+
+@media only screen and (min-device-width: 414px) {
+    .View_Rose {
+        margin-top: 2em;
+    }  
+
+    #expand-rose-header {
+        font-size: 1.75em;
+    }
+
+    #rose-header-expand, #thorn-header-expand, #bud-header-expand {
+        font-size: 1.50em;
+    }
+
+    #expanded-rose, #expanded-thorn, #expanded-bud, #edit, #delete {
+        font-size: 1.10em;
+    }
+} 

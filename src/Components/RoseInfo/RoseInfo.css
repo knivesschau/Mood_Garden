@@ -1,0 +1,63 @@
+/* Mobile styles first, 320px */
+
+.Collapsed_Roses, .Rose_MiniInfo {
+    transition-property: background; 
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+    border: 1px transparent white;
+    border-radius: 20em;
+}
+
+.Collapsed_Roses:hover {
+    background-color: #A88087;
+    cursor: pointer;
+    box-shadow: inset -11px -5px 5px 0px #6E4D65;
+}
+
+.Collapsed_Roses:active {
+    background-color: #7B424C;
+    box-shadow: inset -11px -5px 5px 0px #6E4D65;
+}
+
+.Rose_Image_Garden {
+    position: relative;
+    right: 7.5em;
+    bottom: .5em;
+}
+
+#rose-info {
+    font-weight: bold;
+    font-size: 1.25em;
+    word-spacing: -.10rem;
+    margin-top: -2.5em;
+    margin-left: 2em; 
+    margin-right: 2em;
+    padding: .25em;
+}
+
+#rose-info:hover {
+    color: white;
+}
+
+@media only screen and (min-device-width: 375px) {
+    .Rose_Image_Garden {
+        right: 8.5em;
+    }
+
+    #rose-info {
+        margin-top: -3em;
+        padding: .50em;
+    }
+}
+
+@media only screen and (min-device-width: 414px) {
+    .Rose_Image_Garden {
+        right: 10em;
+    }
+
+    #rose-info {
+        font-size: 1.45em;
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+}

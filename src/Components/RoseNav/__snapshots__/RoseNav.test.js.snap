@@ -7,6 +7,25 @@ exports[`RoseNav Component renders the complete RoseNav Component 1`] = `
   <Link
     to="/your-garden"
   >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="chevron-left"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
     Back To Your Garden
   </Link>
 </div>

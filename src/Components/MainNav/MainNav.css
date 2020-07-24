@@ -1,8 +1,44 @@
-.LandingNav {
+/* mobile style, starting at 320px*/
+.MainNav_NoLogin {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   font-size: 1.25em;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.MainNav_SignedIn {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    border: 1px solid black;
-    padding: .5em;
-    text-align: center;
+    justify-content: space-between;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#register-link, #login-link, #plant-rose, #home-page, #logout-link {
+    transition-property: background;
+    transition-duration: .2s;
+    transition-timing-function: ease-in; 
+}
+
+#register-link:hover, #login-link:hover, #plant-rose:hover, #home-page:hover, #logout-link:hover {
+    cursor: pointer;
+    background-color: #FFADBB;
+    color: #FFFFFF;
+}
+
+#register-link:active, #login-link:active, #plant-rose:active, #home-page:active, #logout-link:active {
+    background-color: #8F0000;
+}
+
+@media only screen and (min-device-width: 414px) {
+    .MainNav_NoLogin {
+        font-size: 1.50em;
+    }
+
+    .MainNav_SignedIn {
+        font-size: 1.50em;
+    }
 }

@@ -7,22 +7,36 @@ exports[`Rose Component renders the complete Rose Component 1`] = `
   <div
     className="View_Rose"
   >
-    <h2>
+    <h2
+      id="expand-rose-header"
+    >
        Rose Planted on 
       Invalid Date
     </h2>
-    <h3>
+    <h3
+      id="rose-header-expand"
+    >
       Rose
     </h3>
-    <p />
-    <h3>
+    <p
+      id="expanded-rose"
+    />
+    <h3
+      id="thorn-header-expand"
+    >
       Thorn
     </h3>
-    <p />
-    <h3>
+    <p
+      id="expanded-thorn"
+    />
+    <h3
+      id="bud-header-expand"
+    >
       Bud
     </h3>
-    <p />
+    <p
+      id="expanded-bud"
+    />
     <Link
       to="/edit-rose/undefined"
     >

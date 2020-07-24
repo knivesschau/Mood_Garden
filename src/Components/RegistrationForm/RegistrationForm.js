@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
 import AuthApiService from '../../services/auth-api-service';
 import './RegistrationForm.css';
@@ -20,7 +21,14 @@ export default class RegistrationForm extends Component {
             validConfirm: false,
             validReg: false,
             errorType: {},
+            seen: false
         };
+    }
+
+    togglePopUp() {
+        this.setState({
+            seen: !this.state.seen
+        })
     }
 
     validateRegForm() {
@@ -75,7 +83,7 @@ export default class RegistrationForm extends Component {
 
     validatePassword() {
         const {password} = this.state;
-        const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/;
+        const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&])[\S]+/;
         let validPass = true;
         let errorType = {...this.state.errorType};
 
@@ -144,35 +152,36 @@ export default class RegistrationForm extends Component {
                 this.props.onValidlRegistration();
             })
             .then(() => {
-                window.location='/'
-                alert("Successfully registered! Please log in to begin gardening!")
+                window.location=`/login`
+                window.alert('Registered successfully. Please log in with your new credentials.')
+
             })
             .catch(res => {
                 this.setState({
-                    error: res.error
+                    error: window.alert('An unexpected error occurred. Please try again later.')
                 })
             })
     }    
     
-    render() {
+    render() {        
         return (
-
-            <section className="LoginForm">
+            <section className="RegistrationForm">
 
                 <nav role="navigation" className="Register_Nav"> 
                     <Link to='/'>
+                        <FontAwesomeIcon icon="chevron-left"/>
                         Back
                     </Link>
                 </nav>
 
-                <h3>Begin Cultivating</h3>
+                <h3 id="register-header">Begin Cultivating</h3>
 
-                <form className="Registration_Form" onSubmit={this.submitRegistration}>
+                <form className="Register_Form" onSubmit={this.submitRegistration}>
 
                     <div className="Username">
 
                         <label htmlFor="username">
-                            Username:
+                            <p id="user-descrip">Username:</p>
 
                             <input 
                                 onChange={e => this.updateUsername(e.target.value)}
@@ -182,6 +191,7 @@ export default class RegistrationForm extends Component {
                                 name="username"/>
 
                             <ErrorValidation 
+                                className="Username_Error"
                                 valid={this.state.validName}
                                 message={this.state.errorType.username}/>
 
@@ -193,7 +203,7 @@ export default class RegistrationForm extends Component {
 
                         <label htmlFor="password">
                             
-                            Password:
+                            <p id="password-descrip">Password:</p>
 
                             <input 
                                 onChange={e => this.updatePassword(e.target.value)}
@@ -202,6 +212,7 @@ export default class RegistrationForm extends Component {
                                 name="password"/>
                             
                             <ErrorValidation 
+                                className="Password_Error"
                                 valid={this.state.validPass}
                                 message={this.state.errorType.password}/>
                         
@@ -209,15 +220,16 @@ export default class RegistrationForm extends Component {
 
                         <label htmlFor="retype-password">
                             
-                            Re-Type Password:
+                            <p id="confirm-descrip">Re-Type Password:</p>
 
                             <input 
                                 onChange={e => this.confirmPassword(e.target.value)}
                                 type="password" 
                                 id="retype-password" 
-                                name="re-typepassword"/>
-                            
+                                name="re-type-password"/>
+
                             <ErrorValidation 
+                                className="Retype_Error"
                                 valid={this.state.validConfirm}
                                 message={this.state.errorType.retypePass}/>
                         
@@ -225,7 +237,9 @@ export default class RegistrationForm extends Component {
 
                     </div>                                                 
 
-                <button type="submit">Register</button>
+                <button type="submit" id="register-user">
+                     Register
+                </button>
 
                 </form>
 

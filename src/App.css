@@ -1,0 +1,32 @@
+/* mobile first, min 320px */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Handlee&family=Merienda+One&family=Raleway&display=swap');
+
+.App {
+    padding: 1em;
+}
+
+h1, h3 {
+    font-family: 'Merienda One';
+}
+
+h2 {
+    color: #3B0000;
+    font-family: 'Didact Gothic';
+}
+
+p, label, nav, input[type="date"], select {
+    font-family: 'Raleway';
+}
+
+a {
+    text-decoration: none;
+}
+
+.error {
+    color: #B0002F;
+    margin: .10em;
+    background-color: rgb(255, 255, 255, .80);
+    border-radius: 2em;
+    font-size: .80em;
+}
+

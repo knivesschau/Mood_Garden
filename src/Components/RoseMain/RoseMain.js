@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import moodGardenContext from '../../moodGardenContext';
+import RoseColor from '../RoseColor/RoseColor';
 import RoseNav from '../RoseNav/RoseNav';
 import Rose from '../Rose/Rose';
 import './RoseMain.css';
@@ -25,11 +26,15 @@ export default class RoseMain extends Component {
         console.log(roseEntry);
         
         return (
-            <section className="View_Rose">
+            <section className="Rose_Expanded">
                 <nav role="navigation" className="Rose_Nav">
                     <RoseNav/>
                 </nav>
-                
+
+                <div className="Rose_Image_Entry">
+                    <RoseColor color={roseEntry.color}/>
+                </div>
+
                     <Rose 
                         id={roseEntry.id}
                         rose={roseEntry.rose}
@@ -40,6 +45,6 @@ export default class RoseMain extends Component {
                         onDeleteRose={this.handleDeleteRose}
                     />
             </section>
-        )
+        );
     }
 }

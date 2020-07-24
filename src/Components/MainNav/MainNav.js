@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import TokenService from '../../services/token-services';
 import './MainNav.css';
 
@@ -11,20 +12,20 @@ export default class MainNav extends Component {
 
     renderUserNav() {
         return (
-            <div className="LandingNav_SignedIn">
-                <Link to='/plant-rose'>
-                    Plant A Rose
+            <div className="MainNav_SignedIn">
+                <Link to='/plant-rose' id="plant-rose">
+                    Plant 
                 </Link>
 
-                ||
-
-                <Link to='/'>
+                <FontAwesomeIcon icon="leaf" style={{color: "green"}}/>
+                
+                <Link to='/' id="home-page">
                     About
                 </Link>
 
-                ||
+                <FontAwesomeIcon icon="leaf" style={{color: "green"}}/>
                 
-                <Link to='/' onClick={this.handleLogoutClick}>
+                <Link to='/' id="logout-link" onClick={this.handleLogoutClick}>
                     Logout 
                 </Link>
 
@@ -34,14 +35,14 @@ export default class MainNav extends Component {
 
     renderStartingNav() {
         return (
-            <div className="LandingNav_NoLogin">
-                <Link to='/register'>
+            <div className="MainNav_NoLogin">
+                <Link to='/register' id="register-link">
                      Sign Up
                 </Link>
 
-                ||
+                <FontAwesomeIcon icon="seedling" style={{color: "green"}}/>
 
-                <Link to='/login'>
+                <Link to='/login' id="login-link">
                      Log In
                 </Link>
             </div>
@@ -50,13 +51,13 @@ export default class MainNav extends Component {
     
     render() {
         return (
-            <div className="Main_Nav">
+            <nav role="navigation" className="Main_Nav">
 
                 {TokenService.hasAuthToken()
                     ? this.renderUserNav()
                     : this.renderStartingNav()}
-
-            </div>
+                    
+            </nav>
         )
     }
 }

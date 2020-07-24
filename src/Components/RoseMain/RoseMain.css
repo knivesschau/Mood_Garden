@@ -1,0 +1,39 @@
+/* Mobile styles first, 320px */
+.Rose_Expanded {
+    margin-top: .25em;
+}
+
+.Rose_Image_Entry > img {
+    position: relative;
+    top: 1.5em;
+    left: 1.5em;
+    animation: rotation 3.5s infinite linear;
+    margin: -2em;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@media only screen and (min-device-width: 375px) {
+    .Rose_Expanded {
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .Rose_Image_Entry > img {
+        top: 1.75em;
+    }
+}
+
+@media only screen and (min-device-width: 414px) {
+    .Rose_Image_Entry > img {
+        top: 2.50em;
+    }
+}

@@ -1,14 +1,105 @@
-.LoginForm {
-    text-align: center;
-    padding: 1em;
-}
+/* mobile first style, min 320px */
 
-label {
+.Register_Form {
     display: flex;
     flex-direction: column;
-    padding: .5em;
+    font-weight: bold;
+    margin: .30em;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em;
+    font-size: 1em;
+    background-color: rgb(255, 152, 169, .80);
+    box-shadow: inset -4px 1px 20px 2px #A8739B;
+    border: 1px transparent white;
+    border-radius: 25em;
 }
 
-button {
-    margin-top: 2em;
+.Register_Nav {
+    font-size: 1.25em;
+    text-transform: uppercase; 
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.2em .5em;
+    margin: 0 0.1em 0.1em 0;
+    border: 2px solid #FFFFFF;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);
+    transition-property: background;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+
+.Register_Nav:hover {
+    cursor: pointer;
+    background-color: #FFADBB;
+    color: #FFFFFF;
+}
+
+.Register_Nav:active {
+    background-color: #B00000;
+    color: #FFFFFF;
+}
+
+#register-header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-shadow: 1px 0px 0px #000000;
+}
+
+#username, #password, #retype-password {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    margin-top: .30em;
+    margin-bottom: .10em;
+}
+
+#user-descrip, #confirm-descrip, #password-descrip {
+    margin: .10em;
+}
+
+#register-user {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 4em 4em 0.1em 4em;
+    border: 2px solid rgba(255,255,255,0);
+    border-radius: 2em;
+    box-sizing: border-box;
+    margin-top: 1em;
+    background-color: #C34444;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em;
+    text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);
+}
+
+#register-user:hover {
+    cursor: pointer;
+    border-color: rgb(255,255,255, 1);
+}
+
+#register-user:active {
+    background-color: #8F0000;
+}
+
+@media only screen and (min-device-width: 375px) {
+    .Register_Form {
+        margin: 1.75em;
+    }
+}
+
+@media only screen and (min-device-width: 414px) {
+    .Register_Nav {
+        font-size: 1.50em;
+    }
+    
+    #register-header {
+        font-size: 1.75em;
+    }
+
+    #register-user, #username, #password, #retype-password {
+        font-size: 1.10em;
+    }
 }

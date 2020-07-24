@@ -2,7 +2,7 @@
 
 exports[`RoseMain Component renders the complete RoseMain Component and all nested Components 1`] = `
 <section
-  className="View_Rose"
+  className="Rose_Expanded"
 >
   <nav
     className="Rose_Nav"
@@ -10,6 +10,11 @@ exports[`RoseMain Component renders the complete RoseMain Component and all nest
   >
     <RoseNav />
   </nav>
+  <div
+    className="Rose_Image_Entry"
+  >
+    <RoseColor />
+  </div>
   <Rose
     onDeleteRose={[Function]}
   />

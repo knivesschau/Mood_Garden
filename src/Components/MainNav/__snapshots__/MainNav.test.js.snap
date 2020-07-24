@@ -1,23 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainNav Component renders the complete MainNav Component 1`] = `
-<div
+<nav
   className="Main_Nav"
+  role="navigation"
 >
   <div
-    className="LandingNav_NoLogin"
+    className="MainNav_NoLogin"
   >
     <Link
+      id="register-link"
       to="/register"
     >
       Sign Up
     </Link>
-    ||
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="seedling"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      style={
+        Object {
+          "color": "green",
+        }
+      }
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
     <Link
+      id="login-link"
       to="/login"
     >
       Log In
     </Link>
   </div>
-</div>
+</nav>
 `;

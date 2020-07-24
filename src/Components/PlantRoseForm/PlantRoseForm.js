@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import TokenService from '../../services/token-services'
 import moodGardenContext from '../../moodGardenContext';
 import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
@@ -142,6 +143,10 @@ export default class PlantRoseForm extends Component {
         )
     }
 
+    handleCancelClick = () => {
+        window.location=`/your-garden`
+    };
+
     static contextType = moodGardenContext;
 
     handleSubmit = e => {
@@ -182,36 +187,42 @@ export default class PlantRoseForm extends Component {
     render() {
         return (
             <section className="PlantRose">
+                
                 <RoseNav/>
 
-                <h1>Plant a Rose</h1>
+                <h1 id="plant-title">Plant a Rose</h1>
 
                 <form className="PlantRoseForm" onSubmit={this.handleSubmit}>
 
                     <div className="Date_Entry">
                         
                         <label htmlFor="date"> 
+                            
+                            <FontAwesomeIcon icon="seedling" color="green" size="3x"/>
+                            
+                            <h2 id="date-entry-header">Date Planted</h2>
 
-                            <p id="date-entry">Date Planted:</p>
-
-                            <input type="date" required="" name="date" id="entry-date"/>
+                            <input type="date" required name="date" id="entry-date"/>
 
                         </label>
 
                     </div>
 
                     <div className="Rose_Entry">
+
+                        <FontAwesomeIcon icon="grin-beam" id="rose-icon" color="#FFFAEA" size="3x"/> 
                         
-                        <h2>Rose</h2>
+                        <h2 id="plant-header-rose">Rose</h2>
 
                         <label htmlFor="rose-entry-input">
                             
-                            <p id="rose-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
+                            <p id="rose-prompt">What brought you happiness today? Did you make progress on any ideas or goals?</p>
                             
                             <textarea 
                                 onChange={e => this.writeRose(e.target.value)} 
                                 value={this.state.rose}
                                 name="rose-text" 
+                                required
                                 id="rose-entry-input" rows="15" 
                                 placeholder="Write your thoughts here"/>
                             
@@ -224,17 +235,20 @@ export default class PlantRoseForm extends Component {
                     </div>
 
                     <div className="Thorn_Entry">
+
+                        <FontAwesomeIcon icon="frown" id="thorn-icon" color="#A272AA" size="3x"/>
                         
-                        <h2>Thorn</h2>
+                        <h2 id="plant-header-thorn">Thorn</h2>
 
                         <label htmlFor="thorn-entry-input">
 
-                            <p id="thorn-prompt">What didn't go as planned? What stressed you out or made you feel upset?</p>
+                            <p id="thorn-prompt">Was there anything that upset or frustrated you today? What were the sources of those feelings?</p>
 
                             <textarea 
                                 onChange={e => this.writeThorn(e.target.value)} 
                                 value={this.state.thorn}
                                 name="thorn-text" 
+                                required
                                 id="thorn-entry-input" 
                                 rows="15" 
                                 placeholder="Write your thoughts here"/>
@@ -249,16 +263,19 @@ export default class PlantRoseForm extends Component {
 
                     <div className="Bud_Entry">
 
-                        <h2>Bud</h2>
+                        <FontAwesomeIcon icon="grin-alt" id="bud-icon" color="#8B5151" size="3x"/>
+
+                        <h2 id="plant-header-bud">Bud</h2>
 
                         <label htmlFor="bud-text">
 
-                            <p id="bud-prompt">What is something you are looking forward to? Are there any new ideas that you would like to see grow?</p>
+                            <p id="bud-prompt">What is something you are looking forward to? What would you like to spend more time focusing on?</p>
                         
                             <textarea 
                                 onChange={e => this.writeBud(e.target.value)} 
                                 value={this.state.bud}
                                 name="bud-text" 
+                                required
                                 id="bud-entry-input" 
                                 rows="15" 
                                 placeholder="Write your thoughts here"/>
@@ -272,8 +289,10 @@ export default class PlantRoseForm extends Component {
                     </div>
 
                     <div className="Rose_Color">
+
+                        <FontAwesomeIcon icon="spa" id="color-icon" color="#B00000" size="3x"/>
                         
-                        <h2>Rose Color</h2>
+                        <h2 id="plant-color-header">Rose Color</h2>
                         
                         <label htmlFor="colors">
 
@@ -282,7 +301,8 @@ export default class PlantRoseForm extends Component {
                             <select 
                                 onChange={e => this.pickColor(e.target.value)} 
                                 value={this.state.color}
-                                name="rose-colors" 
+                                name="rose-colors"
+                                required 
                                 id="colors">
 
                                 <option value=""></option>
@@ -301,10 +321,10 @@ export default class PlantRoseForm extends Component {
 
                         </label>
 
-                    </div> 
+                        <button type="submit" id="submit-rose">Plant Rose</button>
+                        <button type="button" id="cancel-plant" onClick={this.handleCancelClick}>Cancel</button>
                     
-                <button type="submit" id="submit-rose">Plant Rose</button>
-                <button type="reset" id="start-over">Start Over</button>
+                    </div> 
 
                 </form>
 

@@ -1,15 +1,107 @@
+/* mobile first style, min 320px */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Handlee&family=Merienda+One&family=Raleway&display=swap');
+
+h1 {
+    color: #FF637E;
+    text-shadow: 2px 1px 0px #000000;
+    font-size: 2.5em;
+    margin-top: .25em;
+}
+
+#pitch-header {
+    margin-top: -1em;
+}
+
+h3 {
+    font-size: 1em;
+    color: #B00000;
+}
+
+#tagline1 {
+    margin-left: 1.10em;
+    margin-right: 1.10em;
+    margin-top: -.50em;
+}
+
+#tagline2, #tagline3, #landing1, #landing2, #landing3 {
+    margin-left: .50em;
+    margin-right: .50em; 
+    margin-top: -.10em;
+}
+
 .LandingPage {
     text-align: center;
 }
 
 .Description_Intro, .Description_Functional, .Description_Final {
-    padding: 1.5em;
     margin: 1em;
-    min-height: 200px;
+    font-size: 1rem;
+    height: 200px;
+    width: 250px;
     border: 1px solid black;
+    border-radius: 1.5em;
+    background-color: rgb(255, 255, 255, .85);
+    box-shadow: inset -3px -3px 5px 0px #949393;
 }
 
-p {
-    margin-left: 3em;
-    margin-right: 3em;
+.Description_Intro > img, .Description_Functional > img, .Description_Final > img {
+    position: relative;
+    right: 7em;
+    top: .25em;
+    animation: rotation 3.5s infinite linear;
+    margin: -1em;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+} 
+
+@media only screen and (min-device-width: 375px) {
+    .Description_Intro, .Description_Functional, .Description_Final {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+}
+
+@media only screen and (min-device-width: 414px) {
+    h1 {
+        font-size: 3em;
+    }
+    
+    h3 {
+        font-size: 1.10em;
+    }
+    
+    .Description_Intro, .Description_Functional, .Description_Final {
+        height: 200px;
+        width: 300px;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .Description_Intro > img, .Description_Functional > img, .Description_Final > img {
+        right: 8.5em;
+    }
+
+    #pitch-header {
+        font-size: 1.75em;
+    }
+
+    #tagline1, #tagline2, #tagline3 {
+        margin-top: -.50em;
+    }
+    
+    #tagline1 {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    #landing1, #landing2, #landing3 {
+        font-size: 1.05em;
+    }
 }

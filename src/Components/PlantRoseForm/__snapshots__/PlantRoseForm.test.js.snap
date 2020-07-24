@@ -5,7 +5,9 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
   className="PlantRose"
 >
   <RoseNav />
-  <h1>
+  <h1
+    id="plant-title"
+  >
     Plant a Rose
   </h1>
   <form
@@ -18,15 +20,35 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
       <label
         htmlFor="date"
       >
-        <p
-          id="date-entry"
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          color="green"
+          fixedWidth={false}
+          flip={null}
+          icon="seedling"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="3x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <h2
+          id="date-entry-header"
         >
-          Date Planted:
-        </p>
+          Date Planted
+        </h2>
         <input
           id="entry-date"
           name="date"
-          required=""
+          required={true}
           type="date"
         />
       </label>
@@ -34,7 +56,30 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
     <div
       className="Rose_Entry"
     >
-      <h2>
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        color="#FFFAEA"
+        fixedWidth={false}
+        flip={null}
+        icon="grin-beam"
+        id="rose-icon"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="3x"
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <h2
+        id="plant-header-rose"
+      >
         Rose
       </h2>
       <label
@@ -43,24 +88,49 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
         <p
           id="rose-prompt"
         >
-          What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+          What brought you happiness today? Did you make progress on any ideas or goals?
         </p>
         <textarea
           id="rose-entry-input"
           name="rose-text"
           onChange={[Function]}
           placeholder="Write your thoughts here"
+          required={true}
           rows="15"
+          value=""
         />
         <ErrorValidation
-          message="Please enter in some text to repsond to the prompt."
+          valid={false}
         />
       </label>
     </div>
     <div
       className="Thorn_Entry"
     >
-      <h2>
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        color="#A272AA"
+        fixedWidth={false}
+        flip={null}
+        icon="frown"
+        id="thorn-icon"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="3x"
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <h2
+        id="plant-header-thorn"
+      >
         Thorn
       </h2>
       <label
@@ -69,24 +139,49 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
         <p
           id="thorn-prompt"
         >
-          What didn't go as planned? What stressed you out or made you feel upset?
+          Was there anything that upset or frustrated you today? What were the sources of those feelings?
         </p>
         <textarea
           id="thorn-entry-input"
           name="thorn-text"
           onChange={[Function]}
           placeholder="Write your thoughts here"
+          required={true}
           rows="15"
+          value=""
         />
         <ErrorValidation
-          message="Please enter in some text to repsond to the prompt."
+          valid={false}
         />
       </label>
     </div>
     <div
       className="Bud_Entry"
     >
-      <h2>
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        color="#8B5151"
+        fixedWidth={false}
+        flip={null}
+        icon="grin-alt"
+        id="bud-icon"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="3x"
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <h2
+        id="plant-header-bud"
+      >
         Bud
       </h2>
       <label
@@ -95,24 +190,49 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
         <p
           id="bud-prompt"
         >
-          What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+          What is something you are looking forward to? What would you like to spend more time focusing on?
         </p>
         <textarea
           id="bud-entry-input"
           name="bud-text"
           onChange={[Function]}
           placeholder="Write your thoughts here"
+          required={true}
           rows="15"
+          value=""
         />
         <ErrorValidation
-          message="Please enter in some text to repsond to the prompt."
+          valid={false}
         />
       </label>
     </div>
     <div
       className="Rose_Color"
     >
-      <h2>
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        color="#B00000"
+        fixedWidth={false}
+        flip={null}
+        icon="spa"
+        id="color-icon"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="3x"
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <h2
+        id="plant-color-header"
+      >
         Rose Color
       </h2>
       <label
@@ -127,6 +247,8 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
           id="colors"
           name="rose-colors"
           onChange={[Function]}
+          required={true}
+          value=""
         >
           <option
             value=""
@@ -163,22 +285,16 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
           </option>
         </select>
         <ErrorValidation
-          message="Please select a color."
+          valid={false}
         />
       </label>
+      <button
+        id="submit-rose"
+        type="submit"
+      >
+        Plant Rose
+      </button>
     </div>
-    <button
-      id="submit-rose"
-      type="submit"
-    >
-      Plant Rose
-    </button>
-    <button
-      id="start-over"
-      type="reset"
-    >
-      Start Over
-    </button>
   </form>
 </section>
 `;

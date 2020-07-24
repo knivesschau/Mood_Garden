@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
-import TokenService from '../../services/token-services';
 import './RoseNav.css'
 
 export default class RoseNav extends Component {
@@ -8,6 +8,7 @@ export default class RoseNav extends Component {
         return (
             <div className="Rose_Nav">
                 <Link to="/your-garden">
+                    <FontAwesomeIcon icon="chevron-left"/>
                     Back To Your Garden
                 </Link>
             </div>

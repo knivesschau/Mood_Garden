@@ -2,7 +2,7 @@
 
 exports[`RegistrationForm Component renders the complete RegistrationForm Component 1`] = `
 <section
-  className="LoginForm"
+  className="RegistrationForm"
 >
   <nav
     className="Register_Nav"
@@ -11,14 +11,35 @@ exports[`RegistrationForm Component renders the complete RegistrationForm Compon
     <Link
       to="/"
     >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="chevron-left"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
       Back
     </Link>
   </nav>
-  <h3>
+  <h3
+    id="register-header"
+  >
     Begin Cultivating
   </h3>
   <form
-    className="Registration_Form"
+    className="Register_Form"
     onSubmit={[Function]}
   >
     <div
@@ -27,11 +48,21 @@ exports[`RegistrationForm Component renders the complete RegistrationForm Compon
       <label
         htmlFor="username"
       >
-        Username:
+        <p
+          id="user-descrip"
+        >
+          Username:
+        </p>
         <input
           id="username"
           name="username"
+          onChange={[Function]}
           type="text"
+          value=""
+        />
+        <ErrorValidation
+          className="Username_Error"
+          valid={false}
         />
       </label>
     </div>
@@ -41,25 +72,44 @@ exports[`RegistrationForm Component renders the complete RegistrationForm Compon
       <label
         htmlFor="password"
       >
-        Password:
+        <p
+          id="password-descrip"
+        >
+          Password:
+        </p>
         <input
           id="password"
           name="password"
+          onChange={[Function]}
           type="password"
+        />
+        <ErrorValidation
+          className="Password_Error"
+          valid={false}
         />
       </label>
       <label
         htmlFor="retype-password"
       >
-        Re-Type Password:
+        <p
+          id="confirm-descrip"
+        >
+          Re-Type Password:
+        </p>
         <input
           id="retype-password"
-          name="re-typepassword"
+          name="re-type-password"
+          onChange={[Function]}
           type="password"
+        />
+        <ErrorValidation
+          className="Retype_Error"
+          valid={false}
         />
       </label>
     </div>
     <button
+      id="register-user"
       type="submit"
     >
       Register

@@ -1,0 +1,61 @@
+/* mobile first style, min 320px */
+
+.Rose_Editor, .Thorn_Editor, .Bud_Editor {
+    box-shadow: 0px 1px 5px 2px #6E7C51; 
+    border-radius: 2em;
+    margin: 1em;
+    background-color: rgb(203, 211, 167, .90);
+}
+
+#edit-header {
+    margin-top: .50em;
+    font-size: 1.75em;
+}
+
+#rose-edit-header, #thorn-edit-header, #bud-edit-header {
+    color: #6B1A1A;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#update-garden, #cancel-update {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid rgba(255,255,255,0);
+    border-radius: 2em;
+    padding: .5em;
+    margin: .5em;
+    margin-bottom: 1em;
+    background-color: #C34444;
+    color: #ffffff;
+    text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);
+}
+
+#update-garden:hover, #cancel-update:hover {
+    cursor: pointer;
+    border-color: rgb(255,255,255, 1);
+}
+
+#update-garden:hover, #cancel-update:hover {
+    background-color: #8F0000;
+}
+
+@media screen and (min-device-width: 414px) {
+    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
+        margin: 1.5em;
+    }
+
+    #edit-header {
+        
+    }
+    
+    #rose-edit-header, #thorn-edit-header, #bud-edit-header {
+        font-size: 1.75em;
+    }
+    
+    #update-garden, #cancel-update {
+        font-size: 1.10em;
+    }
+}

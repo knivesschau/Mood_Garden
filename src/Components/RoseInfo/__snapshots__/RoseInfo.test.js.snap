@@ -8,9 +8,17 @@ exports[`RoseInfo Component renders the complete RoseInfo Component 1`] = `
     className="Collapsed_Roses"
   >
     <Link
+      id="Rose_MiniInfo"
       to="/roses/undefined"
     >
-      <h2>
+      <div
+        className="Rose_Image_Garden"
+      >
+        <RoseColor />
+      </div>
+      <h2
+        id="rose-info"
+      >
          Rose Planted on 
         Invalid Date
       </h2>

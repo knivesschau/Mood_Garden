@@ -49,10 +49,6 @@ export default class EditRose extends Component {
         });
     }
 
-    handleCancelClick = () => {
-        this.props.history.push(`/your-garden`)
-    };
-
     render() {
         const {roses=[]} = this.context; 
         const {id} = this.props.match.params;
@@ -75,9 +71,6 @@ export default class EditRose extends Component {
                         color={roseEntry.color}
                         entry_date={roseEntry.entry_date}
                     />
-
-                    <button type="submit" id="update-garden">Update Rose</button>
-                    <button type="button" id="cancel-update" onClick={this.handleCancelClick}>Cancel</button>
                     
                     </form>
 
