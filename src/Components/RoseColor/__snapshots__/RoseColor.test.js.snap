@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoseColor Component renders the complete RoseColor component image 1`] = `
+<Fragment>
+  <img
+    alt="rose-color"
+    src="rose-image.png"
+    style={
+      Object {
+        "filter": "hue-rotate(0deg)",
+        "width": "20%",
+      }
+    }
+  />
+</Fragment>
+`;

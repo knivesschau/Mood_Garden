@@ -31,7 +31,6 @@ class App extends Component {
         return res.json()
       })
       .then(roses => {
-        console.log(roses)
         this.setState({roses})
       })
       .catch(error => {

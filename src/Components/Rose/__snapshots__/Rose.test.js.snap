@@ -57,3 +57,68 @@ exports[`Rose Component renders the complete Rose Component 1`] = `
   </div>
 </section>
 `;
+
+exports[`Rose Component renders the complete Rose Component given props 1`] = `
+<section
+  className="Rose"
+>
+  <div
+    className="View_Rose"
+  >
+    <h2
+      id="expand-rose-header"
+    >
+      Yellow
+       Rose Planted on 
+      7/28/2020
+    </h2>
+    <h3
+      id="rose-header-expand"
+    >
+      Rose
+    </h3>
+    <p
+      id="expanded-rose"
+    >
+      test rose
+    </p>
+    <h3
+      id="thorn-header-expand"
+    >
+      Thorn
+    </h3>
+    <p
+      id="expanded-thorn"
+    >
+      test thorn
+    </p>
+    <h3
+      id="bud-header-expand"
+    >
+      Bud
+    </h3>
+    <p
+      id="expanded-bud"
+    >
+      test component
+    </p>
+    <Link
+      to="/edit-rose/undefined"
+    >
+      <button
+        id="edit"
+        type="submit"
+      >
+        Edit Rose
+      </button>
+    </Link>
+    <button
+      id="delete"
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Rose
+    </button>
+  </div>
+</section>
+`;

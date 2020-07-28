@@ -162,3 +162,170 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
   </div>
 </Fragment>
 `;
+
+exports[`EditRoseForm Component renders the correct EditRoseForm Component given props 1`] = `
+<Fragment>
+  <h1
+    id="edit-header"
+  >
+    Editing 
+    Yellow
+     Rose Planted on 
+    7/28/2020
+  </h1>
+  <div
+    className="Rose_Editor"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      color="#FFFAEA"
+      fixedWidth={false}
+      flip={null}
+      icon="grin-beam"
+      id="rose-icon"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="3x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    <h2
+      id="rose-edit-header"
+    >
+      Rose
+    </h2>
+    <label
+      htmlFor="rose-entry-input"
+    >
+      <p
+        id="rose-prompt"
+      >
+        What brought you happiness today? Did you make progress on any ideas or goals?
+      </p>
+      <textarea
+        defaultValue="test rose"
+        id="rose-entry-input"
+        name="rose-edit"
+        onChange={[Function]}
+        rows="15"
+      />
+      <ErrorValidation />
+    </label>
+  </div>
+  <div
+    className="Thorn_Editor"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      color="#A272AA"
+      fixedWidth={false}
+      flip={null}
+      icon="frown"
+      id="thorn-icon"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="3x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    <h2
+      id="thorn-edit-header"
+    >
+      Thorn
+    </h2>
+    <label
+      htmlFor="thorn-entry-input"
+    >
+      <p
+        id="thorn-prompt"
+      >
+        Was there anything that upset or frustrated you today? What were the sources of those feelings?
+      </p>
+      <textarea
+        defaultValue="test thorn"
+        id="thorn-entry-input"
+        name="thorn-edit"
+        onChange={[Function]}
+        rows="15"
+      />
+      <ErrorValidation />
+    </label>
+  </div>
+  <div
+    className="Bud_Editor"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      color="#8B5151"
+      fixedWidth={false}
+      flip={null}
+      icon="grin-alt"
+      id="bud-icon"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="3x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    <h2
+      id="bud-edit-header"
+    >
+      Bud
+    </h2>
+    <label
+      htmlFor="bud-entry-input"
+    >
+      <p
+        id="bud-prompt"
+      >
+        What is something you are looking forward to? What would you like to spend more time focusing on?
+      </p>
+      <textarea
+        defaultValue="test component"
+        id="bud-entry-input"
+        name="bud-edit"
+        onChange={[Function]}
+        rows="15"
+      />
+      <ErrorValidation />
+    </label>
+    <button
+      id="update-garden"
+      type="submit"
+    >
+      Update Rose
+    </button>
+    <button
+      id="cancel-update"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</Fragment>
+`;

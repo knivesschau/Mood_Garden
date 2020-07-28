@@ -26,3 +26,33 @@ exports[`RoseInfo Component renders the complete RoseInfo Component 1`] = `
   </div>
 </section>
 `;
+
+exports[`RoseInfo Component renders the correct Rose Component given props 1`] = `
+<section
+  className="ViewRose"
+>
+  <div
+    className="Collapsed_Roses"
+  >
+    <Link
+      id="Rose_MiniInfo"
+      to="/roses/undefined"
+    >
+      <div
+        className="Rose_Image_Garden"
+      >
+        <RoseColor
+          color="Yellow"
+        />
+      </div>
+      <h2
+        id="rose-info"
+      >
+        Yellow
+         Rose Planted on 
+        7/28/2020
+      </h2>
+    </Link>
+  </div>
+</section>
+`;

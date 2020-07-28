@@ -22,8 +22,6 @@ export default class RoseMain extends Component {
         const {roses=[]} = this.context; 
         const {id} = this.props.match.params;
         const roseEntry = roses.find(rose => rose.id === parseInt(id)) || {};
-
-        console.log(roseEntry);
         
         return (
             <section className="Rose_Expanded">
