@@ -25,9 +25,8 @@ export default class RoseMain extends Component {
         
         return (
             <section className="Rose_Expanded">
-                <nav role="navigation" className="Rose_Nav">
-                    <RoseNav/>
-                </nav>
+                
+                <RoseNav/>
 
                 <div className="Rose_Image_Entry">
                     <RoseColor color={roseEntry.color}/>

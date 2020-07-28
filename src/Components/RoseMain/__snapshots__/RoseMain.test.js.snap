@@ -4,12 +4,7 @@ exports[`RoseMain Component renders the complete RoseMain Component and all nest
 <section
   className="Rose_Expanded"
 >
-  <nav
-    className="Rose_Nav"
-    role="navigation"
-  >
-    <RoseNav />
-  </nav>
+  <RoseNav />
   <div
     className="Rose_Image_Entry"
   >

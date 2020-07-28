@@ -6,12 +6,15 @@ import './RoseNav.css'
 export default class RoseNav extends Component {
     render() {
         return (
-            <div className="Rose_Nav">
+            
+            <nav className="Rose_Nav" role="navigation">
+
                 <Link to="/your-garden">
                     <FontAwesomeIcon icon="chevron-left"/>
                     Back To Your Garden
                 </Link>
-            </div>
+
+            </nav>
         )
     }
 }

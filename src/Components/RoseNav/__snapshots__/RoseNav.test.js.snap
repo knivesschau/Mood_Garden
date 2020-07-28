@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RoseNav Component renders the complete RoseNav Component 1`] = `
-<div
+<nav
   className="Rose_Nav"
+  role="navigation"
 >
   <Link
     to="/your-garden"
@@ -28,5 +29,5 @@ exports[`RoseNav Component renders the complete RoseNav Component 1`] = `
     />
     Back To Your Garden
   </Link>
-</div>
+</nav>
 `;
