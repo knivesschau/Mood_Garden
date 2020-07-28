@@ -2,7 +2,7 @@
 
 exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
 <section
-  className="LoginForm"
+  className="GardenLoginForm"
 >
   <nav
     className="Login_Nav"

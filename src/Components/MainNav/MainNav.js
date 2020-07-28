@@ -17,13 +17,13 @@ export default class MainNav extends Component {
                     Plant 
                 </Link>
 
-                <FontAwesomeIcon icon="leaf" style={{color: "green"}}/>
+                <FontAwesomeIcon icon="leaf" color="green"/>
                 
                 <Link to='/' id="home-page">
                     About
                 </Link>
 
-                <FontAwesomeIcon icon="leaf" style={{color: "green"}}/>
+                <FontAwesomeIcon icon="leaf" color="green"/>
                 
                 <Link to='/' id="logout-link" onClick={this.handleLogoutClick}>
                     Logout 
@@ -40,7 +40,7 @@ export default class MainNav extends Component {
                      Sign Up
                 </Link>
 
-                <FontAwesomeIcon icon="seedling" style={{color: "green"}}/>
+                <FontAwesomeIcon icon="seedling" color="green"/>
 
                 <Link to='/login' id="login-link">
                      Log In

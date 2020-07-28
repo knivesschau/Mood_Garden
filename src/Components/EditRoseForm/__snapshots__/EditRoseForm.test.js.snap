@@ -2,7 +2,9 @@
 
 exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] = `
 <Fragment>
-  <h1>
+  <h1
+    id="edit-header"
+  >
     Editing 
      Rose Planted on 
     Invalid Date
@@ -10,7 +12,30 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
   <div
     className="Rose_Editor"
   >
-    <h2>
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      color="#FFFAEA"
+      fixedWidth={false}
+      flip={null}
+      icon="grin-beam"
+      id="rose-icon"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="3x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    <h2
+      id="rose-edit-header"
+    >
       Rose
     </h2>
     <label
@@ -19,7 +44,7 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
       <p
         id="rose-prompt"
       >
-        What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+        What brought you happiness today? Did you make progress on any ideas or goals?
       </p>
       <textarea
         id="rose-entry-input"
@@ -27,15 +52,36 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
         onChange={[Function]}
         rows="15"
       />
-      <ErrorValidation
-        message="Please edit your original entry, or type in another response."
-      />
+      <ErrorValidation />
     </label>
   </div>
   <div
     className="Thorn_Editor"
   >
-    <h2>
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      color="#A272AA"
+      fixedWidth={false}
+      flip={null}
+      icon="frown"
+      id="thorn-icon"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="3x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    <h2
+      id="thorn-edit-header"
+    >
       Thorn
     </h2>
     <label
@@ -44,7 +90,7 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
       <p
         id="thorn-prompt"
       >
-        What didn't go as planned? What stressed you out or made you feel upset?
+        Was there anything that upset or frustrated you today? What were the sources of those feelings?
       </p>
       <textarea
         id="thorn-entry-input"
@@ -52,15 +98,36 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
         onChange={[Function]}
         rows="15"
       />
-      <ErrorValidation
-        message="Please edit your original entry, or type in another response."
-      />
+      <ErrorValidation />
     </label>
   </div>
   <div
     className="Bud_Editor"
   >
-    <h2>
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      color="#8B5151"
+      fixedWidth={false}
+      flip={null}
+      icon="grin-alt"
+      id="bud-icon"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="3x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    <h2
+      id="bud-edit-header"
+    >
       Bud
     </h2>
     <label
@@ -69,7 +136,7 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
       <p
         id="bud-prompt"
       >
-        What is something you are looking forward to? Are there any new ideas that you would like to see grow?
+        What is something you are looking forward to? What would you like to spend more time focusing on?
       </p>
       <textarea
         id="bud-entry-input"
@@ -77,10 +144,21 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
         onChange={[Function]}
         rows="15"
       />
-      <ErrorValidation
-        message="Please edit your original entry, or type in another response."
-      />
+      <ErrorValidation />
     </label>
+    <button
+      id="update-garden"
+      type="submit"
+    >
+      Update Rose
+    </button>
+    <button
+      id="cancel-update"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
   </div>
 </Fragment>
 `;

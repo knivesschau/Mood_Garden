@@ -4,28 +4,15 @@ exports[`EditRose Component renders the complete EditRose Component and all nest
 <section
   className="EditRose"
 >
-  <RoseNav />
   <div
     className="Rose__Editor"
   >
+    <RoseNav />
     <form
       className="Edit_Rose"
       onSubmit={[Function]}
     >
       <EditRoseForm />
-      <button
-        id="update-garden"
-        type="submit"
-      >
-        Update Rose
-      </button>
-      <button
-        id="cancel-update"
-        onClick={[Function]}
-        type="button"
-      >
-        Cancel
-      </button>
     </form>
   </div>
 </section>

@@ -25,6 +25,7 @@ exports[`LandingPage Component renders the Complete LandingPage Component and al
   <div
     className="Description_Intro"
   >
+    <RoseColor />
     <h3
       id="tagline1"
     >
@@ -39,6 +40,7 @@ exports[`LandingPage Component renders the Complete LandingPage Component and al
   <div
     className="Description_Functional"
   >
+    <RoseColor />
     <h3
       id="tagline2"
     >
@@ -53,6 +55,7 @@ exports[`LandingPage Component renders the Complete LandingPage Component and al
   <div
     className="Description_Final"
   >
+    <RoseColor />
     <h3
       id="tagline3"
     >

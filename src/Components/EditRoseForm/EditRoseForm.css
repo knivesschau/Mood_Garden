@@ -4,6 +4,7 @@
     box-shadow: 0px 1px 5px 2px #6E7C51; 
     border-radius: 2em;
     margin: 1em;
+    padding: .50em;
     background-color: rgb(203, 211, 167, .90);
 }
 
@@ -26,8 +27,8 @@
     border: 2px solid rgba(255,255,255,0);
     border-radius: 2em;
     padding: .5em;
-    margin: .5em;
-    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-bottom: .75em;
     background-color: #C34444;
     color: #ffffff;
     text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);
@@ -48,7 +49,7 @@
     }
 
     #edit-header {
-        
+        font-size: 2em;
     }
     
     #rose-edit-header, #thorn-edit-header, #bud-edit-header {
@@ -57,5 +58,54 @@
     
     #update-garden, #cancel-update {
         font-size: 1.10em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
+        margin-left: 7.5em;
+        margin-right: 7.5em;
+    }
+
+    #edit-header {
+        margin-top: 1em;
+    }
+
+    #update-garden, #cancel-update {
+        margin-left: -.50em;
+        margin-right: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+
+    #edit-header {
+        font-size: 2.75em;
+    }
+
+    #rose-edit-header, #thorn-edit-header, #bud-edit-header {
+        font-size: 2.5em;
+    }
+
+    #update-garden, #cancel-update {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
+        margin-left: 20em;
+        margin-right: 20em;
+    }
+}
+
+@media only screen and (min-device-width: 1700px) {
+    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
+        margin-left: 35em;
+        margin-right: 35em;
     }
 }

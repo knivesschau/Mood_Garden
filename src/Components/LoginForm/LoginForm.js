@@ -47,7 +47,7 @@ export default class LoginForm extends Component {
 
     render() {
         return (
-            <section className="LoginForm">
+            <section className="GardenLoginForm">
 
                 <nav role="navigation" className="Login_Nav"> 
                     <FontAwesomeIcon icon="chevron-left"/>

@@ -315,7 +315,7 @@ export default class PlantRoseForm extends Component {
                             
                             </select> 
 
-                            <ErrorValidation 
+                            <ErrorValidation
                                 valid={this.state.validColor}
                                 message={this.state.errorType.color}/>
 

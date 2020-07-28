@@ -17,6 +17,7 @@ exports[`MainNav Component renders the complete MainNav Component 1`] = `
     <FontAwesomeIcon
       border={false}
       className=""
+      color="green"
       fixedWidth={false}
       flip={null}
       icon="seedling"
@@ -28,11 +29,6 @@ exports[`MainNav Component renders the complete MainNav Component 1`] = `
       rotation={null}
       size={null}
       spin={false}
-      style={
-        Object {
-          "color": "green",
-        }
-      }
       swapOpacity={false}
       symbol={false}
       title=""

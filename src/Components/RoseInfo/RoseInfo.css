@@ -21,7 +21,7 @@
 
 .Rose_Image_Garden {
     position: relative;
-    right: 7.5em;
+    right: 7.75em;
     bottom: .5em;
 }
 
@@ -41,7 +41,7 @@
 
 @media only screen and (min-device-width: 375px) {
     .Rose_Image_Garden {
-        right: 8.5em;
+        right: 9em;
     }
 
     #rose-info {
@@ -56,8 +56,67 @@
     }
 
     #rose-info {
-        font-size: 1.45em;
+        font-size: 1.5em;
         margin-left: 2.5em;
         margin-right: 2.5em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    .Rose_Image_Garden {
+        right: 15em;
+    }
+
+    #rose-info {
+        padding: 1em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Rose_Image_Garden {
+        right: 20em;
+        bottom: .50em;
+    }
+
+    #rose-info {
+        font-size: 1.75em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .Rose_Image_Garden {
+        right: 17em;
+    }
+}
+
+@media only screen and (min-device-width: 1300px) {
+    .Rose_Image_Garden {
+        right: 20em;
+    }
+
+    #rose-info {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-device-width: 1500px) {
+    .Rose_Image_Garden {
+        right: 21em;
+    }
+}
+
+@media only screen and (min-device-width: 1700px) {
+    .Rose_Image_Garden {
+        right: 22em;
+    }
+
+    #rose-info {
+        font-size: 2.25em;
+    }
+}
+
+@media only screen and (min-device-width: 2000px) {
+    .Rose_Image_Garden {
+        right: 27em;
     }
 }

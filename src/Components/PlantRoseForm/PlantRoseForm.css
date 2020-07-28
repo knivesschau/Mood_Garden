@@ -11,6 +11,7 @@
     box-shadow: 0px 1px 5px 2px #6E7C51; 
     border-radius: 2em;
     margin: 1em;
+    padding-top: .50em;
     background-color: rgb(203, 211, 167, .90);
 }
 
@@ -81,7 +82,8 @@ textarea:focus, #colors:focus, input[type="date"]:focus {
 #submit-rose, #cancel-plant {
     display: inline-block;
     padding: .5em;
-    margin: .5em;
+    margin-right: 1em;
+    margin-bottom: .75em;
     border: 2px solid rgba(255,255,255,0);
     border-radius: 2em;
     box-sizing: border-box;
@@ -109,10 +111,6 @@ textarea:focus, #colors:focus, input[type="date"]:focus {
 }
 
 @media only screen and (min-device-width: 414px) {
-    textarea {
-        font-size: 1.20em;
-    }
-
     .Date_Entry, .Thorn_Entry, .Rose_Color, .Rose_Entry, .Bud_Entry {
         margin: 1.5em;
     }
@@ -121,7 +119,91 @@ textarea:focus, #colors:focus, input[type="date"]:focus {
         font-size: 1.75em;
     }
 
-    #rose-prompt, #thorn-prompt, #bud-prompt, #color-prompt, #submit-rose, #cancel-plant, #colors {
-        font-size: 1.10em;
+    textarea, #entry-date, #rose-prompt, #thorn-prompt, #bud-prompt, #color-prompt, #submit-rose, #cancel-plant, #colors {
+        font-size: 1.20em;
+    }
+
+    #plant-title {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    .Date_Entry, .Thorn_Entry, .Rose_Color, .Rose_Entry, .Bud_Entry {
+        margin-left: 7.5em;
+        margin-right: 7.5em;
+    }
+
+    #submit-rose, #cancel-plant {
+        margin-left: -.50em;
+        margin-right: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Date_Entry, .Thorn_Entry, .Rose_Color, .Rose_Entry, .Bud_Entry {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+    
+    #entry-date {
+        width: 40%;
+    }
+
+    #submit-rose, #cancel-plant {
+        margin-left: .10em;
+    }
+
+    #plant-title {
+        font-size: 3.5em;
+    }
+
+    #date-entry-header, #plant-color-header, #plant-header-rose, #plant-header-bud, #plant-header-thorn {
+        font-size: 2.5em;
+    }
+
+    textarea, #date-entry, #rose-prompt, #thorn-prompt, #bud-prompt, #color-prompt, #submit-rose, #cancel-plant, #colors {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .Date_Entry, .Thorn_Entry, .Rose_Color, .Rose_Entry, .Bud_Entry {
+        margin-left: 20em;
+        margin-right: 20em;
+    }
+}
+
+@media only screen and (min-device-width: 1700px) {
+    textarea {
+        width: 95%;
+    }
+    
+    .Date_Entry, .Thorn_Entry, .Rose_Color, .Rose_Entry, .Bud_Entry {
+        margin-left: 30em;
+        margin-right: 30em;
+    }
+
+    #plant-title {
+        margin-bottom: .50em;
+    }
+
+    #entry-date {
+        width: 35%;
+    }
+}
+
+@media only screen and (min-device-width: 2000px) {
+    .Date_Entry, .Thorn_Entry, .Rose_Color, .Rose_Entry, .Bud_Entry {
+        margin-left: 35em;
+        margin-right: 35em;
+    }
+
+    #entry-date {
+        width: 30%;
+    }
+
+    #colors {
+        width: 50%;
     }
 }

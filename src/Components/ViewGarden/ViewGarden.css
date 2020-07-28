@@ -9,8 +9,9 @@
 }
 
 ul {
-    padding-left: 0;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .25em;
 }
 
 li {
@@ -30,5 +31,56 @@ li {
     #garden-header {
         font-size: 2.5em;
         margin-top: .50em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    ul {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #garden-header {
+        font-size: 3em;
+        margin-bottom: .50em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    ul {
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    ul {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+} 
+
+@media only screen and (min-device-width: 1400px) {
+    ul {
+        margin-left: 20em;
+        margin-right: 20em;
+    }
+}
+
+@media only screen and (min-device-width: 1700px) {
+    ul {
+        margin-left: 25em;
+        margin-right: 25em;
+    }
+    
+    #garden-header {
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (min-device-width: 2000px) {
+    ul {
+        margin-left: 30em;
+        margin-right: 30em;
     }
 }

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    margin: .30em;
+    margin: 0;
     text-align: center;
     margin-top: 1em;
     padding: 1em;
@@ -50,10 +50,15 @@
 }
 
 #username, #password, #retype-password {
-    margin-left: 2.5em;
-    margin-right: 2.5em;
     margin-top: .30em;
     margin-bottom: .10em;
+    transition: border .3s ease-out; 
+}
+
+#username:focus, #password:focus, #retype-password:focus {
+    border: 10px solid #B00000;
+    border-style: none none none solid;
+    background-color: white;
 }
 
 #user-descrip, #confirm-descrip, #password-descrip {
@@ -63,7 +68,7 @@
 #register-user {
     display: inline-block;
     padding: 0.3em 1.2em;
-    margin: 4em 4em 0.1em 4em;
+    margin: 3em 3em 0.5em 3em;
     border: 2px solid rgba(255,255,255,0);
     border-radius: 2em;
     box-sizing: border-box;
@@ -85,21 +90,129 @@
 }
 
 @media only screen and (min-device-width: 375px) {
-    .Register_Form {
-        margin: 1.75em;
+    #username, #password, #retype-password {
+        width: 65%;
+    }
+
+    #register-user {
+        margin-left: 5em;
+        margin-right: 5em;
     }
 }
 
 @media only screen and (min-device-width: 414px) {
+    .Register_Form {
+        margin-top: -.50em;
+    }
+    
     .Register_Nav {
         font-size: 1.50em;
     }
     
     #register-header {
+        font-size: 2em;
+    }
+
+    #username, #password, #retype-password, #user-descrip, #password-descrip, #confirm-descrip, #register-user {
+        font-size: 1.20em;
+    }
+
+    #user-descrip, #password-descrip, #confirm-descrip {
+        margin-top: .50em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    .Register_Form {
+        margin: 5em;
+        margin-top: .30em;
+        border-radius: 20em;
+    }
+
+    #username, #password, #retype-password {
+        width: 45%;
+    }
+
+    #register-user {
+        margin-left: 8em;
+        margin-right: 8em;
+        margin-top: .50em;
+    }
+
+    #user-descrip, #password-descrip, #confirm-descrip {
+        margin-top: 0em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Register_Form {
+        margin: 10.5em;
+        margin-top: -1em;
+    }
+
+    .Register_Nav {
         font-size: 1.75em;
     }
 
-    #register-user, #username, #password, #retype-password {
-        font-size: 1.10em;
+    #register-header {
+        font-size: 3em;
+        margin-top: 0;
+    }
+
+    #register-user {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .Register_Form {
+        margin: 15.5em;
+        margin-top: -1em;
+    }
+
+    #register-user {
+        margin-top: .50em;
+        margin-left: 8em;
+        margin-right: 8em;
+    }
+
+    #password, #retype-password {
+        margin-top: -1em;
+    }
+
+    #password-descrip, #confirm-descrip {
+        margin-top: -.25em;
+        margin-bottom: .50em;
+    }
+
+    #username, #password, #retype-password, #user-descrip, #password-descrip, #confirm-descrip, #register-user {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1500px) {
+    .Register_Form {
+        margin: 25em;
+        margin-top: -1em;
+    }
+}
+
+@media only screen and (min-device-width: 1700px) {
+    .Register_Form {
+        margin: 30em;
+        margin-top: -1em;
+    }
+}
+
+@media only screen and (min-device-width: 2000px) {
+    .Register_Form {
+        margin: 35em;
+        margin-top: -1em;
+    }
+
+    #register-user {
+        margin-left: 12em;
+        margin-right: 12em;
     }
 }

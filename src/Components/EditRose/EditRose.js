@@ -56,10 +56,10 @@ export default class EditRose extends Component {
 
         return (
             <section className="EditRose">
-
-                <RoseNav/>
                 
                 <div className="Rose__Editor">
+                    
+                    <RoseNav/>
                     
                     <form className="Edit_Rose" onSubmit={this.handleUpdateRose}>
 

@@ -294,6 +294,13 @@ exports[`PlantRoseForm Component renders the complete PlantRoseForm Component 1`
       >
         Plant Rose
       </button>
+      <button
+        id="cancel-plant"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
     </div>
   </form>
 </section>

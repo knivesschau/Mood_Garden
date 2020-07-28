@@ -104,7 +104,7 @@ export default class RegistrationForm extends Component {
 
         if (!REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password)) {
             validPass = false;
-            errorType.password = "Password must contain 1 upper case letter, lower case letter, number, and special character."
+            errorType.password = "Include 1 upper case letter, lower case letter, number, and special character."
         }
 
         this.setState({

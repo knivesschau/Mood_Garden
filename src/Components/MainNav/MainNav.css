@@ -3,6 +3,8 @@
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
+   margin-left: auto;
+   margin-right: auto;
    font-size: 1.25em;
    font-weight: bold;
    text-transform: uppercase;
@@ -34,11 +36,54 @@
 }
 
 @media only screen and (min-device-width: 414px) {
-    .MainNav_NoLogin {
-        font-size: 1.50em;
-    }
-
-    .MainNav_SignedIn {
+    .MainNav_NoLogin, .MainNav_SignedIn {
         font-size: 1.50em;
     }
 }
+
+@media only screen and (min-device-width: 768px) {
+    .MainNav_NoLogin {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .MainNav_SignedIn {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .MainNav_NoLogin, .MainNav_SignedIn {
+        font-size: 2em;
+    }
+
+    .MainNav_NoLogin, .MainNav_SignedIn {
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .MainNav_NoLogin {
+        margin-left: 7.5em;
+        margin-right: 7.5em;
+    }
+
+    .MainNav_SignedIn {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+}
+
+@media only screen and (min-device-width: 1400px) {
+    .MainNav_NoLogin, .MainNav_SignedIn {
+        font-size: 2.15em;
+    }
+    
+    .MainNav_NoLogin {
+        margin-left: 9.5em;
+        margin-right: 9.5em;
+    }
+} 

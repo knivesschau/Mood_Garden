@@ -1,0 +1,28 @@
+.error {
+    text-align: center;
+    color: #810000;
+    font-weight: bold;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: -.10em;
+    padding-bottom: .25em;
+    font-size: .80em;
+}
+
+@media only screen and (min-device-width: 414px) {
+    .error {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    .error {
+        padding-bottom: 1em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .error {
+        font-size: 1.15em;
+    }
+}

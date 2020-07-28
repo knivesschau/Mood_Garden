@@ -6,8 +6,8 @@
     padding: 0.2em .5em;
     margin: 0 0.1em 0.1em 0;
     margin-bottom: -1.50em;
-    border: 2px transparent #FFFFFF;
-    border-radius: 1em;
+    border: 5px transparent #FFFFFF;
+    border-radius: 2em;
     box-sizing: border-box;
     text-shadow: 0 .65px 0.65px rgb(0,0,0,0.35);
     transition-property: background;
@@ -28,6 +28,18 @@
 
 @media only screen and (min-device-width: 414px) {
     .Rose_Nav {
-        font-size: 1.10em;
+        font-size: 1.20em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Rose_Nav {
+        font-size: 1.35em;
+    }
+}
+
+@media only screen and (min-device-width: 1700px) {
+    .Rose_Nav {
+        font-size: 1.5em;
     }
 }

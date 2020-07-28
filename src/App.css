@@ -3,6 +3,7 @@
 
 .App {
     padding: 1em;
+    overflow: auto;
 }
 
 h1, h3 {
@@ -22,11 +23,8 @@ a {
     text-decoration: none;
 }
 
-.error {
-    color: #B0002F;
-    margin: .10em;
-    background-color: rgb(255, 255, 255, .80);
-    border-radius: 2em;
-    font-size: .80em;
+@media only screen and (min-device-width: 768px) {
+    .App {
+        padding: 2em;
+    }
 }
-

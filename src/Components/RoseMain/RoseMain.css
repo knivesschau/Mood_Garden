@@ -37,3 +37,36 @@
         top: 2.50em;
     }
 }
+
+@media only screen and (min-device-width: 768px) {
+    .Rose_Image_Entry > img {
+        top: 4em;
+        left: 4em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Rose_Image_Entry > img[style] {
+        top: 4em;
+        left: 8em;
+        width: 10% !important;
+    }
+
+    .Rose_Main {
+        margin-top: 20em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .Rose_Image_Entry > img[style] {
+        top: 5em;
+        left: 14em;
+    }
+}
+
+@media only screen and (min-device-width: 1800px) {
+    .Rose_Image_Entry > img[style] {
+        left: 25em;
+        width: 8% !important;
+    }
+}

@@ -14,7 +14,6 @@
     font-size: 1.50em;
     text-align: center;
     font-weight: bold;
-    word-spacing: -.20rem;
     color: white;
     text-shadow: 2px 1px 5px black;
     padding-top: 1.20em;
@@ -76,3 +75,48 @@
         font-size: 1.10em;
     }
 } 
+
+@media only screen and (min-device-width: 768px) {
+    .Rose {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #expanded-rose, #expanded-thorn, #expanded-bud {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) {
+    .Rose {
+        margin-left: 8em;
+        margin-right: 8em;
+    }
+
+    #expand-rose-header {
+        font-size: 2em;
+    }
+
+    #rose-header-expand, #thorn-header-expand, #bud-header-expand {
+        font-size: 1.75em;
+    }
+
+    #expanded-rose, #expanded-thorn, #expanded-bud, #edit, #delete {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    .Rose {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+}
+
+@media only screen and (min-device-width: 1800px) {
+    .Rose {
+        margin-left: 25em;
+        margin-right: 25em;
+    }
+}
