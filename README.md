@@ -1,68 +1,41 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Mood Garden App (Client) 
 
-In the project directory, you can run:
+<a href=https://mood-garden.now.sh/>Live Demo</a> 
+<br>
+<a href=https:/https://github.com/knivesschau/Mood_Garden_API>API Server</a>
 
-### `npm start`
+Mood Garden is an app that allows you to learn, grow, and reflect on your life by cultivating a rose garden that acts as your daily mood journal. Plant roses, edit them, and revisit them anytime, anywhere.  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
+- ReactJS
+- JSX
+- Express
+- Node.JS
+- Knex 
+- PostgreSQL
+- CSS
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Image Acknowledgements
 
-### `npm test`
+This app uses free vectors and images designed by FreePik. Specific image sources are listed below:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by freepik - www.freepik.com</a>
+<br>
+<a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by freepik - www.freepik.com</a>
+<br> 
+<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
 
-### `npm run build`
+## Screenshots (Mobile)
+<img src="https://user-images.githubusercontent.com/54642928/88762344-dffb3980-d125-11ea-88a4-046dd0007a99.png" width="35%">
+<img src="https://user-images.githubusercontent.com/54642928/88762412-00c38f00-d126-11ea-8a45-77949be8e6f4.png" width="35%">
+<img src="https://user-images.githubusercontent.com/54642928/88762640-6c0d6100-d126-11ea-9b89-1a5e9504ec11.png" width="35%">
+<img src="https://user-images.githubusercontent.com/54642928/88762530-3b2d2c00-d126-11ea-879e-38c9b1a187b2.png" width="35%">
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots (Desktop) 
+<img src="https://user-images.githubusercontent.com/54642928/88762600-58fa9100-d126-11ea-8595-6393bc2e4a2c.png" width="70%">
+<img src="https://user-images.githubusercontent.com/54642928/88762467-1c2e9a00-d126-11ea-83c3-dc1df67182a3.png" width="70%">
+<img src="https://user-images.githubusercontent.com/54642928/88762658-7596c900-d126-11ea-99ce-d86f0a403403.png" width="70%">
+<img src="https://user-images.githubusercontent.com/54642928/88762552-48e2b180-d126-11ea-9f2e-c901ae40fb91.png" width="70%">
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
