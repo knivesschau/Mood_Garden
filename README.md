@@ -8,15 +8,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Mood Garden is an app that allows you to learn, grow, and reflect on your life by cultivating a rose garden that acts as your daily mood journal. Plant roses, edit them, and revisit them anytime, anywhere.  
 
-## Technologies Used
-- ReactJS
-- JSX
-- Express
-- Node.JS
-- Knex 
-- PostgreSQL
-- CSS
-
 ## Image Acknowledgements
 
 This app uses free vectors and images designed by FreePik. Specific image sources are listed below:
@@ -26,6 +17,15 @@ This app uses free vectors and images designed by FreePik. Specific image source
 <a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by freepik - www.freepik.com</a>
 <br> 
 <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
+
+## Technologies Used
+- ReactJS
+- JSX
+- Express
+- Node.JS
+- Knex 
+- PostgreSQL
+- CSS
 
 ## Screenshots (Mobile)
 <img src="https://user-images.githubusercontent.com/54642928/88762344-dffb3980-d125-11ea-88a4-046dd0007a99.png" width="35%">
@@ -39,3 +39,7 @@ This app uses free vectors and images designed by FreePik. Specific image source
 <img src="https://user-images.githubusercontent.com/54642928/88762658-7596c900-d126-11ea-99ce-d86f0a403403.png" width="70%">
 <img src="https://user-images.githubusercontent.com/54642928/88762552-48e2b180-d126-11ea-9f2e-c901ae40fb91.png" width="70%">
 
+## Concept Wire Frames 
+<img src="https://user-images.githubusercontent.com/54642928/88764694-45512980-d12a-11ea-93e0-c4e31754e086.png" width="70%">
+<img src="https://user-images.githubusercontent.com/54642928/88764701-47b38380-d12a-11ea-81d6-afa5c8dc23ba.png" width="70%">
+<img src="https://user-images.githubusercontent.com/54642928/88764772-64e85200-d12a-11ea-9134-b39f93a2f8de.png" width="70%">
