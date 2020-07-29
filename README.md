@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Mood Garden App (Client) 
 
-<a href=https://mood-garden.now.sh/>Live Demo</a> 
+<a href="https://mood-garden.now.sh"/>Live Demo</a> 
 <br>
-<a href=https:/https://github.com/knivesschau/Mood_Garden_API>API Server</a>
+<a href="https:/https://github.com/knivesschau/Mood_Garden_API">API Server</a>
 
 Mood Garden is an app that allows you to learn, grow, and reflect on your life by cultivating a rose garden that acts as your daily mood journal. Plant roses, edit them, and revisit them anytime, anywhere.  
 
