@@ -10,11 +10,11 @@ Mood Garden is an app that allows you to learn, grow, and reflect on your life b
 
 ## Image Acknowledgements
 
-This app uses free vectors and images designed by FreePik. Specific image sources are listed below:
+This app uses free vectors and images designed and hosted by FreePik and photographeeasia. Specific image sources are listed below:
 
 <a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by freepik - www.freepik.com</a>
 <br>
-<a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by freepik - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/flower">Flower vector created by photographeeasia - www.freepik.com</a>
 <br> 
 <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
 
@@ -26,6 +26,8 @@ This app uses free vectors and images designed by FreePik. Specific image source
 - Knex 
 - PostgreSQL
 - CSS
+- Jest
+- Enzyme 
 
 ## Screenshots (Mobile)
 <img src="https://user-images.githubusercontent.com/54642928/88762344-dffb3980-d125-11ea-88a4-046dd0007a99.png" width="35%">
