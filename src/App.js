@@ -75,6 +75,7 @@ class App extends Component {
       <ErrorHandler>
 
         <moodGardenContext.Provider value={roseValues}>
+          
           <main className='App'>
 
               <Switch>
@@ -86,8 +87,9 @@ class App extends Component {
                 <Route path='/edit-rose/:id' component={EditRose}/>
                 <Route path='/roses/:id' component={RoseMain}/>
               </Switch>
-              
+
           </main>
+
         </moodGardenContext.Provider>
       
       </ErrorHandler>

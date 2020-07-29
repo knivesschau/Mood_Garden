@@ -23,6 +23,18 @@ li {
     border-radius: 20em; 
 }
 
+#welcome {
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(203, 211, 167, .90);
+    box-shadow: inset -4px 0px 5px 2px #6E7C51; 
+    border-radius: 2em;
+    font-size: .90em;
+    margin-top: -1em;
+    margin-bottom: 1.5em;
+    padding: .5em;
+}
+
 @media only screen and (min-device-width: 414px) { 
     #edit-header {
         font-size: 2em;
@@ -31,6 +43,13 @@ li {
     #garden-header {
         font-size: 2.5em;
         margin-top: .50em;
+    }
+
+    #welcome {
+        font-size: 1em;
+        padding: .75em;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 }
 
@@ -43,6 +62,14 @@ li {
     #garden-header {
         font-size: 3em;
         margin-bottom: .50em;
+    }
+
+    #welcome {
+        font-size: 1.25em;
+        padding: 1.5em;
+        margin-top: .5em;
+        margin-left: 5em;
+        margin-right: 5em;
     }
 }
 
@@ -58,10 +85,20 @@ li {
         margin-left: 15em;
         margin-right: 15em;
     }
+
+    #welcome {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
 } 
 
 @media only screen and (min-device-width: 1400px) {
     ul {
+        margin-left: 20em;
+        margin-right: 20em;
+    }
+
+    #welcome {
         margin-left: 20em;
         margin-right: 20em;
     }
@@ -75,6 +112,10 @@ li {
     
     #garden-header {
         font-size: 3.5em;
+    }
+
+    #welcome {
+        font-size: 1.5em;
     }
 }
 

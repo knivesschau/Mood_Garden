@@ -18,7 +18,9 @@ export default class ViewGarden extends Component {
                 </nav>
 
                 <h1 id="garden-header">Your Mood Garden</h1>
-            
+
+                <p id="welcome">Welcome back! Review your previous entries below, or use the link above to plant a new rose.</p>
+
                 <ul>
                     {roses.map(rose => 
                         <li key={rose.id}> 

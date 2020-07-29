@@ -52,7 +52,7 @@ export default class MainNav extends Component {
     render() {
         return (
             <nav role="navigation" className="Main_Nav">
-
+                        
                 {TokenService.hasAuthToken()
                     ? this.renderUserNav()
                     : this.renderStartingNav()}

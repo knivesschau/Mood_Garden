@@ -23,6 +23,11 @@ a {
     text-decoration: none;
 }
 
+footer {
+    font-size: .5em;
+    background-color: wheat;
+}
+
 @media only screen and (min-device-width: 768px) {
     .App {
         padding: 2em;

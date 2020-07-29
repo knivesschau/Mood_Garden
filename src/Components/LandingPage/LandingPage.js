@@ -18,6 +18,14 @@ export default class LandingPage extends Component {
                     <h2 id="pitch-header">Cultivate Your Mind</h2>
                 </header>
 
+                <div className="Demo_Info">
+
+                    <span id="demo-info1">Demo User: thinkfulTeam2020</span>
+
+                    <span id="demo-info2">Demo Password: M0odGarden1!</span>
+
+                </div>
+
                 <div className="Description_Intro">
                     
                     <RoseColor/>
@@ -45,7 +53,7 @@ export default class LandingPage extends Component {
                     <h3 id="tagline3">Walk in Your Garden</h3>
 
                     <p id="landing3">Take a walk through your mind's garden and reflect on your past journal entries anytime, anywhere. You may even come up with more insights!</p>
-                
+
                 </div>
 
             </div>

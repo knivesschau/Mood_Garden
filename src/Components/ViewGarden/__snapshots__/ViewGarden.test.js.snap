@@ -15,6 +15,11 @@ exports[`ViewGarden Component renders the complete ViewGarden Component and all 
   >
     Your Mood Garden
   </h1>
+  <p
+    id="welcome"
+  >
+    Welcome back! Review your previous entries below, or use the link above to plant a new rose.
+  </p>
   <ul />
 </section>
 `;
