@@ -2,9 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Mood Garden App (Client) 
 
-<a href="https://mood-garden.now.sh"/>Live Demo</a> 
+<a href="https://mood-garden.now.sh"/>Live Demo (Client)</a> 
+<br>
+<a href="https://github.com/knivesschau/Mood_Garden">Client Repo</a>
 <br>
 <a href="https://github.com/knivesschau/Mood_Garden_API">API Server</a>
+<br>
+<a href="https://calm-coast-19093.herokuapp.com/">Heroku API Server</a>
 
 Mood Garden is an app that allows you to learn, grow, and reflect on your life by cultivating a rose garden that acts as your daily mood journal. Plant roses, edit them, and revisit them anytime, anywhere.  
 
@@ -18,16 +22,35 @@ This app uses free vectors and images designed and hosted by FreePik and photogr
 <br> 
 <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
 
+## API Endpoints
+```
+GET
+  - /api/roses (All Entries by User Logged In)
+  - /api/:rose_id 
+```
+```
+POST, DELETE, AND PATCH
+  - /api/:rose_id 
+```
+```
+USERS AND AUTHENTICATION
+  - /api/users (Registration)
+  - /api/auth/login (Login)
+```
+
 ## Technologies Used
-- ReactJS
-- JSX
-- Express
-- Node.JS
-- Knex 
-- PostgreSQL
-- CSS
-- Jest
-- Enzyme 
+- ReactJS (Client)
+- JSX (Client)
+- CSS (Client)
+- Express (Server)
+- Node.JS (Server)
+- Knex (Server)
+- PostgreSQL (Server)
+- Jest (Client Testing)
+- Enzyme (Client Testing)
+- Mocha (Server Testing)
+- Chai (Server Testing)
+- Supertest (Server Testing)
 
 ## Screenshots (Mobile)
 <img src="https://user-images.githubusercontent.com/54642928/88762344-dffb3980-d125-11ea-88a4-046dd0007a99.png" width="35%">
