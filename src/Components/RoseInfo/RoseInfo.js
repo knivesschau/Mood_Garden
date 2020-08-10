@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import RoseColor from '../RoseColor/RoseColor';
 import moodGardenContext from '../../moodGardenContext';
 import './RoseInfo.css';
@@ -20,7 +20,7 @@ export default class RoseInfo extends Component {
                         <div className="Rose_Image_Garden">
                             <RoseColor color={color}/>
                         </div>
-                        
+                        {/* Display short-hand information about Rose via context access. */}
                         <h2 id="rose-info">{color} Rose Planted on {new Date(entry_date).toLocaleDateString()}</h2>
                     
                     </Link>

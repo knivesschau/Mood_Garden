@@ -1,3 +1,5 @@
+/* mobile first styles, min 320px */
+
 .Rose_Nav {
     font-size: 1em;
     font-weight: bold;
@@ -32,6 +34,8 @@
     }
 }
 
+/* desktop and tablet styles */
+
 @media only screen and (min-device-width: 1000px) {
     .Rose_Nav {
         font-size: 1.35em;
@@ -40,6 +44,6 @@
 
 @media only screen and (min-device-width: 1700px) {
     .Rose_Nav {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 }

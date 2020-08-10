@@ -1,4 +1,4 @@
-/* Mobile styles first, 320px */
+/* mobile first styles, min 320px - max 414px */
 
 .Rose {
     text-align: center;
@@ -74,21 +74,49 @@
     #expanded-rose, #expanded-thorn, #expanded-bud, #edit, #delete {
         font-size: 1.10em;
     }
-} 
+}
 
-@media only screen and (min-device-width: 768px) {
+/* desktop and tablet styles. query order is descending from larger desktops - tablets due to max-width constraints */
+
+@media only screen and (min-device-width: 1800px) and (max-width: 2200px) {
     .Rose {
-        margin-left: 5em;
-        margin-right: 5em;
+        margin-left: 28em;
+        margin-right: 28em;
     }
 
-    #expanded-rose, #expanded-thorn, #expanded-bud {
-        margin-left: 2em;
-        margin-right: 2em;
+    #expand-rose-header {
+        font-size: 2.5em;
+    }
+
+    #rose-header-expand, #thorn-header-expand, #bud-header-expand {
+        font-size: 2em;
+    }
+
+    #expanded-rose, #expanded-thorn, #expanded-bud, #edit, #delete {
+        font-size: 1.75em;
     }
 }
 
-@media only screen and (min-device-width: 1000px) {
+@media only screen and (min-device-width: 1200px) and (max-width: 1799px) {
+    .Rose {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+
+    #expand-rose-header {
+        font-size: 2em;
+    }
+
+    #rose-header-expand, #thorn-header-expand, #bud-header-expand {
+        font-size: 1.75em;
+    }
+
+    #expanded-rose, #expanded-thorn, #expanded-bud, #edit, #delete {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) and (max-width: 1199px) {
     .Rose {
         margin-left: 8em;
         margin-right: 8em;
@@ -107,16 +135,14 @@
     }
 }
 
-@media only screen and (min-device-width: 1200px) {
+@media only screen and (min-device-width: 768px) and (max-width: 999px) {
     .Rose {
-        margin-left: 15em;
-        margin-right: 15em;
+        margin-left: 5em;
+        margin-right: 5em;
     }
-}
 
-@media only screen and (min-device-width: 1800px) {
-    .Rose {
-        margin-left: 25em;
-        margin-right: 25em;
+    #expanded-rose, #expanded-thorn, #expanded-bud {
+        margin-left: 2em;
+        margin-right: 2em;
     }
 }

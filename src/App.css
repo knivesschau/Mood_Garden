@@ -1,9 +1,9 @@
-/* mobile first, min 320px */
+/* mobile first styles, min 320px */
+
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Handlee&family=Merienda+One&family=Raleway&display=swap');
 
 .App {
     padding: 1em;
-    overflow: auto;
 }
 
 h1, h3 {
@@ -27,6 +27,8 @@ footer {
     font-size: .5em;
     background-color: wheat;
 }
+
+/* desktop and tablet styles */
 
 @media only screen and (min-device-width: 768px) {
     .App {

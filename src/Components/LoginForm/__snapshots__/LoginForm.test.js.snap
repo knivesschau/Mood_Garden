@@ -81,5 +81,19 @@ exports[`LoginForm Component renders the complete LoginForm Component 1`] = `
       Login
     </button>
   </form>
+  <div
+    className="Demo_Info"
+  >
+    <span
+      id="demo-info1"
+    >
+      Demo User: thinkfulTeam2020
+    </span>
+    <span
+      id="demo-info2"
+    >
+      Demo Password: M0odGarden1!
+    </span>
+  </div>
 </section>
 `;

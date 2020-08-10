@@ -16,9 +16,15 @@ import './App.css';
 class App extends Component {
   state = {
     roses: []
-  }
+  };
 
   componentDidMount() {
+    // check for login credentials on app startup via polyfill. //
+    if (!TokenService.getAuthToken()) { 
+      return; 
+    }
+    
+    // if logged in and credentials valid, fetch all entries by user logged in. //
     fetch(`${config.API_ENDPOINT}/roses`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
@@ -26,42 +32,45 @@ class App extends Component {
     })
       .then(res => {
         if (!res.ok) {
-          return res.json().then(e => Promise.reject(e))
+          return res.json().then(e => Promise.reject(e));
         }
-        return res.json()
+        return res.json();
       })
       .then(roses => {
-        this.setState({roses})
+        this.setState({roses});
       })
       .catch(error => {
-        console.error({error})
+        console.error({error});
       })
   }
 
+  // handle POST of new journal entries in the state. //
   handleAddRose = (newRose) => {
     this.setState({
       roses: [
         ...this.state.roses,
         newRose
       ]
-    })
+    });
   }
 
+  // handle DELETE of existing journal entries in the state. //
   handleDeleteRose = id => {
     this.setState({
       roses: this.state.roses.filter(rose => rose.id !== id)
-    })
+    });
   }
 
+  // handle PATCH of existing journal entries in the state. //
   handleUpdateRose = updatedRose => {
     const updatedRoses = this.state.roses.map(rose => { 
       return rose.id === updatedRose.id ? updatedRose : rose
-    })
+    });
 
     this.setState({
       roses: updatedRoses
     });
-  };
+  }
   
   render() {
     const roseValues = {
@@ -69,7 +78,7 @@ class App extends Component {
       addRose: this.handleAddRose,
       deleteRose: this.handleDeleteRose,
       updateRose: this.handleUpdateRose
-    }
+    };
     
     return (
       <ErrorHandler>

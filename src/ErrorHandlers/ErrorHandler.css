@@ -1,3 +1,5 @@
+/* mobile first styles, min 320px */
+
 .error {
     text-align: center;
     color: #810000;
@@ -14,6 +16,8 @@
         font-size: 1em;
     }
 }
+
+/* desktop and tablet styles */
 
 @media only screen and (min-device-width: 768px) {
     .error {

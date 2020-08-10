@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import moodGardenContext from '../../moodGardenContext';
 import MainNav from '../MainNav/MainNav';
 import RoseInfo from '../RoseInfo/RoseInfo';
@@ -22,6 +22,7 @@ export default class ViewGarden extends Component {
                 <p id="welcome">Welcome back! Review your previous entries below, or use the link above to plant a new rose.</p>
 
                 <ul>
+                    {/* map through context and display mini info about every journal post from user. */}
                     {roses.map(rose => 
                         <li key={rose.id}> 
                             <RoseInfo
@@ -34,7 +35,7 @@ export default class ViewGarden extends Component {
                 </ul>
 
             </section>
-        )
+        );
     }
 }
 

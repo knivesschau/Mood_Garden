@@ -19,7 +19,7 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
       fixedWidth={false}
       flip={null}
       icon="grin-beam"
-      id="rose-icon"
+      id="rose-icon-edit"
       inverse={false}
       listItem={false}
       mask={null}
@@ -65,7 +65,7 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
       fixedWidth={false}
       flip={null}
       icon="frown"
-      id="thorn-icon"
+      id="thorn-icon-edit"
       inverse={false}
       listItem={false}
       mask={null}
@@ -111,7 +111,7 @@ exports[`EditRoseForm Component renders the complete EditRoseForm Component 1`] 
       fixedWidth={false}
       flip={null}
       icon="grin-alt"
-      id="bud-icon"
+      id="bud-icon-edit"
       inverse={false}
       listItem={false}
       mask={null}
@@ -171,7 +171,7 @@ exports[`EditRoseForm Component renders the correct EditRoseForm Component given
     Editing 
     Yellow
      Rose Planted on 
-    7/28/2020
+    8/9/2020
   </h1>
   <div
     className="Rose_Editor"
@@ -183,7 +183,7 @@ exports[`EditRoseForm Component renders the correct EditRoseForm Component given
       fixedWidth={false}
       flip={null}
       icon="grin-beam"
-      id="rose-icon"
+      id="rose-icon-edit"
       inverse={false}
       listItem={false}
       mask={null}
@@ -230,7 +230,7 @@ exports[`EditRoseForm Component renders the correct EditRoseForm Component given
       fixedWidth={false}
       flip={null}
       icon="frown"
-      id="thorn-icon"
+      id="thorn-icon-edit"
       inverse={false}
       listItem={false}
       mask={null}
@@ -277,7 +277,7 @@ exports[`EditRoseForm Component renders the correct EditRoseForm Component given
       fixedWidth={false}
       flip={null}
       icon="grin-alt"
-      id="bud-icon"
+      id="bud-icon-edit"
       inverse={false}
       listItem={false}
       mask={null}

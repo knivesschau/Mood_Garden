@@ -1,4 +1,4 @@
-/* mobile first style, min 320px */
+/* mobile first styles, min 320px - max 414px */
 
 .Rose_Editor, .Thorn_Editor, .Bud_Editor {
     box-shadow: 0px 1px 5px 2px #6E7C51; 
@@ -43,6 +43,10 @@
     background-color: #8F0000;
 }
 
+#rose-icon-edit, #thorn-icon-edit, #bud-icon-edit {
+    margin-bottom: -.40em;
+}
+
 @media screen and (min-device-width: 414px) {
     .Rose_Editor, .Thorn_Editor, .Bud_Editor {
         margin: 1.5em;
@@ -61,23 +65,56 @@
     }
 }
 
-@media only screen and (min-device-width: 768px) {
+/* desktop and tablet styles. query order is descending from larger desktops - tablets due to max-width constraints */
+
+@media only screen and (min-device-width: 1800px) {
     .Rose_Editor, .Thorn_Editor, .Bud_Editor {
-        margin-left: 7.5em;
-        margin-right: 7.5em;
+        margin-left: 38em;
+        margin-right: 38em;
+    }
+
+    #rose-icon-edit, #thorn-icon-edit, #bud-icon-edit {
+        margin-top: .15em;
+        margin-bottom: -.60em;
     }
 
     #edit-header {
-        margin-top: 1em;
+        font-size: 3em;
+    }
+
+    #rose-edit-header, #thorn-edit-header, #bud-edit-header {
+        font-size: 2.75em;
     }
 
     #update-garden, #cancel-update {
-        margin-left: -.50em;
-        margin-right: 1.5em;
+        font-size: 1.75em;
     }
 }
 
-@media only screen and (min-device-width: 1000px) {
+@media only screen and (min-device-width: 1200px) and (max-width: 1799px) {
+    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
+        margin-left: 20em;
+        margin-right: 20em;
+    }
+
+    #rose-icon-edit, #thorn-icon-edit, #bud-icon-edit {
+        margin-bottom: -.75em;
+    }
+
+    #edit-header {
+        font-size: 2.75em;
+    }
+
+    #rose-edit-header, #thorn-edit-header, #bud-edit-header {
+        font-size: 2.65em;
+    }
+
+    #update-garden, #cancel-update {
+        font-size: 1.65em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) and (max-width: 1199px) {
     .Rose_Editor, .Thorn_Editor, .Bud_Editor {
         margin-left: 15em;
         margin-right: 15em;
@@ -96,16 +133,18 @@
     }
 }
 
-@media only screen and (min-device-width: 1200px) {
+@media only screen and (min-device-width: 768px) and (max-width: 999px){
     .Rose_Editor, .Thorn_Editor, .Bud_Editor {
-        margin-left: 20em;
-        margin-right: 20em;
+        margin-left: 7.5em;
+        margin-right: 7.5em;
     }
-}
 
-@media only screen and (min-device-width: 1700px) {
-    .Rose_Editor, .Thorn_Editor, .Bud_Editor {
-        margin-left: 35em;
-        margin-right: 35em;
+    #edit-header {
+        margin-top: 1em;
+    }
+
+    #update-garden, #cancel-update {
+        margin-left: -.50em;
+        margin-right: 1.5em;
     }
 }

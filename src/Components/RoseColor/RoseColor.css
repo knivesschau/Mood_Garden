@@ -1,6 +1,4 @@
-/* Mobile styles first, 320px */
-
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
     img[style] {
         width: 15% !important;
     }

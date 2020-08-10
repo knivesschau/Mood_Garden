@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TokenService from '../../services/token-services';
 import './MainNav.css';
 
 export default class MainNav extends Component {
+    // go to homepage and clear auth token on sign-out. //
     handleLogoutClick = () => {
         TokenService.clearAuthToken();
         window.location='/';
     }
 
+    // render nav links for logged in in users. //
     renderUserNav() {
         return (
             <div className="MainNav_SignedIn">
@@ -30,9 +32,11 @@ export default class MainNav extends Component {
                 </Link>
 
             </div>
-        )
+        );
     }
 
+
+    // render nav links for non-logged in users or new guests. // 
     renderStartingNav() {
         return (
             <div className="MainNav_NoLogin">
@@ -46,7 +50,7 @@ export default class MainNav extends Component {
                      Log In
                 </Link>
             </div>
-        )
+        );
     }
     
     render() {
@@ -58,6 +62,6 @@ export default class MainNav extends Component {
                     : this.renderStartingNav()}
                     
             </nav>
-        )
+        );
     }
 }

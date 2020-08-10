@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import RoseColor from '../RoseColor/RoseColor';
 import MainNav from '../MainNav/MainNav';
 import './LandingPage.css';
@@ -17,14 +17,6 @@ export default class LandingPage extends Component {
                     
                     <h2 id="pitch-header">Cultivate Your Mind</h2>
                 </header>
-
-                <div className="Demo_Info">
-
-                    <span id="demo-info1">Demo User: thinkfulTeam2020</span>
-
-                    <span id="demo-info2">Demo Password: M0odGarden1!</span>
-
-                </div>
 
                 <div className="Description_Intro">
                     

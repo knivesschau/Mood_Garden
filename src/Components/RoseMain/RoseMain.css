@@ -1,4 +1,5 @@
-/* Mobile styles first, 320px */
+/* mobile first styles, min 320px - max 414px */
+
 .Rose_Expanded {
     margin-top: .25em;
 }
@@ -38,17 +39,19 @@
     }
 }
 
-@media only screen and (min-device-width: 768px) {
+/* desktop and tablet styles */
+
+@media only screen and (min-width: 768px) {
     .Rose_Image_Entry > img {
-        top: 4em;
-        left: 4em;
+        top: 4.5em;
+        left: 5em;
     }
 }
 
-@media only screen and (min-device-width: 1000px) {
+@media only screen and (min-width: 1000px) {
     .Rose_Image_Entry > img[style] {
-        top: 4em;
-        left: 8em;
+        top: 4.25em;
+        left: 8.5em;
         width: 10% !important;
     }
 
@@ -57,16 +60,17 @@
     }
 }
 
-@media only screen and (min-device-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .Rose_Image_Entry > img[style] {
-        top: 5em;
-        left: 14em;
+        top: 4.5em !important;
+        left: 14em !important;
     }
 }
 
-@media only screen and (min-device-width: 1800px) {
+@media only screen and (min-width: 1800px) {
     .Rose_Image_Entry > img[style] {
-        left: 25em;
-        width: 8% !important;
+        top: 5em !important;
+        left: 27.5em !important;
+        width: 7% !important;
     }
 }

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
 import './EditRoseForm.css';
 
@@ -19,6 +19,7 @@ export default class EditRoseForm extends Component {
         };
     }
 
+    // validate the entire form for accuracy. //
     validateEditForm() {
         const {roseEdit, thornEdit, budEdit} = this.state;
         
@@ -27,6 +28,7 @@ export default class EditRoseForm extends Component {
         });
     }
 
+    // capture each time the "rose" section gets updated and pass through validator. //
     editRose(rose) {
         this.setState({
             rose: rose
@@ -35,6 +37,7 @@ export default class EditRoseForm extends Component {
         );
     }
 
+    // capture each time the "thorn" section gets updated and pass through validator. //
     editThorn(thorn) {
         this.setState({
             thorn: thorn
@@ -43,6 +46,7 @@ export default class EditRoseForm extends Component {
         );
     }
 
+    // capture each time the "bud" section gets updated and pass through validator. //
     editBud(bud) {
         this.setState({
             bud: bud
@@ -51,6 +55,7 @@ export default class EditRoseForm extends Component {
         );
     }
 
+    // validate "rose" section of form. //
     validateRose() {
         const {rose} = this.state;
         let roseEdit = true;
@@ -58,7 +63,7 @@ export default class EditRoseForm extends Component {
 
         if (rose.length === 0) {
             roseEdit = false;
-            errorType.rose = "Please edit your original entry, or type in another response."
+            errorType.rose = "Please edit your original entry, or type in another response.";
         }
 
         this.setState({
@@ -66,9 +71,10 @@ export default class EditRoseForm extends Component {
             errorType
         },
             this.validateEditForm
-        )
+        );
     }
 
+    // validate "thorn" section of form. //
     validateThorn() {
         const {thorn} = this.state;
         let thornEdit = true;
@@ -76,7 +82,7 @@ export default class EditRoseForm extends Component {
 
         if (thorn.length === 0) {
             thornEdit = false;
-            errorType.thorn = "Please edit your original entry, or type in another response."
+            errorType.thorn = "Please edit your original entry, or type in another response.";
         }
 
         this.setState({
@@ -84,17 +90,18 @@ export default class EditRoseForm extends Component {
             errorType
         }, 
             this.validateEditForm
-        )
+        );
     }
 
+    // validate "bud" section of form. //
     validateBud() {
         const {bud} = this.state;
         let budEdit = true;
-        let errorType = {...this.state.errorType}
+        let errorType = {...this.state.errorType};
 
         if (bud.length === 0) {
             budEdit = false;
-            errorType.bud = "Please edit your original entry, or type in another response."
+            errorType.bud = "Please edit your original entry, or type in another response.";
         }
 
         this.setState({
@@ -106,8 +113,8 @@ export default class EditRoseForm extends Component {
     }
 
     handleCancelClick = () => {
-        window.location=`/your-garden`
-    };
+        window.location=`/your-garden`;
+    }
 
     render() {
         const {rose, thorn, bud, color, entry_date} = this.props;
@@ -118,7 +125,7 @@ export default class EditRoseForm extends Component {
 
             <div className="Rose_Editor">
                
-               <FontAwesomeIcon icon="grin-beam" id="rose-icon" color="#FFFAEA" size="3x"/> 
+               <FontAwesomeIcon icon="grin-beam" id="rose-icon-edit" color="#FFFAEA" size="3x"/> 
 
                <h2 id="rose-edit-header">Rose</h2>
 
@@ -143,7 +150,7 @@ export default class EditRoseForm extends Component {
 
             <div className="Thorn_Editor">
 
-                <FontAwesomeIcon icon="frown" id="thorn-icon" color="#A272AA" size="3x"/>
+                <FontAwesomeIcon icon="frown" id="thorn-icon-edit" color="#A272AA" size="3x"/>
                 
                 <h2 id="thorn-edit-header">Thorn</h2>
 
@@ -168,7 +175,7 @@ export default class EditRoseForm extends Component {
 
             <div className="Bud_Editor">
 
-                <FontAwesomeIcon icon="grin-alt" id="bud-icon" color="#8B5151" size="3x"/>
+                <FontAwesomeIcon icon="grin-alt" id="bud-icon-edit" color="#8B5151" size="3x"/>
                 
                 <h2 id="bud-edit-header">Bud</h2>
 

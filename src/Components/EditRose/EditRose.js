@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TokenService from '../../services/token-services';
 import EditRoseForm from '../EditRoseForm/EditRoseForm';
 import RoseNav from '../RoseNav/RoseNav';
@@ -11,10 +11,11 @@ export default class EditRose extends Component {
         match: {
             params: {}
         }
-    }
+    };
     
     static contextType = moodGardenContext;
 
+    // handle PATCH updates to all journal entries. //
     handleUpdateRose = e => {
         e.preventDefault();
         
@@ -25,7 +26,7 @@ export default class EditRose extends Component {
             rose: e.target['rose-edit'].value,
             thorn: e.target['thorn-edit'].value,
             bud: e.target['bud-edit'].value,
-        }
+        };
 
         fetch(`${config.API_ENDPOINT}/roses/${roseId}`, {
             method: 'PATCH',
@@ -37,32 +38,30 @@ export default class EditRose extends Component {
         })
         .then(res => {
             if (!res.ok) {
-                return res.json().then(e => Promise.reject(e))
+                return res.json().then(e => Promise.reject(e));
             }
         })
         .then(() => {
             this.context.updateRose(updatedRose);
             window.location=`/roses/${roseId}`;
         })
-        .catch(error => {
-            console.error({error})
-        });
+        .catch(error => {console.error({error})});
     }
 
     render() {
         const {roses=[]} = this.context; 
         const {id} = this.props.match.params;
-        const roseEntry = roses.find(rose => rose.id === parseInt(id)) || {};
+        const roseEntry = roses.find(rose => rose.id === parseInt(id)) || {}; // find entry that needs updating within context by id. //
 
         return (
             <section className="EditRose">
-                
                 <div className="Rose__Editor">
-                    
+
                     <RoseNav/>
                     
                     <form className="Edit_Rose" onSubmit={this.handleUpdateRose}>
-
+                    
+                    {/* Pass in props to the EditRoseForm component via context access.*/}
                     <EditRoseForm
                         id={roseEntry.id}
                         rose={roseEntry.rose}

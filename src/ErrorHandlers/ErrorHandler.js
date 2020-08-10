@@ -7,12 +7,12 @@ export default class ErrorHandler extends Component {
 
         this.state = {
             hasError: false
-        }
-    }
+        };
+    };
 
     static getDerivedStateFromError(error) {
-        return {hasError:true}
-    }
+        return {hasError:true};
+    };
 
     render() {
         if (this.state.hasError) {

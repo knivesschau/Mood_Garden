@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import config from '../../config';
 import TokenService from '../../services/token-services';
 import moodGardenContext from '../../moodGardenContext';
@@ -8,10 +8,11 @@ import './Rose.css';
 export default class Rose extends Component {
     static defaultProps = {
         onDeleteRose: () => {}
-    }
+    };
 
     static contextType = moodGardenContext;
 
+    // handle DELETE requests on submission. //
     handleDelete = e => {
         e.preventDefault();
         const id = this.props.id;
@@ -25,7 +26,7 @@ export default class Rose extends Component {
         })
         .then(res => {
             if (!res.ok) {
-                return res.json().then(e => Promise.reject(e))
+                return res.json().then(e => Promise.reject(e));
             }
             return null;
         })
@@ -34,7 +35,7 @@ export default class Rose extends Component {
             this.props.onDeleteRose(id);
         })
         .catch(error => {
-            console.error({error})
+            console.error({error});
         });
     }
 

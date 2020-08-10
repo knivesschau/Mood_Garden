@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import TokenService from '../../services/token-services'
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import TokenService from '../../services/token-services';
 import moodGardenContext from '../../moodGardenContext';
 import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
 import RoseNav from '../RoseNav/RoseNav';
@@ -12,7 +12,7 @@ export default class PlantRoseForm extends Component {
         history: {
             push: () => {}
         },
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -29,8 +29,9 @@ export default class PlantRoseForm extends Component {
             validPlant: false,
             errorType: {},
         };
-    }
+    };
 
+    // validate the entire form for accuracy. //
     validateEntry() {
         const {validRose, validThorn, validBud, validColor} = this.state;
 
@@ -39,6 +40,8 @@ export default class PlantRoseForm extends Component {
         });
     }
 
+
+    // capture each time "rose" section gets updated and pass through validator. //
     writeRose(rose) {
         this.setState({
             rose: rose,
@@ -47,6 +50,7 @@ export default class PlantRoseForm extends Component {
         );
     }
 
+    // capture each time the "thorn" section gets updated and pass through validator. //
     writeThorn(thorn) {
         this.setState({
             thorn: thorn,
@@ -55,6 +59,7 @@ export default class PlantRoseForm extends Component {
         );
     }
 
+    // capture each time the "bud" section gets updated and pass through validator. //
     writeBud(bud) {
         this.setState({
             bud: bud,
@@ -63,6 +68,7 @@ export default class PlantRoseForm extends Component {
         );
     }
 
+    // capture each time the "color" section gets updated and pass through validator. //
     pickColor(color) {
         this.setState({
             color: color,
@@ -71,6 +77,7 @@ export default class PlantRoseForm extends Component {
         );
     }
 
+    // validate "rose" section of form. //
     validateRoseInput() {
         const {rose} = this.state;
         let validRose = true;
@@ -78,7 +85,7 @@ export default class PlantRoseForm extends Component {
 
         if (rose.length === 0) {
             validRose = false;
-            errorType.rose = "Please enter in some text to repsond to the prompt."
+            errorType.rose = "Please enter in some text to repsond to the prompt.";
         }
 
         this.setState({
@@ -86,9 +93,10 @@ export default class PlantRoseForm extends Component {
             errorType
         },
             this.validateEntry
-        )
+        );
     }
 
+    // validate "thorn" section of form. //
     validateThornInput() {
         const {thorn} = this.state;
         let validThorn = true;
@@ -96,7 +104,7 @@ export default class PlantRoseForm extends Component {
 
         if (thorn.length === 0) {
             validThorn = false;
-            errorType.thorn = "Please enter in some text to repsond to the prompt."
+            errorType.thorn = "Please enter in some text to repsond to the prompt.";
         }
 
         this.setState({
@@ -107,6 +115,7 @@ export default class PlantRoseForm extends Component {
         );
     }
 
+    // validate "bud" section of form. //
     validateBudInput() {
         const {bud} = this.state;
         let validBud = true;
@@ -114,7 +123,7 @@ export default class PlantRoseForm extends Component {
 
         if (bud.length === 0) {
             validBud = false;
-            errorType.bud = "Please enter in some text to repsond to the prompt."
+            errorType.bud = "Please enter in some text to repsond to the prompt.";
         }
 
         this.setState({
@@ -122,9 +131,10 @@ export default class PlantRoseForm extends Component {
             errorType
         },
             this.validateEntry
-        )
+        );
     }
 
+    // validate "color" section of form. //
     validateColorPick() {
         const {color} = this.state;
         let validColor = true;
@@ -132,7 +142,7 @@ export default class PlantRoseForm extends Component {
 
         if (color === "") {
             validColor = false;
-            errorType.color = "Please select a color."
+            errorType.color = "Please select a color.";
         }
 
         this.setState({
@@ -140,15 +150,16 @@ export default class PlantRoseForm extends Component {
             errorType
         },
             this.validateEntry
-        )
+        );
     }
 
     handleCancelClick = () => {
-        window.location=`/your-garden`
-    };
+        window.location=`/your-garden`; 
+    }
 
     static contextType = moodGardenContext;
 
+    // handle POST submissions for all journal entries. //
     handleSubmit = e => {
         e.preventDefault();
 
@@ -170,16 +181,16 @@ export default class PlantRoseForm extends Component {
         })
         .then(res => {
             if (!res.ok) {
-                return res.json().then(e => Promise.reject(e))
+                return res.json().then(e => Promise.reject(e));
             }
             return res.json();
         })
         .then(rose => {
             this.context.addRose(rose);
-            this.props.history.push(`/roses/${rose.id}`)
+            this.props.history.push(`/roses/${rose.id}`);
         })
         .catch(error => {
-            console.error({error})
+            console.error({error});
         });
     }
     

@@ -1,4 +1,4 @@
-/* Mobile styles first, 320px */
+/* mobile first styles, min 320px - max 414px */
 
 #garden-header {
     text-align: center;
@@ -53,10 +53,46 @@ li {
     }
 }
 
-@media only screen and (min-device-width: 768px) {
+/* desktop and tablet styles. query order is descending from larger desktops - tablets due to max-width constraints */
+
+@media only screen and (min-device-width: 1700px) and (max-width: 2200px) {
     ul {
-        margin-left: 5em;
-        margin-right: 5em;
+        margin-left: 25em;
+        margin-right: 25em;
+    }
+
+    #garden-header {
+        font-size: 3.5em;
+    }
+
+    #welcome {
+        font-size: 1.75em;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) and (max-width: 1699px) {
+    ul {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+
+    #garden-header {
+        font-size: 3.25em;
+    }
+
+    #welcome {
+        font-size: 1.5em;
+        margin-left: 7.5em;
+        margin-right: 7.5em;
+    }
+} 
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+    ul {
+        margin-left: 3em;
+        margin-right: 3em;
     }
 
     #garden-header {
@@ -70,58 +106,5 @@ li {
         margin-top: .5em;
         margin-left: 5em;
         margin-right: 5em;
-    }
-}
-
-@media only screen and (min-device-width: 1000px) {
-    ul {
-        margin-left: 7em;
-        margin-right: 7em;
-    }
-}
-
-@media only screen and (min-device-width: 1200px) {
-    ul {
-        margin-left: 15em;
-        margin-right: 15em;
-    }
-
-    #welcome {
-        margin-left: 15em;
-        margin-right: 15em;
-    }
-} 
-
-@media only screen and (min-device-width: 1400px) {
-    ul {
-        margin-left: 20em;
-        margin-right: 20em;
-    }
-
-    #welcome {
-        margin-left: 20em;
-        margin-right: 20em;
-    }
-}
-
-@media only screen and (min-device-width: 1700px) {
-    ul {
-        margin-left: 25em;
-        margin-right: 25em;
-    }
-    
-    #garden-header {
-        font-size: 3.5em;
-    }
-
-    #welcome {
-        font-size: 1.5em;
-    }
-}
-
-@media only screen and (min-device-width: 2000px) {
-    ul {
-        margin-left: 30em;
-        margin-right: 30em;
     }
 }

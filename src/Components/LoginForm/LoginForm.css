@@ -1,4 +1,8 @@
-/* mobile first style, min 320px */
+/* mobile first styles, min 320px - max 414px */
+
+.GardenLoginForm {
+    overflow-y: hidden;
+}
 
 .Login_Form {
     display: flex;
@@ -12,6 +16,22 @@
     box-shadow: inset -4px 1px 20px 2px #A8739B;
     border: 1px transparent white;
     border-radius: 30em;
+}
+
+.Demo_Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    text-align: center;
+    font-size: .95em;
+    background: rgb(203, 211, 167, .90);
+    box-shadow: inset -4px 0px 5px 2px #6E7C51; 
+    border: 1px solid black;
+    border-radius: 1.5em;
+    padding: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1.25em;
 }
 
 .Login_Nav {
@@ -93,6 +113,11 @@
         margin: 3em;
         margin-top: 1em;
     }
+
+    .Demo_Info {
+        font-size: 1em;
+        margin-top: -1em;
+    }
 }
 
 @media only screen and (min-device-width: 414px) {
@@ -111,62 +136,139 @@
     #return-user-label, #return-pass-label, #submit-login, #return-user, #return-pass {
         font-size: 1.20em;
     }
-
 }
 
-@media only screen and (min-device-width: 768px) {
+/* desktop and tablet styles. query order is descending from larger desktops - tablets due to max-width constraints */
+
+@media only screen and (min-device-width: 1800px) and (max-width: 2200px) {
     .Login_Form {
-        margin: 12.75em; 
-        margin-top: 2.75em;
+        margin: 38em;
+        margin-top: 2.5em;
+    }
+
+    .Demo_Info {
+        font-size: 2em;
+        margin-top: -18em;
+        margin-left: 18em;
+        margin-right: 18em;
+    }
+
+    .Login_Nav {
+        font-size: 2.25em;
+    }
+
+    #login-header {
+        font-size: 3.5em;
+        margin-top: -.5em;
     }
 
     #submit-login {
-        margin-bottom: .50em;
+        margin-bottom: .75em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #return-user, #return-pass {
+        width: 70%;
+    }
+
+    #return-user-label, #return-pass-label {
+        margin-bottom: .75em;
+    }
+
+    #return-user-label, #return-pass-label, #submit-login, #return-user, #return-pass {
+        font-size: 2em;
     }
 }
 
-@media only screen and (min-device-width: 1000px) {
-    .Login_Form {
-        margin: 20em;
+@media only screen and (min-device-width: 1200px) and (max-width: 1799px) {
+   .Login_Form {
+       margin: 20em;
+       margin-top: 1.75em;
+   }
+
+   .Demo_Info {
+       font-size: 1.90em;
+       margin-top: -9em;
+       margin-left: 7em;
+       margin-right: 7em;
+   }
+
+   .Login_Nav {
+       font-size: 2em;
+   }
+   
+    #submit-login {
+        margin-left: 4.5em;
+        margin-right: 4.5em;
+        margin-bottom: .5em;
+    }
+
+    #login-header {
+        font-size: 3em;
         margin-top: 0;
+    }
+
+    #return-user-label, #return-pass-label {
+        margin-bottom: 1em;
+    }
+    
+    #return-user-label, #return-pass-label, #submit-login, #return-user, #return-pass {
+        font-size: 1.90em;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) and (max-width: 1199px) {
+    .Login_Form {
+        margin: 15em;
+        margin-top: 1em;
     }
 
     .Login_Nav {
         font-size: 1.75em;
+    }
+
+    .Demo_Info {
+        font-size: 1.75em;
+        margin-top: -6.5em;
+        margin-left: 6em;
+        margin-right: 6em;
     }
     
     #login-header {
         font-size: 3em;
         margin-top: 0;
     }
-}
 
-@media only screen and (min-device-width: 1200px) {
-    .Login_Form {
-        margin: 24em;
-        margin-top: 1em;
+    #return-user-label, #return-pass-label {
+        margin-bottom: .85em;
     }
-
+    
     #return-user-label, #return-pass-label, #submit-login, #return-user, #return-pass {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 }
 
-@media only screen and (min-device-width: 1500px) {
+@media only screen and (min-device-width: 768px) and (max-width: 999px) {
     .Login_Form {
-        margin: 33em;
+        margin: 10em; 
         margin-top: 2.5em;
     }
 
-    #submit-login {
-        margin-left: 4.5em;
-        margin-right: 4.5em;
+    .Demo_Info {
+        font-size: 1.5em;
+        margin-top: -5em;
+        margin-left: 5em;
+        margin-right: 5em;
     }
-}
 
-@media only screen and (min-device-width: 2000px) {
-    .Login_Form {
-        margin: 48em;
-        margin-top: 4.5em;
+    #submit-login {
+        margin-bottom: .50em;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    #return-user-label, #return-pass-label {
+        margin-bottom: .75em;
     }
 }

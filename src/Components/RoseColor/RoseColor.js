@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+/* eslint-disable default-case */
+import React, { Component } from 'react';
 import moodGardenContext from '../../moodGardenContext';
 import roseImg from '../../images/rose-image.png';
 import './RoseColor.css';
@@ -6,6 +7,7 @@ import './RoseColor.css';
 export default class RoseColor extends Component {
     static contextType = moodGardenContext;
 
+    // switch cases to render different rose colors based on the colors user picked in their journal entries via context access. //
     pickColor(color) {
         switch(color) {
             case "Red": 
@@ -26,7 +28,7 @@ export default class RoseColor extends Component {
             case "Black":
                 return "hue-rotate(0deg) saturate(0%)";
         }
-        return "hue-rotate(0deg)"; //default case
+        return "hue-rotate(0deg)"; 
     }
 
     render() {

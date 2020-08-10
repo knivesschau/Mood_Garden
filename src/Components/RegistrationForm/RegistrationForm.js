@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import  {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ErrorValidation from '../../ErrorHandlers/ErrorValidation';
 import AuthApiService from '../../services/auth-api-service';
 import './RegistrationForm.css';
@@ -8,10 +8,11 @@ import './RegistrationForm.css';
 export default class RegistrationForm extends Component {
     static defaultProps = {
         onValidlRegistration: () => {}
-    }
+    };
 
     constructor(props) {
         super(props);
+
         this.state = { 
             username: '',
             password: '',
@@ -21,16 +22,10 @@ export default class RegistrationForm extends Component {
             validConfirm: false,
             validReg: false,
             errorType: {},
-            seen: false
         };
-    }
+    };
 
-    togglePopUp() {
-        this.setState({
-            seen: !this.state.seen
-        })
-    }
-
+    // validate all parts of registration form prior to submission. //
     validateRegForm() {
         const {validName, validPass, validConfirm} = this.state;
 
@@ -39,6 +34,7 @@ export default class RegistrationForm extends Component {
         });
     }
 
+    // capture "username" updates and pass through validator. //
     updateUsername(username) {
         this.setState({
             username: username,
@@ -47,6 +43,7 @@ export default class RegistrationForm extends Component {
         );
     }
 
+    // capture "password" updates and pass through validator. //
     updatePassword(password) {
         this.setState({
             password: password,
@@ -55,6 +52,7 @@ export default class RegistrationForm extends Component {
         );
     }
 
+    // capture "confirm password" updates and pass through validator. //
     confirmPassword(retypePass) {
         this.setState({
             retypePass: retypePass,
@@ -63,6 +61,8 @@ export default class RegistrationForm extends Component {
         );
     }
 
+
+    // validate "username" section of form. //
     validateUsername() {
         const {username} = this.state;
         let validName = true;
@@ -70,7 +70,7 @@ export default class RegistrationForm extends Component {
 
         if (username.length < 3) {
             validName = false;
-            errorType.username = "Please create a username that is longer than 3 characters."
+            errorType.username = "Please create a username that is longer than 3 characters.";
         }
 
         this.setState({
@@ -81,6 +81,7 @@ export default class RegistrationForm extends Component {
         );
     }
 
+    // validate "password" section of form. //
     validatePassword() {
         const {password} = this.state;
         const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&])[\S]+/;
@@ -89,22 +90,22 @@ export default class RegistrationForm extends Component {
 
         if (password.length < 8) {
             validPass = false;
-            errorType.password = "Password must be at least 8 characters long."
+            errorType.password = "Password must be at least 8 characters long.";
         }
 
         if (password.length > 72) {
             validPass = false;
-            errorType.password = "Password must be less than 72 characters long."
+            errorType.password = "Password must be less than 72 characters long.";
         }
 
         if (password.startsWith(' ') || password.endsWith(' ')) { 
             validPass = false;
-            errorType.password = "Password must not start or end with a space."
+            errorType.password = "Password must not start or end with a space.";
         }
 
         if (!REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password)) {
             validPass = false;
-            errorType.password = "Include 1 upper case letter, lower case letter, number, and special character."
+            errorType.password = "Include 1 upper case letter, lower case letter, number, and special character.";
         }
 
         this.setState({
@@ -115,15 +116,16 @@ export default class RegistrationForm extends Component {
         );
     }
     
+    // validate "confirm password" section of form. //
     validateConfirmedPassword() {
         const {retypePass} = this.state;
         const {password} = this.state;
         let validConfirm = true;
-        let errorType = {...this.state.errorType}
+        let errorType = {...this.state.errorType};
 
         if (password !== retypePass) {
             validConfirm = false;
-            errorType.retypePass = "Passwords do not match."
+            errorType.retypePass = "Passwords do not match.";
         }
 
         this.setState({
@@ -134,13 +136,14 @@ export default class RegistrationForm extends Component {
         );
     }
 
+    // handle registration submission (POST new users). //
     submitRegistration = e => {
         e.preventDefault();
         const {username, password} = e.target; 
 
         this.setState({
             error: null
-        })
+        });
 
         AuthApiService.postUser({
             user_name: username.value,
@@ -152,15 +155,14 @@ export default class RegistrationForm extends Component {
                 this.props.onValidlRegistration();
             })
             .then(() => {
-                window.location=`/login`
-                window.alert('Registered successfully. Please log in with your new credentials.')
-
+                window.location=`/login`;
+                window.alert('Registered successfully. Please log in with your new credentials.');
             })
             .catch(res => {
                 this.setState({
                     error: window.alert('An unexpected error occurred. Please try again later.')
-                })
-            })
+                });
+            });
     }    
     
     render() {        
@@ -244,6 +246,6 @@ export default class RegistrationForm extends Component {
                 </form>
 
             </section>
-        )
+        );
     }
 }

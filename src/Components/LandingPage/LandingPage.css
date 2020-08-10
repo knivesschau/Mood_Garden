@@ -1,4 +1,5 @@
-/* mobile first style, min 320px */
+/* mobile first styles, min 320px */
+
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Handlee&family=Merienda+One&family=Raleway&display=swap');
 
 h1 {
@@ -32,21 +33,7 @@ h3 {
 .LandingPage {
     text-align: center;
 }
-
-.Demo_Info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    background: rgb(203, 211, 167, .90);
-    box-shadow: inset -4px 0px 5px 2px #6E7C51; 
-    border: 1px solid black;
-    border-radius: 1.5em;
-    padding: .5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 1.25em;
-}   
-
+ 
 .Description_Intro, .Description_Functional, .Description_Final {
     margin-left: auto;
     margin-right: auto;
@@ -114,6 +101,8 @@ h3 {
     }
 }
 
+/* desktop and tablet styles */
+
 @media only screen and (min-device-width: 768px) {
     .Description_Intro, .Description_Functional, .Description_Final {
         width: 400px;
@@ -121,12 +110,6 @@ h3 {
 
     .Description_Intro > img, .Description_Functional > img, .Description_Final > img {
         right: 12em;
-    }
-
-    .Demo_Info {
-        font-size: 1.20em;
-        margin-left: 10em;
-        margin-right: 10em;
     }
 
     #tagline1, #tagline2, #tagline3 {
@@ -145,12 +128,6 @@ h3 {
 
     #pitch-header {
         font-size: 2.5em;
-    }
-
-    .Demo_Info {
-        margin-left: 15em;
-        margin-right: 15em;
-        margin-bottom: 1.75em;
     }
     
     .Description_Intro, .Description_Functional, .Description_Final {
@@ -173,12 +150,6 @@ h3 {
 @media only screen and (min-device-width: 1700px) {
     h1 {
         font-size: 4.5em;
-    }
-
-    .Demo_Info {
-        font-size: 1.5em;
-        margin-left: 25em;
-        margin-right: 25em;
     }
     
     .Description_Intro, .Description_Functional, .Description_Final {
