@@ -103,7 +103,7 @@
     }
 }
 
-@media only screen and (min-device-width: 1600px) and (max-width: 1699px) {
+@media only screen and (min-device-width: 1500px) and (max-width: 1699px) {
     .Rose_Image_Garden {
         right: 32em;
         bottom: 1em;
@@ -115,7 +115,7 @@
     }
 }
 
-@media only screen and (min-device-width: 1200px) and (max-width: 1599px) {
+@media only screen and (min-device-width: 1200px) and (max-width: 1499px) {
     .Rose_Image_Garden {
         right: 22em;
         bottom: .50em;

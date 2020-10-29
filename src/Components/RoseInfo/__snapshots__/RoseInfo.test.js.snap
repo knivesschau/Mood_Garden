@@ -50,7 +50,7 @@ exports[`RoseInfo Component renders the correct Rose Component given props 1`] =
       >
         Yellow
          Rose Planted on 
-        8/9/2020
+        10/11/2020
       </h2>
     </Link>
   </div>
