@@ -1,154 +1,161 @@
 /* mobile first styles, min 320px - max 414px */
 
-.Collapsed_Roses, .Rose_MiniInfo {
-    transition-property: background; 
-    transition-duration: .5s;
-    transition-timing-function: ease-in;
-    border: 1px transparent white;
-    border-radius: 20em;
+.Collapsed_Roses,
+.Rose_MiniInfo {
+  transition-property: background;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  border: 1px transparent white;
+  border-radius: 20em;
 }
 
 .Collapsed_Roses:hover {
-    background-color: #A88087;
-    cursor: pointer;
-    box-shadow: inset -11px -5px 5px 0px #6E4D65;
+  background-color: #a88087;
+  cursor: pointer;
+  box-shadow: inset -11px -5px 5px 0px #6e4d65;
 }
 
 .Collapsed_Roses:active {
-    background-color: #7B424C;
-    box-shadow: inset -11px -5px 5px 0px #6E4D65;
+  background-color: #7b424c;
+  box-shadow: inset -11px -5px 5px 0px #6e4d65;
 }
 
 .Rose_Image_Garden {
-    position: relative;
-    right: 7.75em;
-    bottom: .5em;
+  position: relative;
+  right: 7.75em;
+  bottom: 0.5em;
 }
 
 #rose-info {
-    font-weight: bold;
-    font-size: 1.25em;
-    word-spacing: -.10rem;
-    margin-top: -2.5em;
-    margin-left: 2em; 
-    margin-right: 2em;
-    padding: .25em;
+  font-weight: bold;
+  font-size: 1.25em;
+  word-spacing: -0.1rem;
+  margin-top: -2.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 0.25em;
 }
 
 #rose-info:hover {
-    color: white;
+  color: white;
 }
 
 @media only screen and (min-device-width: 375px) {
-    .Rose_Image_Garden {
-        right: 9em;
-    }
+  .Rose_Image_Garden {
+    right: 9em;
+  }
 
-    #rose-info {
-        margin-top: -3em;
-        padding: .50em;
-    }
+  #rose-info {
+    margin-top: -3em;
+    padding: 0.5em;
+  }
 }
 
 @media only screen and (min-device-width: 414px) {
-    .Rose_Image_Garden {
-        right: 10em;
-    }
+  .Rose_Image_Garden {
+    right: 10em;
+  }
 
-    #rose-info {
-        font-size: 1.5em;
-        margin-left: 2.5em;
-        margin-right: 2.5em;
-    }
+  #rose-info {
+    font-size: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
 }
 
 /* desktop and tablet styles. query order is descending from larger desktops - tablets due to max-width constraints */
 
 @media only screen and (min-device-width: 2000px) and (max-width: 2200px) {
-    .Rose_Image_Garden {
-        right: 33em;
-        bottom: 1.25em;
-    }
+  .Rose_Image_Garden {
+    right: 33em;
+    bottom: 1.25em;
+  }
 
-    #rose-info {
-        font-size: 2.5em;
-        padding: 1.15em;
-        margin-top: -3.5em;
-    }
+  #rose-info {
+    font-size: 2.5em;
+    padding: 1.15em;
+    margin-top: -3.5em;
+  }
 }
 
 @media only screen and (min-device-width: 1800px) and (max-width: 1999px) {
-    .Rose_Image_Garden {
-        right: 28em;
-        bottom: 1.25em;
-    }
+  .Rose_Image_Garden {
+    right: 28em;
+    bottom: 1.25em;
+  }
 
-    #rose-info {
-        font-size: 2.25em;
-        padding: 1.25em;
-        margin-top: -3.65em;
-    }
+  #rose-info {
+    font-size: 2.25em;
+    padding: 1.25em;
+    margin-top: -3.65em;
+  }
 }
 
 @media only screen and (min-device-width: 1700px) and (max-width: 1799px) {
-    .Rose_Image_Garden {
-        right: 23em;
-        bottom: .50em;
-    }
+  .Rose_Image_Garden {
+    right: 23em;
+    bottom: 0.5em;
+  }
 
-    #rose-info {
-        font-size: 2.15em;
-        padding: 1.35em;
-        margin-top: -2.50em;
-    }
+  #rose-info {
+    font-size: 2.15em;
+    padding: 1.35em;
+    margin-top: -2.5em;
+  }
 }
 
 @media only screen and (min-device-width: 1500px) and (max-width: 1699px) {
-    .Rose_Image_Garden {
-        right: 32em;
-        bottom: 1em;
-    }
+  .Rose_Image_Garden {
+    right: 32em;
+    bottom: 1em;
+  }
 
-    #rose-info {
-        padding: 1.45em;
-        margin-top: -4.25em;
-    }
+  #rose-info {
+    padding: 1.45em;
+    margin-top: -4.25em;
+  }
 }
 
-@media only screen and (min-device-width: 1200px) and (max-width: 1499px) {
-    .Rose_Image_Garden {
-        right: 22em;
-        bottom: .50em;
-    }
+@media only screen and (min-device-width: 1300px) and (max-width: 1499px) {
+  .Rose_Image_Garden {
+    right: 27em;
+  }
+}
 
-    #rose-info {
-        font-size: 2em;
-        padding: 1.65em;
-        margin-top: -3.5em;
-    }
+@media only screen and (min-device-width: 1200px) and (max-width: 1300px) {
+  .Rose_Image_Garden {
+    right: 24em;
+    bottom: 0.5em;
+  }
+
+  #rose-info {
+    font-size: 2em;
+    padding: 1.65em;
+    margin-top: -3.5em;
+  }
 }
 
 @media only screen and (min-device-width: 1000px) and (max-width: 1199px) {
-    .Rose_Image_Garden {
-        right: 23em;
-        bottom: .75em;
-    }
+  .Rose_Image_Garden {
+    right: 23em;
+    bottom: 0.75em;
+  }
 
-    #rose-info {
-        font-size: 1.75em;
-        padding: 1.5em;
-        margin-top: -4em;
-    }
+  #rose-info {
+    font-size: 1.75em;
+    padding: 1.5em;
+    margin-top: -4em;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 999px) {
-    .Rose_Image_Garden {
-        right: 17em;
-    }
+  .Rose_Image_Garden {
+    right: 17em;
+  }
 
-    #rose-info {
-        font-size: 1.55em;
-        padding: 1.25em;
-        margin-top: -3em;
-    }
+  #rose-info {
+    font-size: 1.55em;
+    padding: 1.25em;
+    margin-top: -3em;
+  }
 }
